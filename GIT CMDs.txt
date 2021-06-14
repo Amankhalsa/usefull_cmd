@@ -1,0 +1,47 @@
+Create folder where you downloaded files 
+select clone repository  with https then copy link 
+
+1st Main Commands 
+
+   1. git clone (link paste here  or Run)
+   2. git status Run 
+   3. git add 2nd file.js
+   3. git add. (for all)
+   4. git status Run
+   5. git commit -m "Type Message here"
+   6. git push Run  enter psw 
+      check repository on git hub
+  
+2nd step for branch 
+  
+   1 git branch (Enter  Name) Run it 
+   2 Git checkout (Enter name)
+   3 breanch will be created 
+   4 git status 
+   5 git add.html
+   6 git commit - "MSG"
+   7 git push (Run)
+   8 Copy error or paste 
+     Check now 
+
+3rd Advance big feartue 
+
+    1 git branch bigfeature 
+    2 git checkout 'bigfeature'
+    3 git status 
+    4 git add index.html
+    5 git commit -m "MSG"
+    6 git push (run)
+    if error copy paste cmd
+    
+Cmd  line commands  
+    1. change dir =>Cd 
+    2. clear screen=> cls  
+    3. Two folder navigatecd => downloads\me 
+    4. for open folder or file=>start.   
+    5. for make dir=>mkdir 
+    6. for create  file=> echo> index.html    
+    7. for Rename => mv index.html index2.html
+    8. for Remove => rm filename 
+    9.for delete file => del =>rm file remove 
+    10. for delete => del -r folder name  
