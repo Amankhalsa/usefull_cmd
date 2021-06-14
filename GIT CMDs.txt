@@ -45,8 +45,10 @@ Cmd  line commands
     8. for Remove => rm filename 
     9.for delete file => del =>rm file remove 
     10. for delete => del -r folder name  
-
+    
+---------------------------------------------------
 Django CMD
+---------------------------------------------------
 https://appuals.com/fix-pip-is-not-recognized-as-an-internal-or-external-command/
 django in win 10 
 
@@ -91,5 +93,21 @@ https://www.youtube.com/watch?v=2FvIa4BADvA
 
 LOCAL HOST 
 Python -m http.server
+----------------------------------------------------
+React CMD
+---------------------------------------------------
+#first:
+#npm install --global expo-cli
+
+#2nd 
+#create new project 
+#expo init my-project
+#expo init rn-first-app
+
+#3rd 
+#cd rn-first-app/
+
+#4th 
+#npm start 
 
 
