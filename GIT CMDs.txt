@@ -45,3 +45,51 @@ Cmd  line commands
     8. for Remove => rm filename 
     9.for delete file => del =>rm file remove 
     10. for delete => del -r folder name  
+
+Django CMD
+https://appuals.com/fix-pip-is-not-recognized-as-an-internal-or-external-command/
+django in win 10 
+
+15 min 
+https://www.youtube.com/watch?v=fr1f84rg4Nw
+Django 
+https://www.youtube.com/watch?v=t90FMQr9WWc
+
+Long 
+https://www.youtube.com/watch?v=qHJjMvHLJdg&t=375s
+
+Ubuntu 
+
+Config
+https://www.youtube.com/watch?v=BSRN0hC96L8
+
+Installation 
+sudo apt-get install python3-django
+
+Check version 
+django-admin --version 
+Startproject 
+django-admin startproject projectname
+Then 
+Migrate cmd
+python3 manage.py migrate
+Admin panel 
+python3 manage.pp createsuperuser
+Then give admin password 
+Run server
+ python manage.py runserver
+Win 10 
+
+
+https://appuals.com/fix-pip-is-not-recognized-as-an-internal-or-external-command/
+
+django in win 10 
+
+Then see thi video 
+https://www.youtube.com/watch?v=2FvIa4BADvA
+
+
+LOCAL HOST 
+Python -m http.server
+
+
