@@ -35,79 +35,76 @@ select clone repository  with https then copy link
     if error copy paste cmd
     
 Cmd  line commands  
-    1. change dir =>Cd 
-    2. clear screen=> cls  
-    3. Two folder navigatecd => downloads\me 
-    4. for open folder or file=>start.   
-    5. for make dir=>mkdir 
-    6. for create  file=> echo> index.html    
-    7. for Rename => mv index.html index2.html
-    8. for Remove => rm filename 
-    9.for delete file => del =>rm file remove 
-    10. for delete => del -r folder name  
-    
----------------------------------------------------
-Django CMD
----------------------------------------------------
-https://appuals.com/fix-pip-is-not-recognized-as-an-internal-or-external-command/
-django in win 10 
+   * 1. change dir =>Cd 
+   * 2. clear screen=> cls  
+   * 3. Two folder navigatecd => downloads\me 
+   * 4. for open folder or file=>start.   
+   * 5. for make dir=>mkdir 
+   * 6. for create  file=> echo> index.html    
+   * 7. for Rename => mv index.html index2.html
+   * 8. for Remove => rm filename 
+   * 9.for delete file => del =>rm file remove 
+   * 10. for delete => del -r folder name  
 
-15 min 
-https://www.youtube.com/watch?v=fr1f84rg4Nw
-Django 
-https://www.youtube.com/watch?v=t90FMQr9WWc
+=============
+React
+=============
 
-Long 
-https://www.youtube.com/watch?v=qHJjMvHLJdg&t=375s
+    *  #first:
+    *  #npm install --global expo-cli
 
-Ubuntu 
+    *  #2nd 
+    *  #create new project 
+    *  #expo init my-project
+    *  #expo init rn-first-app
 
-Config
-https://www.youtube.com/watch?v=BSRN0hC96L8
+    *  #3rd 
+    *  #cd rn-first-app/
 
-Installation 
-sudo apt-get install python3-django
-
-Check version 
-django-admin --version 
-Startproject 
-django-admin startproject projectname
-Then 
-Migrate cmd
-python3 manage.py migrate
-Admin panel 
-python3 manage.pp createsuperuser
-Then give admin password 
-Run server
- python manage.py runserver
-Win 10 
+    *  #4th 
+    *  #npm start 
 
 
-https://appuals.com/fix-pip-is-not-recognized-as-an-internal-or-external-command/
+      https://amankhalsa.github.io/Mysite/
 
-django in win 10 
+‎Accessed+>Today, ‎June ‎14, ‎2021, ‏‎24 minutes ago
 
-Then see thi video 
-https://www.youtube.com/watch?v=2FvIa4BADvA
+Modified=>‎Sunday, ‎June ‎14, ‎2020, ‏‎6:28:38 PM
+
+‎Created=>Saturday, ‎May ‎29, ‎2021, ‏‎9:37:42 PM
 
 
-LOCAL HOST 
-Python -m http.server
-----------------------------------------------------
-React CMD
----------------------------------------------------
-#first:
-#npm install --global expo-cli
+=============
+React
+=============
 
-#2nd 
-#create new project 
-#expo init my-project
-#expo init rn-first-app
+npm init
+npm install -g live-server 
+npm i -g npm 
 
-#3rd 
-#cd rn-first-app/
+if installed for check type 
+live-server 
 
-#4th 
-#npm start 
+===============================================
+Git hub CMD
+===============================================
+Quick setup — if you’ve done this kind of thing before
+or	
+https://github.com/Amankhalsa/Amankhalsa.git
+Get started by creating a new file or uploading an existing file. We recommend every repository include a README, LICENSE, and .gitignore.
 
+…or create a new repository on the command line
+echo "# Amankhalsa" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Amankhalsa/Amankhalsa.git
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin https://github.com/Amankhalsa/Amankhalsa.git
+git branch -M main
+git push -u origin main
+…or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
 
