@@ -1,0 +1,95 @@
+-------
+1st 
+-------
+pip install virtualenv
+-------
+2nd
+-------
+virtualenv venv
+-------
+3rd 
+-------
+python manage.py runserver
+
+https://appuals.com/fix-pip-is-not-recognized-as-an-internal-or-external-command/
+======================================
+django in win 10 
+======================================
+======================================
+15 min 
+======================================
+https://www.youtube.com/watch?v=fr1f84rg4Nw
+======================================
+Django 
+======================================
+https://www.youtube.com/watch?v=t90FMQr9WWc
+======================================
+Long 
+======================================
+https://www.youtube.com/watch?v=qHJjMvHLJdg&t=375s
+=======
+Ubuntu 
+========
+======================================
+Config
+======================================
+https://www.youtube.com/watch?v=BSRN0hC96L8
+
+======================================
+Installation 
+======================================
+sudo apt-get install python3-django
+==============
+Check version 
+===============
+django-admin --version 
+Startproject 
+django-admin startproject projectname
+==========
+Then 
+==========
+Migrate cmd
+python3 manage.py migrate
+
+python manage.py makemigrations
+------------------------
+if no changes then type 
+------------------------
+python manage.py migrate
+
+======================================
+Admin panel 
+======================================
+python3 manage.py createsuperuser
+Then give admin password 
+======================================
+Run server
+======================================
+ python manage.py runserver
+Win 10 
+===============
+1st required for folder  ==>
+open setting find templates add this below cmd==>
+
+'DIRS': [os.path.join(BASE_DIR,'templates')],
+
+2nd thing is required 
+==>
+import os # new
+==================
+
+https://appuals.com/fix-pip-is-not-recognized-as-an-internal-or-external-command/
+=================
+django in win 10 
+==================
+==================
+Then see thi video 
+==================
+https://www.youtube.com/watch?v=2FvIa4BADvA
+
+==========
+LOCAL HOST 
+==========
+Python -m http.server
+
+
