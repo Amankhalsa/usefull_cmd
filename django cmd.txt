@@ -1,3 +1,54 @@
+for window 7 Django installation steps
+======================================
+1st=>
+install python on pc 
+2nd=>
+ Open Powershell
+
+ Verify Python Installation by
+__________	
+python -V
+__________
+Step 3 - Upgrade Pip
+___________________________________
+python -m pip install --upgrade pip
+___________________________________
+
+Step 4 - Create a Project Directory by 
+_____________________
+ mkdir django_project
+ 
+ cd django_project
+_____________________
+
+Step 5 - Create Virtual Environment
+____________________
+python -m venv venv
+____________________
+
+Step 6 - Activate Virtual Environment by 
+_____________________
+venv\Scripts\activate
+_____________________
+
+Step 7 - Install Django
+__________________
+pip install django
+pip install django==2.1
+__________________
+Step 8 - Start a New Project
+__________________________________
+django-admin startproject testsite
+cd testsite
+
+Step 9 - Run the Server
+__________________________
+python manage.py runserver
+__________________________
+
+https://www.stanleyulili.com/django/how-to-install-django-on-windows/#step-8---start-a-new-project
+
+
 -------
 1st 
 -------
