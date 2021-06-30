@@ -1,8 +1,11 @@
 for window 7 Django installation steps
 ======================================
-1st=>
+Step 1
+---------------------------------------
 install python on pc 
-2nd=>
+---------------------------------------
+Step 2
+---------------------------------------
  Open Powershell
 
  Verify Python Installation by
@@ -112,27 +115,73 @@ python manage.py migrate
 Admin panel 
 ======================================
 python3 manage.py createsuperuser
+python manage.py createsuperuser
 Then give admin password 
 ======================================
 Run server
 ======================================
  python manage.py runserver
 Win 10 
-===============
+
+
+
+
+
+
+======================================================
+
+most important in django  important in django important in django important in django
+========================================================
 1st required for folder  ==>
+
 open setting find templates add this below cmd==>
 
 'DIRS': [os.path.join(BASE_DIR,'templates')],
 
-2nd thing is required 
-==>
+==================================================
+2ND STATIC FOLDER FOR CSS JS AND PICS ETC  
+==================================================
+# Added manually
+
+STATICFILES_DIRS = [ os.path.join(BASE_DIR, "static") ]
+=========================================================
+3RD  thing is required  
+=========================================================
+
 import os # new
-==================
+
+i used then my static files problem solved 
+
+python manage.py collectstatic
+==========================================================
+
+4th  in head tag add below 
+==========================================================
+
+{% load static %}
+===========================================================
+
+for style sheet in link tag add this 
+==========================================================
+
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+-----------------------------------------------------------------------
+ 
+
+
+
+
+
+
 
 https://appuals.com/fix-pip-is-not-recognized-as-an-internal-or-external-command/
 =================
 django in win 10 
 ==================
+
+
+
+
 ==================
 Then see thi video 
 ==================
@@ -144,3 +193,6 @@ LOCAL HOST
 Python -m http.server
 
 
+<!-- {% load static % } -->
+	<!-- {% static 'style.css' %} -->
+<!-- <link rel="stylesheet" type="text/css" href=""> -->
