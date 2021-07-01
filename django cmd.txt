@@ -1,10 +1,10 @@
 for window 7 Django installation steps
 ======================================
-Step 1
+	Step 1
 ---------------------------------------
 install python on pc 
 ---------------------------------------
-Step 2
+	Step 2
 ---------------------------------------
  Open Powershell
 
@@ -12,113 +12,136 @@ Step 2
 __________	
 python -V
 __________
-Step 3 - Upgrade Pip
+	Step 3 - Upgrade Pip
 ___________________________________
 python -m pip install --upgrade pip
 ___________________________________
 
-Step 4 - Create a Project Directory by 
+	Step 4 - Create a Project Directory by 
 _____________________
  mkdir django_project
  
  cd django_project
 _____________________
 
-Step 5 - Create Virtual Environment
+	Step 5 - Create Virtual Environment
 ____________________
 python -m venv venv
+
 ____________________
 
-Step 6 - Activate Virtual Environment by 
+	Step 6 - Activate Virtual Environment by 
 _____________________
 venv\Scripts\activate
 _____________________
 
-Step 7 - Install Django
+	Step 7 - Install Django
 __________________
 pip install django
 pip install django==2.1
 __________________
-Step 8 - Start a New Project
+	Step 8 - Start a New Project
 __________________________________
 django-admin startproject testsite
 cd testsite
+==============================================================
+you can add app  you can add appyou can add appyou can add app
 
-Step 9 - Run the Server
+==============================================================
+python manage.py startapp myapp
+
+	Step 9 - Run the Server
 __________________________
 python manage.py runserver
 __________________________
+
+-------
+	10th  
+-------
+pip install virtualenv
+-------
+	11th 
+-------
+virtualenv venv
+-------
+	12th 
+-------
+python manage.py runserver
+==========================================
+13th in v env you need django installation 
+==========================================
+pip install django 
+==========================================
+do this 
+===============================
+pip freeze > requirements.txt
+=============================
+then run server 
+=============================
+python manage.py runserver
+============================
+add dependencies  or packages 1st terminate 
+============================
+pip install -r requirements.txt
 
 https://www.stanleyulili.com/django/how-to-install-django-on-windows/#step-8---start-a-new-project
 
 
--------
-1st 
--------
-pip install virtualenv
--------
-2nd
--------
-virtualenv venv
--------
-3rd 
--------
-python manage.py runserver
 
 https://appuals.com/fix-pip-is-not-recognized-as-an-internal-or-external-command/
 ======================================
-django in win 10 
+	django in win 10 
 ======================================
 ======================================
-15 min 
+	15 min 
 ======================================
 https://www.youtube.com/watch?v=fr1f84rg4Nw
 ======================================
-Django 
+	Django 
 ======================================
 https://www.youtube.com/watch?v=t90FMQr9WWc
 ======================================
-Long 
+	Long 
 ======================================
 https://www.youtube.com/watch?v=qHJjMvHLJdg&t=375s
 =======
 Ubuntu 
 ========
 ======================================
-Config
+	Config
 ======================================
 https://www.youtube.com/watch?v=BSRN0hC96L8
 
 ======================================
-Installation 
+	ubuntu Installation 
 ======================================
 sudo apt-get install python3-django
 ==============
-Check version 
+	Check version 
 ===============
 django-admin --version 
 Startproject 
 django-admin startproject projectname
 ==========
-Then 
+	Then 
 ==========
 Migrate cmd
 python3 manage.py migrate
 
 python manage.py makemigrations
 ------------------------
-if no changes then type 
+	if no changes then type 
 ------------------------
 python manage.py migrate
 
 ======================================
-Admin panel 
+	Admin panel 
 ======================================
 python3 manage.py createsuperuser
 python manage.py createsuperuser
 Then give admin password 
 ======================================
-Run server
+	Run server
 ======================================
  python manage.py runserver
 Win 10 
@@ -132,36 +155,36 @@ Win 10
 
 most important in django  important in django important in django important in django
 ========================================================
-1st required for folder  ==>
+	1st required for folder  ==>
 
 open setting find templates add this below cmd==>
 
 'DIRS': [os.path.join(BASE_DIR,'templates')],
 
 ==================================================
-2ND STATIC FOLDER FOR CSS JS AND PICS ETC  
+	2ND STATIC FOLDER FOR CSS JS AND PICS ETC  
 ==================================================
 # Added manually
 
 STATICFILES_DIRS = [ os.path.join(BASE_DIR, "static") ]
 =========================================================
-3RD  thing is required  
+	3RD  thing is required  
 =========================================================
 
 import os # new
 
-i used then my static files problem solved 
+	i used then my static files problem solved 
 
 python manage.py collectstatic
 ==========================================================
 
-4th  in head tag add below 
+	4th  in head tag add below 
 ==========================================================
 
 {% load static %}
 ===========================================================
 
-for style sheet in link tag add this 
+	for style sheet in link tag add this 
 ==========================================================
 
 <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
@@ -183,7 +206,7 @@ django in win 10
 
 
 ==================
-Then see thi video 
+Then see this video 
 ==================
 https://www.youtube.com/watch?v=2FvIa4BADvA
 
@@ -193,6 +216,3 @@ LOCAL HOST
 Python -m http.server
 
 
-<!-- {% load static % } -->
-	<!-- {% static 'style.css' %} -->
-<!-- <link rel="stylesheet" type="text/css" href=""> -->
