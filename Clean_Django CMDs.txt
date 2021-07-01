@@ -120,3 +120,72 @@ python manage.py collectstatic
 
 <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
 -----------------------------------------------------------------------
+
+
+========================================
+My first app with httprequest required 
+========================================
+1st open setting add app name 
+========================================
+INSTALLED_APPS['myapp']
+========================================
+2nd add in current urls
+========================================
+from django.urls import path,include
+and 
+ path('',include('myapp.urls'))
+================================================================================
+create new file in app view file then add
+================================================================================
+from django.shortcuts import render
+from django.http import HttpResponse
+
+
+# Create your views here.
+def myfunctioncall(request):
+	return HttpResponse("<h1>hello world this is from my app</h1>")
+================================================================================
+app urls dir 
+
+from django.urls import path
+from . import views
+urlpatterns=[
+	path('preet/',views.myfunctioncall,name='preet')
+
+]
+================================================================================
+then run server with 
+in url =>preet/
+
+======================
+add function app views 
+=====================
+def add(request,a,b):
+	# a=int(input("enter num1"))
+	# b=int(input("enter num2"))
+	return HttpResponse(f'<h1> You ans is :{a+b}</h1>')
+=====================
+in urls 
+=====================
+path('add/<int:a>/<int:b>',views.add,name='add'),
+
+==========================================
+Json response add this  in urls
+==========================================
+path('intro/<str:name>/<int:age>',views.intro,name='intro'),
+==========================================
+in views 
+==========================================
+from django.http import HttpResponse,JsonResponse
+==========================================
+Function is 
+==========================================
+def intro(request,name,age):
+	my_dict={
+	 'Name':name,
+	 'Age':age 
+	 }
+
+	return JsonResponse(my_dict)
+==========================================
+
