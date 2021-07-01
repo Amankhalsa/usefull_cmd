@@ -1,0 +1,17 @@
+Data science
+================================
+Create v env
+================================
+
+pip install sklearn
+================================
+used for data exploring  
+pre processing, cleaning 
+pip install pandas
+================================
+used for mathemetical 
+pip install numpy 
+================================
+post processing 
+pip matplotlib
+================================
