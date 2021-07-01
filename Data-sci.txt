@@ -13,5 +13,5 @@ used for mathemetical
 pip install numpy 
 ================================
 post processing 
-pip matplotlib
+pip install matplotlib
 ================================
