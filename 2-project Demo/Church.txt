@@ -1,0 +1,6 @@
+http://phpbootcampdemo1.com/church/
+
+http://phpbootcampdemo1.com/church/access/login
+
+admin@site.com
+123456

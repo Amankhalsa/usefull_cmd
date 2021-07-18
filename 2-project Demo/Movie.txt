@@ -1,0 +1,5 @@
+http://www.phpbootcampdemo1.com/movie
+	
+http://www.phpbootcampdemo1.com/movie/admin/
+admin@admin.com
+admin

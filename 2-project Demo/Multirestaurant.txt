@@ -1,0 +1,11 @@
+Front End
+httpwww.phpbootcampdemo1.commultirestaurant
+Admin
+httpwww.phpbootcampdemo1.commultirestaurantadmin
+
+User Name	admin
+Password	password
+
+Merchant
+httpwww.phpbootcampdemo1.commultirestaurantmerchantlogin
+create by admin

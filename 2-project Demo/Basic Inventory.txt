@@ -1,0 +1,3 @@
+http://www.phpbootcampdemo1.com/basic_inventory/
+admin@demo.com
+123456

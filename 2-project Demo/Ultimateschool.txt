@@ -1,0 +1,3 @@
+http://www.phpbootcampdemo1.com/ultimateschool/
+admin@admin.com
+password	

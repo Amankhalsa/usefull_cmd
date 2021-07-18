@@ -1,0 +1,21 @@
+http://www.phpbootcampdemo1.com/ams/
+
+Super Admin
+User Name	devsolver@gmail.com
+Password	123456
+
+Admin
+User Name	shoaib@gmail.com
+Password	123456
+
+Owner
+User Name	wough@yahoo.com
+Password	123456
+
+Employee
+User Name	jhonson@yahoo.com
+Password	123456
+
+Renter
+User Name	ricky@yahoo.com
+Password	123456

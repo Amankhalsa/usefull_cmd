@@ -1,0 +1,6 @@
+http://www.phpbootcampdemo1.com/blood_bank/
+	
+http://www.phpbootcampdemo1.com/blood_bank/admin/login.php
+
+admin@gmail.com
+1234

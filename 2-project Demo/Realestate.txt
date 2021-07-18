@@ -1,0 +1,11 @@
+http://www.phpbootcampdemo1.com/realestate1/admin/
+
+admin
+admin
+	
+Client
+http://www.phpbootcampdemo1.com/realestate1/Users/login
+
+user@demo.com
+demo123
+

@@ -1,0 +1,4 @@
+http://www.phpbootcampdemo1.com/institute/admin/login
+
+admin@admin.com
+password

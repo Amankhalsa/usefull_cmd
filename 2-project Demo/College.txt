@@ -1,0 +1,13 @@
+http://www.phpbootcampdemo1.com/college
+
+Admin
+User Name	admin
+Password	admin
+
+Student
+User Name	student
+Password	student
+
+Employee
+User Name	employee
+Password	employee

@@ -1,0 +1,6 @@
+www.phpbootcampdemo1.com/quiz
+	
+http://www.phpbootcampdemo1.com/quiz/admin/
+
+admin@admin.com
+123456

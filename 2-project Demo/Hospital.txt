@@ -1,0 +1,33 @@
+http://www.phpbootcampdemo1.com/hospital/
+
+Admin
+User Name	admin@demo.com
+Password	12345
+
+Doctor
+User Name	doctor@demo.com
+Password	12345
+
+Accountant
+User Name	accountant@demo.com
+Password	12345
+
+Nurse
+User Name	nurse@demo.com
+Password	12345
+
+Laboratorist
+User Name	laboratorist@demo.com
+Password	12345
+
+Pharmacist
+User Name	pharmacist@demo.com
+Password	12345
+
+Receptionist
+User Name	receptionist@demo.com
+Password	12345
+
+Representative
+User Name	representative@demo.com
+Password	12345

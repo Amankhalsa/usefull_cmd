@@ -1,0 +1,6 @@
+http://www.phpbootcampdemo1.com/eoffice/admin/login
+admin
+password
+
+www.phpbootcampdemo1.com/eoffice/
+created by admin

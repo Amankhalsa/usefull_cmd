@@ -1,0 +1,5 @@
+http://www.phpbootcampdemo1.com/laundary/
+
+http://www.phpbootcampdemo1.com/laundary/admincp/index.php
+admin
+admin

@@ -1,0 +1,6 @@
+http://www.phpbootcampdemo1.com/library/
+	
+http://www.phpbootcampdemo1.com/library/panel
+
+admin@admin.com
+password

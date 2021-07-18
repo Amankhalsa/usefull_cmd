@@ -1,0 +1,4 @@
+http://www.phpbootcampdemo1.com/restaurant_pos/login
+
+admin
+password

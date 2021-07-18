@@ -1,0 +1,4 @@
+http://www.phpbootcampdemo1.com/gym/users/login
+
+admin
+password

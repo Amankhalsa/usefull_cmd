@@ -1,0 +1,6 @@
+http://www.phpbootcampdemo1.com/300hotel
+
+http://www.phpbootcampdemo1.com/300hotel/admin/login.php
+
+admin
+password

@@ -1,0 +1,7 @@
+http://www.phpbootcampdemo1.com/school2
+
+http://www.phpbootcampdemo1.com/school2/login
+
+Admin
+User Name	superadmin@gsms.com
+Password	123456

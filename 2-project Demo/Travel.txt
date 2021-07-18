@@ -1,0 +1,6 @@
+http://www.phpbootcampdemo1.com/travel
+	
+http://www.phpbootcampdemo1.com/travel/admin
+
+admin@admin.com
+password

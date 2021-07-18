@@ -1,0 +1,8 @@
+http://www.phpbootcampdemo1.com/projectms/admin/login
+
+admin@admin.com
+password
+
+CLient
+http://www.phpbootcampdemo1.com/projectms/client/login
+created by admin

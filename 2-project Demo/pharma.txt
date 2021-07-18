@@ -1,0 +1,4 @@
+http://www.phpbootcampdemo1.com/pharma/Admin_dashboard/login
+
+test@test.com
+123456

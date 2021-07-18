@@ -1,0 +1,14 @@
+http://www.phpbootcampdemo1.com/cab/en/auth
+http://www.phpbootcampdemo1.com/cab/en/auth/login
+
+Admin
+User Name	admin@admin.com
+Password	admin123
+
+Executive
+User Name	executive@executive.com
+Password	executive123
+
+Customer
+User Name	customer@customer.com
+Password	customer123

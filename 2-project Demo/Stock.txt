@@ -1,0 +1,4 @@
+http://www.phpbootcampdemo1.com/stock/login.php
+
+admin
+master

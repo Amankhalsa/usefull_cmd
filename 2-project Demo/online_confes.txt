@@ -1,0 +1,5 @@
+http://www.phpbootcampdemo1.com/online_confes
+
+http://www.phpbootcampdemo1.com/online_confes/admin/login
+admin@admin.com
+password

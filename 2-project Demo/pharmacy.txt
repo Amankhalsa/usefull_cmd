@@ -1,0 +1,13 @@
+http://www.phpbootcampdemo1.com/pharmacy/auth/login
+
+Super Admin
+User Name	superadmin@pms.com
+Password	12345
+
+Admin
+User Name	admin@pms.com
+Password	12345
+
+Staff
+User Name	staff@pms.com
+Password	12345

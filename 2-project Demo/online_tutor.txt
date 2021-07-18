@@ -1,0 +1,6 @@
+http://phpbootcampdemo1.com/online_tutor/
+	
+http://www.phpbootcampdemo1.com/online_tutor/auth/login
+
+admin@admin.com
+123456789

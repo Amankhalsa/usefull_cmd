@@ -1,0 +1,17 @@
+http://www.phpbootcampdemo1.com/advance_school_pro345/
+
+Admin
+User Name	admin
+Password	1234
+
+Student
+User Name	student
+Password	1234
+
+Parent
+User Name	parent
+Password	1234
+
+Teacher
+User Name	devendragupta
+Password	1234

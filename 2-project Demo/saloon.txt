@@ -1,0 +1,6 @@
+www.phpbootcampdemo1.com/saloon
+
+http://www.phpbootcampdemo1.com/saloon/admin/
+
+admin
+admin

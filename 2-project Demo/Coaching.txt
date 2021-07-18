@@ -1,0 +1,17 @@
+http://phpbootcampdemo1.com/coaching/auth/login
+
+Admin
+User Name	admin@example.com
+Password	12345
+
+Instructor
+User Name	instructor@example.com
+Password	12345
+
+Employee
+User Name	employee@example.com
+Password	12345
+
+Student
+User Name	student@student.com
+Password	12345

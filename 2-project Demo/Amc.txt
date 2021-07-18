@@ -1,0 +1,4 @@
+http://www.phpbootcampdemo1.com/amc/
+	
+admin@admin.com
+password

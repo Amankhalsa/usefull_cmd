@@ -1,0 +1,4 @@
+http://www.phpbootcampdemo1.com/ultimate_college/cms/index.php
+	
+admin@admin.com
+password

@@ -1,0 +1,5 @@
+http://auction.phpbootcampdemo1.com/
+http://auction.phpbootcampdemo1.com/?/admin/login
+
+admin
+password
