@@ -1,0 +1,4 @@
+keras
+tensorflow
+
+https://www.udemy.com/course/laravel-advanced-course-build-school-management-system/
