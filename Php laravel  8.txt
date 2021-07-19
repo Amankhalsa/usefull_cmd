@@ -12,21 +12,72 @@ First project
 1st 
 composer create-project --prefer-dist laravel/laravel my-blog
 
-if Error 
 ---------------------------------------------------------------------------
+if Error
 
 'composer' is not recognized as an internal or external command,
 operable program or batch file.
 link=.https://www.youtube.com/watch?v=vNmx1Za9AFM
 
-Then add path
 ---------------------------------------------------------------------------
+Then add path
+
 Change dir then 
 2nd 
 php artisan serve
 ---------------------------------------------------------------------------
+---------------------------------------------------------------------------
+working with controler:
+https://laravel.com/docs/8.x/controllers
+
+Make contact controler with this cmd 
+
+
+php artisan make:controller ContactController
+---------------------------------------------------------------------------
+Add this on  ContactController in from controller folder 
+  public function index(){
+        // echo "<h1>This is a contact page </h1>";
+        return view('contact');
+    }
+
+---------------------------------------------------------------------------
+Go to in Routes  dir
+
+// Route::get('/contact', 'ContactControlle@index');  // laraver 6, 7  
+
+for laravel 8 
+
+above: 
+use App\Http\Controllers\ContactController; 
+
+bottom:
+Route::get('/contact', [ContactController::class,'index']);
+
+---------------------------------------------------------------------------
+---------------------------------------------------------------------------
+Defining Middleware:
+====================
+Run this:
+php artisan make:middleware CheckAge
+
+then add this below in CheckAge which you have created :
+   public function handle(Request $request, Closure $next)
+    {
+        
+if($request-> age <= 20)
+	{
+      return redirect('home');
+        			}
+
+        return $next($request);
+    }
+
+
+add this in  kernel.php for registration 
+        'age' => \App\Http\Middleware\CheckAge::class,
 
 ---------------------------------------------------------------------------
 
----------------------------------------------------------------------------
+
 
