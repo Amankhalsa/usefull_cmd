@@ -2,3 +2,10 @@ keras
 tensorflow
 
 https://www.udemy.com/course/laravel-advanced-course-build-school-management-system/
+
+Django 3 - Python Backend Web Development For Beginner
+
+https://www.udemy.com/course/django-python-web-development-for-beginner/?referralCode=75418236328D16AB524C
+
+youtube 
+https://www.youtube.com/channel/UCBzcZLh8xXXr61hftCCT3wQ/videos
