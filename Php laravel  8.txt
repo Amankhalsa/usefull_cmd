@@ -1,4 +1,6 @@
-
+---------------------------------------------------------------------------
+composer-setup: 
+---------------------------------------------------------------------------
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 ---------------------------------------------------------------------------
 php -r "if (hash_file('sha384', 'composer-setup.php') === '756890a4488ce9024fc62c56153228907f1545c228516cbf63f885e036d37e9a59d27d63f46af1d4d07ee0f76181c7d3') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
@@ -7,6 +9,8 @@ php composer-setup.php
 ---------------------------------------------------------------------------
 php -r "unlink('composer-setup.php');"
 
+paste these above in project folder by  cmd 
+---------------------------------------------------------------------------
 First project 
 ---------------------------------------------------------------------------
 1st 
@@ -28,6 +32,7 @@ php artisan serve
 ---------------------------------------------------------------------------
 ---------------------------------------------------------------------------
 working with controler:
+==============================================================================
 https://laravel.com/docs/8.x/controllers
 
 Make contact controler with this cmd 
@@ -57,7 +62,7 @@ Route::get('/contact', [ContactController::class,'index']);
 ---------------------------------------------------------------------------
 ---------------------------------------------------------------------------
 Defining Middleware:
-====================
+============================================================
 Run this:
 php artisan make:middleware CheckAge
 
@@ -78,6 +83,28 @@ add this in  kernel.php for registration
         'age' => \App\Http\Middleware\CheckAge::class,
 
 ---------------------------------------------------------------------------
+Installation of jetstream:
+---------------------------------------------------------------------------
+
+Official link:
+https://jetstream.laravel.com/2.x/installation.html
+1st CMD:
+composer require laravel/jetstream
 
 
+2nd CMD: 
+php artisan jetstream:install livewire
 
+npm install
+npm run dev
+
+Aman this is required if you wana to access default login & Register
+3rd: 
+npm install && npm run dev
+
+php artisan migrate
+
+---------------------------------------------------------------------------
+
+D:\xamp\php
+C:\Program Files\nodejs
