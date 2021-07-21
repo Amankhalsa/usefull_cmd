@@ -1,50 +1,48 @@
----------------------------------------------------------------------------
-composer-setup: 
----------------------------------------------------------------------------
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
----------------------------------------------------------------------------
-php -r "if (hash_file('sha384', 'composer-setup.php') === '756890a4488ce9024fc62c56153228907f1545c228516cbf63f885e036d37e9a59d27d63f46af1d4d07ee0f76181c7d3') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
----------------------------------------------------------------------------
-php composer-setup.php
----------------------------------------------------------------------------
-php -r "unlink('composer-setup.php');"
+# composer-setup: 
 
-paste these above in project folder by  cmd 
+	php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 ---------------------------------------------------------------------------
-First project 
+	php -r "if (hash_file('sha384', 'composer-setup.php') === '756890a4488ce9024fc62c56153228907f1545c228516cbf63f885e036d37e9a59d27d63f46af1d4d07ee0f76181c7d3') { echo 		'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
 ---------------------------------------------------------------------------
-1st 
-composer create-project --prefer-dist laravel/laravel my-blog
+	php composer-setup.php
+---------------------------------------------------------------------------
+	php -r "unlink('composer-setup.php');"
 
+* paste these above in project folder by  cmd 
 ---------------------------------------------------------------------------
-if Error
-
-'composer' is not recognized as an internal or external command,
-operable program or batch file.
-link=.https://www.youtube.com/watch?v=vNmx1Za9AFM
+* First project 
+---------------------------------------------------------------------------
+	1st 
+	composer create-project --prefer-dist laravel/laravel my-blog
 
 ---------------------------------------------------------------------------
-Then add path
+* if Error
 
-Change dir then 
-2nd 
-php artisan serve
+	'composer' is not recognized as an internal or external command,
+	operable program or batch file.
+	link=.https://www.youtube.com/watch?v=vNmx1Za9AFM
+
 ---------------------------------------------------------------------------
+* Then add path
+
+	Change dir then 
+	2nd 
+	php artisan serve
 ---------------------------------------------------------------------------
-working with controler:
+# working with controler:
 ==============================================================================
-https://laravel.com/docs/8.x/controllers
+	https://laravel.com/docs/8.x/controllers
 
-Make contact controler with this cmd 
+	Make contact controler with this cmd 
 
 
-php artisan make:controller ContactController
+	php artisan make:controller ContactController
 ---------------------------------------------------------------------------
-Add this on  ContactController in from controller folder 
-  public function index(){
+	Add this on  ContactController in from controller folder 
+  	public function index(){
         // echo "<h1>This is a contact page </h1>";
         return view('contact');
-    }
+    		}
 
 ---------------------------------------------------------------------------
 Go to in Routes  dir
