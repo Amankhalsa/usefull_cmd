@@ -83,21 +83,23 @@
 # Installation of jetstream:
 ---------------------------------------------------------------------------
 * Official link:
-	https://jetstream.laravel.com/2.x/installation.html
+		https://jetstream.laravel.com/2.x/installation.html
 * 1st CMD:
-	composer require laravel/jetstream
+	
+		composer require laravel/jetstream
 
 * 2nd CMD: 
-	php artisan jetstream:install livewire
+	
+		php artisan jetstream:install livewire
 
-	npm install
-	npm run dev
+		npm install
+		npm run dev
 
 * Aman this is required if you wana to access default login & Register
 * 3rd: 
-	npm install && npm run dev
+		npm install && npm run dev
 
-	php artisan migrate
+		php artisan migrate
 
 ---------------------------------------------------------------------------
 
