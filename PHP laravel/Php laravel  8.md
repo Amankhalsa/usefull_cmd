@@ -29,7 +29,6 @@
 	php artisan serve
 ---------------------------------------------------------------------------
 # working with controler:
-==============================================================================
 	https://laravel.com/docs/8.x/controllers
 
 	Make contact controler with this cmd 
@@ -57,9 +56,8 @@
 	Route::get('/contact', [ContactController::class,'index']);
 
 ---------------------------------------------------------------------------
----------------------------------------------------------------------------
 # Defining Middleware:
-============================================================
+
 * Run this:
 	php artisan make:middleware CheckAge
 
@@ -101,7 +99,6 @@
 
 		php artisan migrate
 
----------------------------------------------------------------------------
 
-D:\xamp\php
-C:\Program Files\nodejs
+		D:\xamp\php
+		C:\Program Files\nodejs
