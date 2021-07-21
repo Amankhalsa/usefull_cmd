@@ -12,7 +12,7 @@
 ---------------------------------------------------------------------------
 * First project 
 ---------------------------------------------------------------------------
-	1st 
+* 1st 
 	composer create-project --prefer-dist laravel/laravel my-blog
 
 ---------------------------------------------------------------------------
@@ -24,9 +24,8 @@
 
 ---------------------------------------------------------------------------
 * Then add path
-
-	Change dir then 
-	2nd 
+* Change dir then 2nd
+*  
 	php artisan serve
 ---------------------------------------------------------------------------
 # working with controler:
@@ -45,62 +44,60 @@
     		}
 
 ---------------------------------------------------------------------------
-Go to in Routes  dir
+# Go to in Routes  dir
 
-// Route::get('/contact', 'ContactControlle@index');  // laraver 6, 7  
+	// Route::get('/contact', 'ContactControlle@index');  // laraver 6, 7  
 
-for laravel 8 
+	for laravel 8 
 
-above: 
-use App\Http\Controllers\ContactController; 
+	above: 
+	use App\Http\Controllers\ContactController; 
 
-bottom:
-Route::get('/contact', [ContactController::class,'index']);
+	bottom:
+	Route::get('/contact', [ContactController::class,'index']);
 
 ---------------------------------------------------------------------------
 ---------------------------------------------------------------------------
-Defining Middleware:
+# Defining Middleware:
 ============================================================
-Run this:
-php artisan make:middleware CheckAge
+* Run this:
+	php artisan make:middleware CheckAge
 
-then add this below in CheckAge which you have created :
-   public function handle(Request $request, Closure $next)
-    {
-        
-if($request-> age <= 20)
-	{
-      return redirect('home');
-        			}
+* then add this below in CheckAge which you have created :
+	   public function handle(Request $request, Closure $next)
+	    {
 
-        return $next($request);
-    }
+	if($request-> age <= 20)
+		{
+	      return redirect('home');
+					}
+
+		return $next($request);
+	    }
 
 
-add this in  kernel.php for registration 
-        'age' => \App\Http\Middleware\CheckAge::class,
+* add this in  kernel.php for registration 
+        	age' => \App\Http\Middleware\CheckAge::class,
 
 ---------------------------------------------------------------------------
-Installation of jetstream:
+# Installation of jetstream:
 ---------------------------------------------------------------------------
+* Official link:
+	https://jetstream.laravel.com/2.x/installation.html
+* 1st CMD:
+	composer require laravel/jetstream
 
-Official link:
-https://jetstream.laravel.com/2.x/installation.html
-1st CMD:
-composer require laravel/jetstream
+* 2nd CMD: 
+	php artisan jetstream:install livewire
 
+	npm install
+	npm run dev
 
-2nd CMD: 
-php artisan jetstream:install livewire
+* Aman this is required if you wana to access default login & Register
+* 3rd: 
+	npm install && npm run dev
 
-npm install
-npm run dev
-
-Aman this is required if you wana to access default login & Register
-3rd: 
-npm install && npm run dev
-
-php artisan migrate
+	php artisan migrate
 
 ---------------------------------------------------------------------------
 
