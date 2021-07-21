@@ -59,29 +59,32 @@
 # Defining Middleware:
 
 * Run this:
-	php artisan make:middleware CheckAge
+
+		php artisan make:middleware CheckAge
 
 * then add this below in CheckAge which you have created :
-	   public function handle(Request $request, Closure $next)
-	    {
-
-	if($request-> age <= 20)
-		{
-	      return redirect('home');
-					}
-
-		return $next($request);
-	    }
+			
+			public function handle(Request $request, Closure $next)
+		    {
+			if($request-> age <= 20)
+			{ 
+		    return redirect('home');
+						}
+			return $next($request);
+		    }
 
 
 * add this in  kernel.php for registration 
+
         	age' => \App\Http\Middleware\CheckAge::class,
 
 ---------------------------------------------------------------------------
 # Installation of jetstream:
 ---------------------------------------------------------------------------
 * Official link:
+
 		https://jetstream.laravel.com/2.x/installation.html
+
 * 1st CMD:
 	
 		composer require laravel/jetstream
@@ -95,6 +98,7 @@
 
 * Aman this is required if you wana to access default login & Register
 * 3rd: 
+		
 		npm install && npm run dev
 
 		php artisan migrate
