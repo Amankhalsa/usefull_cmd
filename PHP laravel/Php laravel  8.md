@@ -8,9 +8,9 @@
 ---------------------------------------------------------------------------
 	php -r "unlink('composer-setup.php');"
 
-* paste these above in project folder by  cmd 
+#  paste these above in project folder by  cmd 
 ---------------------------------------------------------------------------
-* First project 
+#  First project 
 ---------------------------------------------------------------------------
 * 1st 
 	composer create-project --prefer-dist laravel/laravel my-blog
@@ -27,7 +27,7 @@
 * Change dir then 2nd
 *  
 	php artisan serve
----------------------------------------------------------------------------
+
 # working with controler:
 	https://laravel.com/docs/8.x/controllers
 
