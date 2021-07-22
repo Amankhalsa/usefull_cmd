@@ -43,7 +43,7 @@
     		}
 
 ---------------------------------------------------------------------------
-# Go to in Routes  dir
+Go to in Routes  dir:
 
 	// Route::get('/contact', 'ContactControlle@index');  // laraver 6, 7  
 
@@ -73,7 +73,11 @@
 			return $next($request);
 		    }
 
+* call by web.php by add this 
 
+			Route::get('/about', function () {
+				return view('about');
+				})->middleware('age');
 * add this in  kernel.php for registration 
 
         	age' => \App\Http\Middleware\CheckAge::class,
