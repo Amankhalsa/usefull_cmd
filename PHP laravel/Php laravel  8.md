@@ -154,7 +154,7 @@ Go to in Routes  dir:
 # For Show user name and total User: 
 * Add this code in dashboard.php
 
-	Hi... <B>{{ Auth::user()->name}}</B>
-	<b style='float: right;'>Total users:
-	<span class="badge badge-danger"> {{count($users)}}</span>
-	</b>
+		Hi... <B>{{ Auth::user()->name}}</B>
+		<b style='float: right;'>Total users:
+		<span class="badge badge-danger"> {{count($users)}}</span>
+		</b>
