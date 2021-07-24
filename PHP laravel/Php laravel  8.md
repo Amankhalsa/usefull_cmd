@@ -158,3 +158,4 @@ Go to in Routes  dir:
 		<b style='float: right;'>Total users:
 		<span class="badge badge-danger"> {{count($users)}}</span>
 		</b>
+
