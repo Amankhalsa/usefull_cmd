@@ -152,6 +152,7 @@ Go to in Routes  dir:
 		</div>
 		</div>
 # For Show user name and total User: 
+* Add this code in dashboard.php
 
 	Hi... <B>{{ Auth::user()->name}}</B>
 	<b style='float: right;'>Total users:
