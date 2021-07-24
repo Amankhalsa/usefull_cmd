@@ -34,6 +34,7 @@ Version	Released on
 
 # if you type in CMd :
       php artisan 
+
 * then you can see all cmds 
 * in This session we have learn in App\Http\Controllers folder we declare two method 
    
@@ -98,7 +99,10 @@ Version	Released on
                 </body>
                 </html>
 * In Routes folder: we define 3 diff methods:
-
+        
+        1st import this : 
+        use App\Http\Controllers\SignupController;
+        2nd:
         Route::view('/about', 'about');  //static 
         Route::get('/sign-up', [SignupController::class,'showForm'] );
 
