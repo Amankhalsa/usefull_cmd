@@ -110,3 +110,40 @@ Go to in Routes  dir:
 
 		D:\xamp\php
 		C:\Program Files\nodejs
+
+
+#  Eloquent ORM Read Users Data
+ 	* in web.php we use this below code @ dashboard
+
+	 	Route::middleware(['auth:sanctum','verified'])->get('/dashboard',function(){
+	    $users=User::all();
+	    return view('dashboard',compact('users'));
+		})->name('dashboard');
+
+# In Dashboard.blade.php:
+   	* we use this 
+		<div class="container">
+		<div class="row">
+		<table class="table">
+		<thead>
+		<tr>
+		<th scope="col">SL no</th>
+		<th scope="col">Name</th>
+		<th scope="col">Email</th>
+		<th scope="col">Created At</th>
+		</tr>
+		</thead>
+		<tbody>
+		@php($i=1)
+		@foreach($users as $user)
+		<tr>
+		<th scope="row">{{$i++}}</th>
+		<td>{{$user->name}}</td>
+		<td>{{$user->email}}</td>
+		<td>{{$user->created_at->diffforHumans()}}</td>
+		</tr>
+		@endforeach
+		</tbody>
+		</table>
+		</div>
+		</div>
