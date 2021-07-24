@@ -20,9 +20,9 @@ Version	Released on
     Laravel 7	March 3, 2020
     Laravel 8	September 8, 2020
 
-=================================================
-https://www.w3schools.in/laravel-tutorial/history/
-=================================================
+* link=> 
+        https://www.w3schools.in/laravel-tutorial/history/
+
 # 23-7-2021
 * HTTP Methods:
     1st=> Get
