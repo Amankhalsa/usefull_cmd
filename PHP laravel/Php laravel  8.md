@@ -113,6 +113,10 @@ Go to in Routes  dir:
 
 
 #  Eloquent ORM Read Users Data
+* 1st create database using phpmy admin 
+* Add database name in .env file 
+* Then can use this below code 
+
  	* in web.php we use this below code @ dashboard
 
 	 	Route::middleware(['auth:sanctum','verified'])->get('/dashboard',function(){
