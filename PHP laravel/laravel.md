@@ -34,6 +34,9 @@ Version	Released on
 
 # if you type in CMd :
       php artisan 
+      
+      for making Controler:
+      php artisan make:controller name
 
 * then you can see all cmds 
 * in This session we have learn in App\Http\Controllers folder we declare two method 
