@@ -151,3 +151,9 @@ Go to in Routes  dir:
 		</table>
 		</div>
 		</div>
+# For Show user name and total User: 
+
+	Hi... <B>{{ Auth::user()->name}}</B>
+	<b style='float: right;'>Total users:
+	<span class="badge badge-danger"> {{count($users)}}</span>
+	</b>
