@@ -181,4 +181,9 @@ Go to in Routes  dir:
 		<span class="badge badge-danger"> {{count($users)}}</span>
 		</b>
 
-# 17: Create Model And Migration
+# 17: Create Model And Migration:
+* Run this
+
+			php artisan make:model Category -m
+			php artisan migrate
+			php artisan make:controller Categorycontroller
