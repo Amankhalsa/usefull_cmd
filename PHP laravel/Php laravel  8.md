@@ -112,7 +112,7 @@ Go to in Routes  dir:
 		C:\Program Files\nodejs
 
 
-#  Eloquent ORM Read Users Data
+# 1st Eloquent ORM Read Users Data
  	* in web.php we use this below code @ dashboard
 
 	 	Route::middleware(['auth:sanctum','verified'])->get('/dashboard',function(){
@@ -120,8 +120,8 @@ Go to in Routes  dir:
 	    return view('dashboard',compact('users'));
 		})->name('dashboard');
 
-# In Dashboard.blade.php:
-   	* we use this 
+#  In Dashboard.blade.php:
+   	* in resources\views folder we use this code in dashboad template file  
 		<div class="container">
 		<div class="row">
 		<table class="table">
@@ -147,3 +147,25 @@ Go to in Routes  dir:
 		</table>
 		</div>
 		</div>
+
+# 2nd  Query Builder Read Users Data:
+* Routes folder we used:
+
+		Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+	    // $users=User::all();
+	    $users=DB::table('users')->get();
+	    return view('dashboard',compact('users'));
+		})->name('dashboard');
+
+* AND THIS (import this):
+		
+		use Illuminate\Support\Facades\DB;		
+
+* IN Dashboard.blade.php file i used this for remove error:
+	
+		{{Carbon\Carbon::parse($user->created_at)->diffforHumans()}}
+
+
+
+# 17: Create Model And Migration
+# 
