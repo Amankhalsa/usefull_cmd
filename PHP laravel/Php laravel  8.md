@@ -113,7 +113,12 @@ Go to in Routes  dir:
 
 
 # 1st Eloquent ORM Read Users Data
- 	* in web.php we use this below code @ dashboard
+=======
+#  Eloquent ORM Read Users Data
+* 1st create database using phpmy admin 
+* Add database name in .env file 
+* Then can use this below code 
+* in web.php we use this below code @ dashboard
 
 	 	Route::middleware(['auth:sanctum','verified'])->get('/dashboard',function(){
 	    $users=User::all();
@@ -148,6 +153,7 @@ Go to in Routes  dir:
 		</div>
 		</div>
 
+
 # 2nd  Query Builder Read Users Data:
 * Routes folder we used:
 
@@ -167,5 +173,12 @@ Go to in Routes  dir:
 
 
 
+# For Show user name and total User: 
+* Add this code in dashboard.php
+
+		Hi... <B > <span style="text-transform: uppercase; color: green;">{{ Auth::user()->name}}</span></B>
+		<b style='float: right;'>Total users:
+		<span class="badge badge-danger"> {{count($users)}}</span>
+		</b>
+
 # 17: Create Model And Migration
-# 
