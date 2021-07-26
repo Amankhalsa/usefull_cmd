@@ -220,3 +220,4 @@ URL section 2nd Method:
 			php artisan make:model Category -m
 			php artisan migrate
 			php artisan make:controller Categorycontroller
+start from 19

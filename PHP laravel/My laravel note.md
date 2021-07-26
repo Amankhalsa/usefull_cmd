@@ -121,6 +121,11 @@ Version	Released on
 
 # Function will be same 
 
+         public function myfun($name= 'Aman',$age=29){
+        // dd($name , $age);
+        return "Hello :". $name. " " .$age;
+                                                    }
+
     * Optional URL:
 
           public function myfun($name= 'Aman',$age=29){
