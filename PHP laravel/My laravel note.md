@@ -114,6 +114,32 @@ Version	Released on
         // Route::get('/create-user', [SignupController::class, 'addUser'] );
 
 
+# 26-7-2021
+        * Required:
 
+        Route::get('/test/{name}/{age}',[SignupController::class,'myfun']);
 
+# Function will be same 
 
+    * Optional URL:
+
+          public function myfun($name= 'Aman',$age=29){
+                // dd($name , $age);
+                return "Hello :". $name. " " .$age;
+            }
+
+#  In Routes folder add this below:
+    
+        Route::get('/test/{name?}/{age?}',[SignupController::class,'myfun']);
+
+* Make a controler by below CMD:
+        
+            php artisan make:controller verifier
+
+* import: use App\Http\Controllers\SignupController;
+* Then open controler file or  add this code:
+
+        public function myfun($name= 'Aman',$age=29){
+        // dd($name , $age);
+        return "Hello :". $name. " " .$age;
+                                                    }
