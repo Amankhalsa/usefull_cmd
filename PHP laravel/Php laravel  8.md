@@ -56,6 +56,39 @@ Go to in Routes  dir:
 	Route::get('/contact', [ContactController::class,'index']);
 
 ---------------------------------------------------------------------------
+
+# URL when we used for href :
+
+		   		<a href="{{ url ('/')}}">Dashboard </a> |
+                <a href="{{ URL::to('/about')}}">About  </a> |
+                <a href="{{ route('con')}}">Contact  </a> |
+
+
+# How work with URL in laravel 8:
+
+	* URL section 1ST Method
+		  
+		   <a href="{{ url ('/')}}">Home </a> |
+		   <a href="{{ url ('/about')}}">About  </a> |
+		
+
+URL section 2nd Method:
+		 
+		  * <a href="{{ URL::to('/about')}}">About  </a> |		  
+
+ *URL section 3rd Method:
+		
+		<a href="{{ route('con')}}">Contact  </a> |
+		
+		in routes/web.php use this below syntax
+
+		Route::get('/contact', 'ContactControlle@index');
+
+* We can use this in routes/web.php:
+
+		Route::get('/contact-this-is', [ContactController::class,'index'])->name('con');
+
+
 # Defining Middleware:
 
 * Run this:
