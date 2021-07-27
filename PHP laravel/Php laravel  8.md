@@ -132,12 +132,12 @@ URL section 2nd Method:
 
 		npm install
 		npm run dev
-
 * Aman this is required if you wana to access default login & Register
 * 3rd: 
 		
 		npm install && npm run dev
 
+# then Create a database then migrate it or add DB name in .env file 
 		php artisan migrate
 
 
@@ -154,6 +154,8 @@ URL section 2nd Method:
 * in web.php we use this below code @ dashboard
 
 	 	Route::middleware(['auth:sanctum','verified'])->get('/dashboard',function(){
+
+		//Add this 
 	    $users=User::all();
 	    return view('dashboard',compact('users'));
 		})->name('dashboard');
@@ -204,6 +206,16 @@ URL section 2nd Method:
 	
 		{{Carbon\Carbon::parse($user->created_at)->diffforHumans()}}
 
+
+# by config.php below side yu can change eor see features like this below :
+
+	 'features' => [
+        // Features::termsAndPrivacyPolicy(),
+        // Features::profilePhotos(),
+        // Features::api(),
+        // Features::teams(['invitations' => true]),
+        Features::accountDeletion(),
+   	 ],
 
 
 # For Show user name and total User: 
