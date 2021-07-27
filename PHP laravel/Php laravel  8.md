@@ -211,7 +211,7 @@ URL section 2nd Method:
 		{{Carbon\Carbon::parse($user->created_at)->diffforHumans()}}
 
 
-# by config.php below side yu can change eor see features like this below :
+# by config.php then open jetstream.php file then can change profile API:
 
 	 'features' => [
         // Features::termsAndPrivacyPolicy(),
