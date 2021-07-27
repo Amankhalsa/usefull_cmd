@@ -137,17 +137,19 @@ URL section 2nd Method:
 		
 		npm install && npm run dev
 
-# then Create a database then migrate it or add DB name in .env file 
+* 4th  then Create a database then migrate it or add DB name in .env file 
+		
 		php artisan migrate
 
+* for path :
 
 		D:\xamp\php
 		C:\Program Files\nodejs
-
-
+-------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
 # 1st Eloquent ORM Read Users Data
-=======
-#  Eloquent ORM Read Users Data
+# Database jobs;
+# Eloquent ORM Read Users Data
 * 1st create database using phpmy admin 
 * Add database name in .env file 
 * Then can use this below code 
@@ -188,12 +190,14 @@ URL section 2nd Method:
 		</div>
 		</div>
 
-
-# 2nd  Query Builder Read Users Data:
+-------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
+# 2nd  Query Builder method  Read Users Data:
 * Routes folder we used:
 
 		Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 	    // $users=User::all();
+	    //Add this  below code  for access database values 
 	    $users=DB::table('users')->get();
 	    return view('dashboard',compact('users'));
 		})->name('dashboard');
@@ -202,8 +206,8 @@ URL section 2nd Method:
 		
 		use Illuminate\Support\Facades\DB;		
 
-* IN Dashboard.blade.php file i used this for remove error:
-	
+* IN Dashboard.blade.php file i used this for remove error: show Humans dated 
+
 		{{Carbon\Carbon::parse($user->created_at)->diffforHumans()}}
 
 
@@ -214,22 +218,148 @@ URL section 2nd Method:
         // Features::profilePhotos(),
         // Features::api(),
         // Features::teams(['invitations' => true]),
-        Features::accountDeletion(),
-   	 ],
+        Features::accountDeletion(), 
+        ],
 
 
 # For Show user name and total User: 
-* Add this code in dashboard.php
+*  TO do this Add this code in dashboard.php
 
 		Hi... <B > <span style="text-transform: uppercase; color: green;">{{ Auth::user()->name}}</span></B>
 		<b style='float: right;'>Total users:
 		<span class="badge badge-danger"> {{count($users)}}</span>
 		</b>
-
+-------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
 # 17: Create Model And Migration:
-* Run this
+
+1. need new menu, add this below code, file name is navigation-menu.blade.php
+
+			<x-jet-nav-link href="{{ route('all.Category') }}">
+			All Category
+			</x-jet-nav-link> 
+
+2. THen create model by below cmds:
 
 			php artisan make:model Category -m
+3. open migration file then add fields can copy it path database/migrations
+
+		public function up()
+		{
+		Schema::create('categories', function (Blueprint $table) {
+		$table->id();
+		$table->integer('user_id');
+		$table->string('categories_name');
+		$table->timestamps();
+		$table->SoftDeletes();
+		});
+		}
+
+4. open model file in category file add this 
+	
+		use SoftDeletes;
+5. AND ADD this with imported 
+	
+		use Illuminate\Database\Eloquent\SoftDeletes;
+
+6. open user.php model file and copy code protected and paste here 
+
+		protected $fillable = [
+		    'user_id',
+		    'categories_name',
+		];
+        //no need password 
+7. Run migrate cmd then automaticaly created in database 
+
 			php artisan migrate
+8. Then create controller by this cmd 
+
 			php artisan make:controller Categorycontroller
+9. Now open route folder add route
+* include this:
+
+		use App\Http\Controllers\Categorycontroller;
+
+		Route::post('/category/add', [Categorycontroller::class,'Addcat'])->name('store.category');
+
+10. THen opne controller folder with categorycontroller file  then add this 
+* Under class area add this code 
+* Then create some filder in view 1st) admin 2nd) category 3rd) index file 
+
+		public function Allcat(){
+		return view('admin.category.index');
+		}
+* Save file and then for check click on all category link
+11. Then add code on index file 
+			
+			<x-app-layout>
+			<x-slot name="header">
+			<h2 class="font-semibold text-xl text-gray-800 leading-tight">
+			<!-- {{ __('Dashboard') }} -->
+			</h2>
+			</x-slot>
+			<div class="py-12">
+			<div class="container">
+			<div class="row">
+			<div class="col-md-8">
+			<div class="card">
+			<div class="card-header">All Category</div>
+			<table class="table">
+			<thead>
+			<tr>
+			<th scope="col">SL no</th>
+			<th scope="col">Name</th>
+			<th scope="col">Email</th>
+			<th scope="col">Created At</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+			<th scope="row"></th>
+			<td></td>
+			<td></td>
+			<td></td>
+			</tr>
+			</tbody>
+			</table>
+			</div>
+			</div>
+			<div class="col-md-4">
+			<div class="card">
+			<div class="card-header">Add Category</div>
+			<div class="card-body">														18. Form Validation & Show Custom Error Message
+			<form action="{{ route('store.category')}}" method="post">
+			@csrf
+			<div class="form-group">
+			<label for="exampleInputEmail1">Category Name</label>
+			<input type="email" name="category_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+			@error('category_name') 
+			<span class="text-danger">{{ $message }} </span>
+			@enderror 
+			<span></span>
+			</div>
+			<button type="submit" class="btn btn-primary">Add Category</button>
+			</form>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</x-app-layout> 
+
+12. 18 Form Validation & Show Custom Error Message
+ 1. update designe i already updated  in above pasted code under 11 
+
+		public function Addcat(Request $request){
+		$validatedData = $request->validate([
+		'category_name' => 'required|unique:categories|max:255',
+		],
+		[
+		'category_name.required' => 'Please input category name',
+		'category_name.max' => 'Category less then 255 chars',
+		]);
+		}
+
+
 start from 19
