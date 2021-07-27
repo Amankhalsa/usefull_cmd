@@ -148,3 +148,82 @@ Version	Released on
         // dd($name , $age);
         return "Hello :". $name. " " .$age;
                                                     }
+
+
+
+# 27 Today i have learn these topics:
+* How to create Groups
+* Routes and middleware:
+* how to create resource
+* How to define middleware in controller ny constructor
+* Practical cmds:
+
+* 1. Recap:
+
+* set parameter
+
+        echo route('test',['name'=>'aman', 'age'=>29]);
+in form site i used this below code :
+
+        <a href="{{ route('test',['name'=>'aman', 'age'=>29]) }}">Link</a>
+ 
+* in controller site  i used this :
+
+        public function showForm()
+        {
+        echo route('test',['name'=>'aman', 'age'=>29]);
+            }
+
+        To view list:
+            php artisan route:list
+        Make resource Controller:
+            php artisan make:controller PostController --resource
+ name shoul be define in routes:   like this ->name('test');
+ * for practical i created mylink.php file check it 
+
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+2. Routes and middleware:
+* How to create Groups:
+* Open web. php add this below example method 
+            
+            Route::name('users.')->group( function() {
+                Route::get('/sign-up', [SignupController::class,'showForm']);
+                Route::view('about', 'about')->name('about');  
+            });
+
+-------------------------------------------------------------------------------------
+
+
+3. How to Make resource Controller use this cmd:
+
+                php artisan make:controller PostController --resource
+* when in created this resource controller then 
+
+* 1. Created  new file in  view by name create_post.balde.php then define in $this under create like this 
+* bellow is resource  controller code:
+
+                public function create()
+                {
+            //  i redirected to this file  
+                    return view('create_post');
+                    }
+
+* 2. In web.php i typed this line:
+
+        Route::resource('posts', PostController::class); 
+
+* 3. i created a page in view  this file 
+
+        create_post.blade 
+-------------------------------------------------------------------------------------
+
+4.  New method to define middle ware in controller by  constructor if you use 
+
+ 
+            public function __construct()
+                {
+                    $this->middleware('checkUser')->only(['addUser']);
+                }                                                                    
+
+* this will be apply for all below functions:
