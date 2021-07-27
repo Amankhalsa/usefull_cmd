@@ -132,12 +132,12 @@ URL section 2nd Method:
 
 		npm install
 		npm run dev
-
 * Aman this is required if you wana to access default login & Register
 * 3rd: 
 		
 		npm install && npm run dev
 
+# then Create a database then migrate it or add DB name in .env file 
 		php artisan migrate
 
 
