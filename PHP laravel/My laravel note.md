@@ -6,7 +6,8 @@
 
 
 Version	Released on
-============================
+-------------------------------------------------------------------------------------
+
     Laravel 1	June 9, 2011
     Laravel 2	November 24, 2011
     Laravel 3	February 22, 2012
@@ -22,6 +23,8 @@ Version	Released on
 
 * link=> 
         https://www.w3schools.in/laravel-tutorial/history/
+-------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
 
 # 23-7-2021
 * HTTP Methods:
@@ -61,40 +64,29 @@ Version	Released on
                 <table>
                 <!-- <form action="{{ url('/create-user') }}" method="get"> -->
                 <form action="{{ url('/user-detail') }}" method="post">
-
                 @csrf
                 <tr><td>	
                 Student name:<br></td><td>
-
                 <input type="text" name="name"><br>
                 </td></tr>
                 <tr><td>
                 Class:<br></td><td>
-
                 <input type="text" name="class"><br>
                 </td></tr>
                 <tr><td>
                 Student age:<br></td><td>
-
                 <input type="text" name="age" maxlength="2"><br>
-
                 </td></tr>
                 <tr><td>
-
                 email:<br></td><td>
-
                 <input type="text" name="email" /><br>
                 </td></tr>
                 <tr><td>
-
                 Password:<br></td><td>
-
                 <input type="password" name="password"><br>
                 </td></tr>
                 <tr><td>
-
                 Submit:<br></td><td>
-
                 <input type="submit" name="submit"><br>
                 </td></tr>
                 </form>
@@ -103,19 +95,20 @@ Version	Released on
                 </html>
 * In Routes folder: we define 3 diff methods:
         
-        1st import this : 
+1.  import this : 
+        
         use App\Http\Controllers\SignupController;
-        2nd:
+2.  
         Route::view('/about', 'about');  //static 
         Route::get('/sign-up', [SignupController::class,'showForm'] );
 
 
         Route::post('/user-detail', [SignupController::class, 'addUser'] );
         // Route::get('/create-user', [SignupController::class, 'addUser'] );
-
-
+-------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
 # 26-7-2021
-        * Required:
+1. Required:
 
         Route::get('/test/{name}/{age}',[SignupController::class,'myfun']);
 
@@ -126,9 +119,9 @@ Version	Released on
         return "Hello :". $name. " " .$age;
                                                     }
 
-    * Optional URL:
+2. Optional URL:
 
-          public function myfun($name= 'Aman',$age=29){
+        public function myfun($name= 'Aman',$age=29){
                 // dd($name , $age);
                 return "Hello :". $name. " " .$age;
             }
