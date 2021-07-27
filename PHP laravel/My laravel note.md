@@ -225,5 +225,5 @@ in form site i used this below code :
                 {
                     $this->middleware('checkUser')->only(['addUser']);
                 }                                                                    
-
-* this will be apply for all below functions:
+ 
+* this will be apply for all below functions in you use ->only(['addUser']) this will be appply for selected.
