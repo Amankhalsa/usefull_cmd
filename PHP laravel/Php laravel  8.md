@@ -154,6 +154,8 @@ URL section 2nd Method:
 * in web.php we use this below code @ dashboard
 
 	 	Route::middleware(['auth:sanctum','verified'])->get('/dashboard',function(){
+
+		//Add this 
 	    $users=User::all();
 	    return view('dashboard',compact('users'));
 		})->name('dashboard');
