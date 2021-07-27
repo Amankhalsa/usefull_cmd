@@ -207,6 +207,16 @@ URL section 2nd Method:
 		{{Carbon\Carbon::parse($user->created_at)->diffforHumans()}}
 
 
+# by config.php below side yu can change eor see features like this below :
+
+	 'features' => [
+        // Features::termsAndPrivacyPolicy(),
+        // Features::profilePhotos(),
+        // Features::api(),
+        // Features::teams(['invitations' => true]),
+        Features::accountDeletion(),
+   	 ],
+
 
 # For Show user name and total User: 
 * Add this code in dashboard.php
