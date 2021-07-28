@@ -178,14 +178,27 @@ in form site i used this below code :
 ------------------------------------------------------------------------------------
 2. Routes and middleware:
 * How to create Groups:
+1. 
+
+        Route::middleware('checkUser')->group( function(){
+            //
+        });
+2. 
+
+        Route::group(['middleware'=>'checkUser', 'prefix'=>'abc'],function(){
+        Route::get('/sign-up', [SignupController::class,'showForm']);
+            });
+
+
 * Open web. php add this below example method 
-            
+
+3.           
             Route::name('users.')->group( function() {
                 Route::get('/sign-up', [SignupController::class,'showForm']);
                 Route::view('about', 'about')->name('about');  
             });
 
--------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
 
 
 3. How to Make resource Controller use this cmd:
@@ -220,3 +233,79 @@ in form site i used this below code :
                 }                                                                    
  
 * this will be apply for all below functions in you use ->only(['addUser']) this will be appply for selected.
+
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+# 28 7 21 
+* 1st topic used in database controller to view
+
+1. 
+        //in controller 
+        $data = ['name' => 'aman', 'age' => 39];
+        // 1st method 
+            // return view('signup',$data);
+        //2nd method we can use array
+        // return view('signup')->with('name','deep'); //deep is value
+        //3rd method
+        $name = 'abc';
+        $age = 29;
+        in compact we can use multiple variable
+        return view('signup', compact('data','name','age'));
+2. 
+        
+            in  view 
+            {{ $name='Aman'}}  
+            {{ $data['name'] }} <br>
+            {{ $data['age'] }} <br>
+            {{ $age }}                                                   
+
+* 2nd topic 
+        
+        <!DOCTYPE html>
+        <html>
+        <head>
+        <title></title>
+        </head>
+        <body>
+        <h1>Header </h1> 
+        
+        @include('layouts.header')
+        <h3>Contact us </h3>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        @include('layouts.fotter')
+
+        <h1>Fotter</h1>
+        </body>
+        </html>
+* 3rd is  views 
+
+        {{ $name='Aman'}}<br>
+        <ul>
+        @for( $i=1;$i<5; $i++)
+        <li>{{"$i My Name is ".$name }}</li>
+        @endfor
+
+        </ul>
+        @if($name=="aman") 
+        {{ 'true'}}
+        @else 
+        {{ "false"}}
+        @endif
+        <br>
+        @env('APP_NAME')
+        @endenv
+        @for($i=0; $i<=5; $i++)
+        {{"value ".$i }}<br>
+        @endfor
+
+        <script>
+        var name = '{{ $name }}';
+        alert(name);
+        </script>
+
