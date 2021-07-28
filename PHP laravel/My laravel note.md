@@ -222,7 +222,7 @@ in form site i used this below code :
 * 3. i created a page in view  this file 
 
         create_post.blade 
--------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
 
 4.  New method to define middle ware in controller by  constructor if you use 
 
@@ -283,7 +283,7 @@ in form site i used this below code :
         <h1>Fotter</h1>
         </body>
         </html>
-* 3rd is  views 
+* 3rd is  views syntax
 
         {{ $name='Aman'}}<br>
         <ul>
@@ -309,3 +309,5 @@ in form site i used this below code :
         alert(name);
         </script>
 
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
