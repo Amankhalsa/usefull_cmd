@@ -311,3 +311,364 @@ in form site i used this below code :
 
 ----------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------
+# My Practical code 
+* 1. Form  code
+
+
+        <!DOCTYPE HTML>  
+        <html>
+        <head>
+        <style>
+        .error {color: #FF0000;}
+        .green{color: green;}
+        </style>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        </head>
+        <body> 
+        <div class="container">
+        <div class="col-md-8">
+        <h2>PHP Form Validation Example</h2>
+        <p><span class="error">* required field</span></p>
+        <form method="post" action="{{ url('/output')}}">  
+        @csrf
+        Name: <input type="text" name="name">
+        <br><br>
+        E-mail: <input type="text" name="email">
+        <br><br>
+        Website: <input type="URL" name="website">
+        <br><br>
+        Comment:<span class="green">*</span><br>
+        <textarea name="comment" rows="5" 
+        cols="40"></textarea>
+        <br><br>
+        Gender:
+        <input type="radio" name="gender" value="female">Female
+        <input type="radio" name="gender" value="male">Male
+        <br><br>
+        @if(session('sucess'))
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>{{session('sucess')}}</strong> 
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        @endif
+        <input type="reset" name="reset" value="Reset"><br><br>
+        <input type="submit" name="submit" value="Submit">  
+        </form>
+        </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+        </body>
+        </html> 
+
+* 2.  Make route "{{ url('/output')}}" with controller 
+
+* 3.  route code   
+            
+            qRoute::post('/output', [SignupController::class,'get_input']);
+
+* 4. controller code :
+
+        public function get_input(Request $request){
+        // $data =[$request->name, $request->email];
+        // return $data;
+        print_r("<h2> Name : ".$request->name. "</h2><br>").
+        print_r("<h2> Email : ".$request->email. "</h2><br>").
+        print_r("<h2> Website : ".$request->website. "</h2><br>").
+        print_r("<h2> Comment : ".$request->comment. "</h2><br>").
+        print_r("<h2> Gender : ".$request->gender. "</h2><br>");
+        die;
+        }
+ 
+5. IMG:
+
+
+
+# 29-7-21
+* In this session i have learn about laravel template inheritance concept 
+* 1. Create master file with below code 
+
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>@yield('title') - Website</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <style type="text/css">
+        .mystyle{
+        background-color: black;
+        font-size: 20px;
+        color: white;
+        font-weight: bolder;
+        }
+        li{
+        display: inline;
+        margin-left: 10px;
+        margin-right: 65px;
+        box-sizing: border-box;
+        }
+        a{
+        text-decoration: none;
+        color: white;
+        }
+        a:hover{
+        color: lightgray;
+        text-decoration: none;
+        }
+        body{
+        background-color: lightgray;
+        }
+        </style>
+        </head>
+        <body>
+        @yield('navbar')  
+        <!-- @section('navbar') -->
+        <div class="container">
+        <!-- Navbar start  -->
+        <nav class=" navbar-expand-lg  navbar navbar-dark mystyle sticky-top">
+        <a class="navbar-brand" href="{{url ('/gallery')}}"><i class="fa fa-apple col-5" style="font-size:30px;color:white;"></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        <li class="nav-item" >
+        <a href="{{ route('mac')}}">Mac</a>
+        </li>
+        <li class="nav-item">
+        <a href="">ipad</a>
+        </li>
+        <li class="nav-item">
+        <a href="https://localhost/phpmyadmin/" target="_blank">PHP Admin</a>
+        <!--    </li>
+        <li class="nav-item">
+        <a href="">TV</a>
+        </li> -->
+        <li class="nav-item">
+        <a href="{{route('dbstore')}}">Data base</a>
+        </li>
+        <li class="nav-item">
+        <a href="{{route('contact_us')}}">Contact us</a>
+        </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        </form>
+        </div>
+        </nav>
+        @section('subtitle')
+        <center><h4>Welcome </h4></center>
+        @show
+        @yield('para')
+
+        @if(Request::is('gallery'))
+        <center><h1>laravel</h1></center>
+        <div class="row">
+        <div class="col ">
+        <h2>Laravel 8</h2>
+        <p>
+        Laravel 8 continues the improvements made in Laravel 7.x by introducing Laravel Jetstream, model factory classes, migration squashing, job batching, improved rate limiting, queue improvements, dynamic Blade components, Tailwind pagination views, time testing helpers, improvements to artisan serve, event listener improvements, and a variety of other bug fixes and usability improvements..</p>
+        </div>
+        <div class="col ">
+        <h2>Laravel Jetstream</h2>
+        <p> 
+        Laravel Jetstream was written by Taylor Otwell. 
+        Laravel Jetstream is a beautifully designed application scaffolding for Laravel. Jetstream provides the perfect starting point for your next project and includes login, registration, email verification, two-factor authentication, session management, API support via Laravel Sanctum, and optional team management. Laravel Jetstream replaces and improves upon the legacy authentication UI scaffolding available for previous versions of Laravel.</p>
+        </div>
+        </div>
+        @endif
+        @if(!Request::is('database'))
+
+        <div class="jumbotron jumbotron-fluid bg-gray">
+        <div class="container">
+        <center>
+        <a class="navbar-brand" href="{{url ('/gallery')}}"><i class="fa fa-apple col-5" style="font-size:30px;color:black;"></i></a></center>
+        <center> <h1 class="display-4">
+        Footer section </h1></center>
+        <p class="lead">
+        <div class="row">
+        <div class="col" ><h2><a href="{{ route('mac')}}" style="color: blue;"> Mac</a></h2></div>
+        <div class="col"><h2><a href="" style="color: blue;"> ipad</a></h2></div>
+        <div class="col"><h2><a href="" style="color: blue;"> iphone</a></h2></div>
+        <div class="col"><h2><a href="{{route('contact_us')}}" style="color: blue;"> Contact us</a></h2></div>
+        </div>
+        </p>
+        </div>
+        <center>
+        <p>Copyright &copy; 2021 The Golden Roast.</p></center>
+        </div>
+        @endif
+        @yield('newtext')
+        <!-- containter end -->
+        @show
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        </script>
+        </body>
+        </html>
+
+2. Child code 
+
+        @extends('layouts.master')
+        @section('title', 'Mac')
+        @section('navbar')
+        @section('subtitle')
+
+        @parent
+        <center>
+        <h1>Mac</h1></center>
+        <table class="table">
+        <thead>
+        <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+        </tr>
+        <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+        </tr>
+        <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+        </tr>
+        </tbody>
+        </table>
+
+        <!-- media -->
+        <ul class="list-unstyled">
+        <li class="media">
+        <img src="https://source.unsplash.com/100x100/?Laravel,laravel" class="mr-3" alt="...">
+        <div class="media-body">
+        <h5 class="mt-0 mb-1">Why Laravel?</h5>
+        <p>There are a variety of tools and frameworks available to you when building a web application. However, we believe Laravel is the best choice for building modern, full-stack web applications.</p>
+        </div>
+        </li>
+        <li class="media my-4">
+        <img src="https://source.unsplash.com/100x100/?Environment,engineer" class="mr-3" alt="...">
+        <div class="media-body">
+        <h5 class="mt-0 mb-1">Environment Configuration</h5>
+        <p>
+        It is often helpful to have different configuration values based on the environment where the application is running. For example, you may wish to use a different cache driver locally than you do on your production server.</p>
+        </div>
+        </li>
+        <li class="media">
+        <img src="https://source.unsplash.com/100x100/?read,write" class="mr-3" alt="...">
+        <div class="media-body">
+        <h5 class="mt-0 mb-1">Read & Write Connections</h5>
+        <p>
+        Sometimes you may wish to use one database connection for SELECT statements, and another for INSERT, UPDATE, and DELETE statements. Laravel makes this a breeze, and the proper connections will always be used whether you are using raw queries, the query builder, or the Eloquent ORM.</p>
+        </div>
+        </li>
+        </ul>
+        <!-- end media  -->
+
+        @section('para')
+        @endsection
+        @endsection
+        @section('newtext')
+        @stop
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# 30-7-21 
+
+* Darabase concept :
+
+* 1. Query builder 
+
+* 2. Eloquent ORM
+
+* 3. Make database with table student 
+
+* 4. Add db name in env file 
+
+# Practical code :
+
+* Make model with 
+        
+        php artisan make:model Post
+* Roule Model file name shoulb be capital
+* if you have other new table  example use below code
+
+
+        protected $table = 'student';
+        // protected $primarKey = 'id';
+        protected $fillable = [
+        'Name',
+        'Email',
+        'Roll', 
+        'Phone', 
+        ];
+* can copy from user model file
+
+2. Make controller 
+* Add this imoprt path 
+
+            use App\Models\Post;
+            use DB; // used for query builder 
+3.  controller DB code :
+* Query builder 
+
+        public function db_add(Request $request){
+        // Post::insert([
+        //          'Name' => $request->name,
+        //          'Email' => $request->email,
+        //          'Roll' => $request->number,
+        //          'Phone' => $request->phone
+        //      ]);
+        // $result =
+
+* Eloquent ORM
+
+        DB::table('student')->insert([
+        'Name' => $request->name,
+        'Email' => $request->email,
+        'Roll' => $request->number,
+        'Phone' => $request->phone
+        ]);
+        return redirect()->back()->with('sucess', 'Data inserted sucessfull');
+        }
+ 4. Make two routes :
+* import this two files 1st :
+
+        use App\Http\Controllers\PostController;
+        use App\Http\Controllers\dbpost;
+
+        Route::get('/database', function () {
+            return view('db_store');
+        })->name('dbstore');
+
+        Route::post('/store',[dbpost::class,'db_add'])->middleware('empty_input')->name('store');
+
+* Can use middleware: 
+ 
+            if($request->get('name')=="")
+            // echo "<h1>Condition is true</h1>";
+            return redirect('/database')->with('error', 'Please enter full detail');
+        else
+            return $next($request);
+# ------------------  end this session  ------------------------------- 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
