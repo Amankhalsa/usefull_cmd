@@ -430,7 +430,77 @@ URL section 2nd Method:
 		</div>
 		@endif
 		<!-- end message block  -->
--------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
 <!-- end this 19. Eloquent ORM Insert Data -->
--------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+# 3rd method to insert data by query builder way 
+* Import this  first for this operation 
+		
+		use Illuminate\Support\Facades\DB;
 
+            $data = array();
+            $data['categories_name']= $request ->categories_name;
+            $data['user_id']=Auth::user()->id;
+            DB::table('categories')->insert($data);
+    	return redirect()->back()->with('sucess', 'Category inserted sucessfull');
+        }
+
+----------------------------------------------------------------------------------
+<!-- end this 20. Query builder way to  Insert Data -->
+----------------------------------------------------------------------------------
+# 21.  Eloquent ORM Read Data
+* 1st need controller code :
+	
+			public function Allcat(){    
+        $cate = Category::Latest()->get(); // for fast latest added entry above
+        // $cate = Category::all();  we can use this 
+        return view('admin.category.index',compact('cate'));
+    		}
+ * 2nd need index page code like this below:
+
+		@php( $i =1)
+		@foreach($cate as $category)
+		<tr>
+		<th scope="row">{{$i++}}</th>
+		<td class="text-success font-weight-bold">{{ strtoupper($category->categories_name)}} </td>
+		<td class="font-weight-bold">{{ $category->user_id}}</td>     
+		<!-- if you use query builder use this method for human date  -->
+		<td class="font-weight-bold"> @if($category->created_at == NULL)
+		<span class="text-danger">No date set</span>
+		@else
+		{{Carbon\Carbon::parse($category->created_at)->diffforHumans()}}
+		@endif
+		</td>
+		</tr>
+		@endforeach
+# extra feature 
+
+		Hi... <B > 
+		<span style="text-transform: uppercase; color: green;">
+		{{ Auth::user()->name}}
+		</span></B>
+		<b style='float: right;'>Total items:
+		<span class="badge badge-danger"> {{count($cate)}}</span>
+		</b>
+------------------------------------------------------------------------------
+<!-- end this 21.  Eloquent ORM Read Data -->
+------------------------------------------------------------------------------
+# 22. Query Builder Read Data method:
+
+	$cate = DB::table('categories')->Latest()->get();
+
+# 23. Laravel Pagination
+* Controller code 
+1. with query builder 
+   
+        $cate = DB::table('categories')->Latest()->paginate(5);
+2. 	El ORM
+
+        $cate = Category::Latest()->paginate(5);
+ 3. Index file code after table:
+		
+		{{$cate ->Links()}}														
+
+4. Serial nubmer order 1 to 16
+
+		<th scope="row">{{ $cate->firstitem()+$loop->index}}</th>
