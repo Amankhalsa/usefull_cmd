@@ -671,6 +671,242 @@ in form site i used this below code :
             return $next($request);
 # ------------------  end this session  ------------------------------- 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Student Db CRUD Operation:
+* Routes example code: 
+* ========================= Student Crud Start =========================
+// update page showing by this 
+
+        Route::get('/mac', [dbpost::class,'mac_view'])->name('view_data');
+
+        Route::post('/store',[dbpost::class,'db_add'])->middleware('empty_input')->name('store');
+//showing data in option del 
+    
+    Route::get('/updatedata/{id}', [dbpost::class,'aman_view'])->name('Updata2');
+
+    Route::post('/my_del', [dbpost::class,'my_del'])->name('my_del');
+
+    Route::post('/data_updated', [dbpost::class,'edited'])->name('new_up');
+
+    Route::post('/deleted', [dbpost::class,'sam_del'])->name('sammy_dell');
+* ========================= Student Crud End =========================
+
+
+# Student CRUD Controller example code;
+* 1 view page controller code :
+
+        public  function mac_view(){
+        //ORM method 
+        $get_data = Student::all();
+        return view('/mac',compact('get_data'));
+        }
+
+* 2 Data store method by request
+
+        public function db_add(Request $request){
+        Student::insert([
+        'Name' => $request->name,
+        'Email' => $request->email,
+        'Roll' => $request->number,
+        'Phone' => $request->phone
+        ]);
+        // $result = 
+      
+        //Query builder method to insert data in DB
+        //   DB::table('student')->insert([
+        //        'Name' => $request->name,
+        //     'Email' => $request->email,
+        //     'Roll' => $request->number,
+        //     'Phone' => $request->phone
+        // ]);
+        return redirect()->route('view_data')->with('sucess', 'Data inserted sucessfull');                                                                                              }
+
+* 3 Edit code :
+
+        public function edited(Request $request){
+        Student::where('id', $request->id)->update([
+        'Name' => $request->name,
+        'Roll' => $request->number,
+        'Phone' => $request->phone
+        ]);
+        return redirect()->route('view_data')->with('update', 'Data Updated sucessfull');
+        }
+* fill data in update page :
+
+        public function aman_view($id){
+            $get_show  = Student::findOrFail($id);
+            return view('update',compact('get_show'));
+        }
+* 4 Delete method 
+
+        public function sam_del(Request $request){
+        Student::where('id', $request->id)->delete();
+        return redirect()->back()->with('update', 'Data Deleted sucessfull');
+        }
+
+
+# View Page example code in blade.php format 
+* 1st table data
+        <center>
+        <h1>View Data</h1></center>
+        <b style="float: left;">Total Students:
+        <span class="badge badge-danger">{{count($get_data)}} </span></b><br><br>
+        @if(session('update'))
+        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+        <strong>{{session('update')}}</strong> 
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        @endif
+        
+        <table class="table">
+        <thead>
+        <tr class="bg-dark text-white">
+        <th scope="col">Sl no</th>
+        <th scope="col">Roll no</th>
+        <th scope="col">Student name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Created At</th>
+        <th scope="col">Updated At</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        @foreach( $get_data as $seen_data)
+        <tr>
+        <th>{{ $loop->index+1}}</th>
+        <th scope="row">{{$seen_data->Roll}}</th>
+        <td class="text-success font-weight-bold">{{ucwords($seen_data->Name)}}</td>
+        <td class="text-primary font-weight-bold">{{$seen_data->Email}}</td>
+        <td class="font-weight-bold">{{$seen_data->Phone}}</td>
+        <td class="font-weight-bold">
+        {{Carbon\Carbon::parse($seen_data->created_at)->diffForHumans()}}
+        </td>
+        <td class="font-weight-bold">
+        {{Carbon\Carbon::parse($seen_data->updated_at)->diffForHumans()}}
+        </td>
+        <td class="font-weight-bold"> 
+        <center>
+        <a href="{{route('Updata2',$seen_data->id)}}" onclick="alert('Do You want to edit');"> <span class="btn btn-info">Edit</span></a>
+        </center></td>
+        <td class="font-weight-bold ">
+        <form method="post" action="{{ route('sammy_dell')}}" onsubmit="confirm('Do You want to Delete');">
+        @csrf
+        <input type="hidden" value="{{ $seen_data->id}}" name="id">
+        <input type="Submit" name="Delete" class=" btn btn-danger" value="Delete">
+        </form>
+        </td>
+        <!-- ->diffForHumans() -->
+        </tr>
+        @endforeach
+        </tbody>
+        </table>
+
+
+# 2nd update page example code:
+
+        <div class="container">
+        <div class="row">
+        <div class="col ">
+        <h3>Data update section:</h3>
+        <form method="post" action="{{route('new_up')}}">
+        @csrf
+        <input type="hidden" value="{{ $get_show->id}}" name="id">
+        <div class="row">
+        <div class="col border border-dark ">
+        <label for="name"> Student Name:</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your Name" value="{{ $get_show->Name}}">
+        <label for="name"> Roll No:</label>
+        <input type="text" class="form-control" id="id_number" name="number" placeholder="Enter your Roll no 0-99" maxlength="2" value="{{ $get_show->Roll}}">
+        <label for="Email">Email Id:</label>
+        <input type="Email" class="form-control bg-warning" id="" name="email" placeholder="Enter 10 digits  Phone Number " maxlength="10" value="{{ $get_show->Email}}" disabled="">   
+        <label for="phone">Phone Number:</label>
+        <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter 10 digits  Phone Number " maxlength="10" value="{{ $get_show->Phone}}">
+        <!-- alert -->
+        @if(session('error'))
+        <div class="alert alert-danger  alert-dismissible fade show" id="alert-success" role="alert">
+        <strong>{{session('error')}}</strong> 
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+        </div> 
+        @endif
+        <!-- end alert -->
+        <br>
+        Submit:        <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+        </div>   
+        </form><br>
+        <!-- end 1st fom -->
+        </div>
+        </div>
+        </div>
+
+# 3rd view student crud  store DB
+
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>{{session('sucess')}}</strong> 
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        @endif
+
+        <h1 class="text-center">DB Store</h1>
+        <form method="post" action="{{url('/store')}}"><
+        @csrf
+
+        <div class="row">
+        <div class="col">
+        <!-- <div class="form-group"> -->
+        <label for="name"> Student Name:</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your Name">
+        <!-- </div> -->
+
+
+        <!-- <div class="form-group"> -->
+        <label for="email">Email address:</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email">
+        </div>
+        <div class="col">
+        <!-- </div> -->
+        <!-- <div class="form-group"> -->
+        <label for="name"> Roll No:</label>
+        <input type="text" class="form-control" id="id_number" name="number" placeholder="Enter your Roll no 0-99" maxlength="2">
+
+
+        <!-- </div> -->
+        <!-- <div class="form-group"> -->
+        <label for="phone">Phone Number:</label>
+        <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter 10 digits  Phone Number " maxlength="10">
+        <!-- </div> -->
+        </div>
+        <!-- <div class="col"> -->
+
+
+        <!-- <div class="form-group"> -->
+        <!--  <label for="desc">Tell me about what you want to contact me for...</label>
+        <textarea class="form-control" id="desc" rows="3" name="desc"></textarea> -->
+        <!-- </div> -->
+
+
+        </div>     
+        @if(session('error'))
+        <div class="alert alert-danger  alert-dismissible fade show" id="alert-success" role="alert">
+        <strong>{{session('error')}}</strong> 
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        @endif
+        <br>
+        <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+
+
 # Crud Opeation for post description in data base
 
 //=====================post DB methods start here for DB con===================
@@ -871,7 +1107,7 @@ in form site i used this below code :
     </form>
     </div>
     @endsection
-# ============== END Crud Opeation for post description in data base =============
+# ============== END Crud Opeation for post description in data base ============
 
 
 # ==============Query builder relation method for join table============== 
