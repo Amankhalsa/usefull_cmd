@@ -674,7 +674,7 @@ in form site i used this below code :
 # Student DB CRUD Operation:
 
 # =============== Student Crud Start ===============
-* Routes example code: 
+# Student CRUD Routes example code: 
 
 // update page showing by this 
 
@@ -746,7 +746,7 @@ in form site i used this below code :
         }
 
 
-# View Page example code in blade.php format 
+# Student CRUD View Page example code in blade.php format 
 * 1st table data
 
         <center>
