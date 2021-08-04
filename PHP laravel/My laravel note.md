@@ -907,7 +907,8 @@ in form site i used this below code :
         <button class="btn btn-primary" type="submit">Submit</button>
         </form>
 # ==============Student DB CRUD End ==============
-
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
 # Crud Opeation for post description in data base
 
 //=====================post DB methods start here for DB con===================
@@ -1108,10 +1109,10 @@ in form site i used this below code :
     </form>
     </div>
     @endsection
-# ============== END Crud Opeation for post description in data base ============
-
-
-# ==============Query builder relation method for join table============== 
+# ==== END Crud Opeation for post description in data base ==== 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+# ====  Query builder relation method for join table ==== 
     //Controller code
     public function qbRelation()
     {
