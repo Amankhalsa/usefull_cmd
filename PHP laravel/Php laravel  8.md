@@ -504,3 +504,30 @@ URL section 2nd Method:
 4. Serial nubmer order 1 to 16
 
 		<th scope="row">{{ $cate->firstitem()+$loop->index}}</th>
+
+# 24. Eloquent ORM One To One Relationships
+* 1st need in category model class one function 
+	
+		    public function user(){
+			return $this->hasOne(User::class,'id','user_id');
+			}
+
+* 2nd need ORM way in controller like this 
+
+	   		public function Allcat(){
+
+	        $cate = Category::Latest()->paginate(5); 
+	        return view('admin.category.index',compact('cate'));
+	    	}														
+* 3rd in index page  required user method with bellow example:
+	
+		<td class="font-weight-bold">{{ $category->user->name}}</td> 				
+# 25. Query Builder Join & relation Table 
+
+
+	 <td class="font-weight-bold">{{ $category->name}}</td>   
+
+* 2ND  IN CONTROLLER SECTION join code relation:
+
+		public function Allcat(){
+		$cate = DB::table('categories')->join('users','categories.user_id','users.id')->select('categories.*','users.name')->Latest()->paginate(5);

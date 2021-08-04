@@ -671,4 +671,240 @@ in form site i used this below code :
             return $next($request);
 # ------------------  end this session  ------------------------------- 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Crud Opeation for post description in data base
+
+//=====================post DB methods start here for DB con===================
+* 1 featch Controller  method 
+
+        public function post_fm(){    
+        $Post_data = Post::all();
+        return view('post_form',compact('Post_data'));
+        }
+
+*  2 insert Controller method
+
+        public function db_post_store( Request $request){
+        Post::insert([
+        'title'=>$request->title,
+        'description'=>$request->description
+        ]);
+        return redirect()->back()->with('postdata', 'Post data inserted sucessfull');
+        }
+
+* 3 Update Controller method 
+  
+        public function post_edit(Request $req){
+        Post::where('id', $req->id)->update([
+                'title'=> $req->title,
+                'description' => $req->description
+        ]);
+        return redirect()->route('post_myfom')->with('update', 'Data Updated sucessfull');
+        }
+* 4 Fill data  Controller method 
+
+        public function db_fill($id){
+        $post_fill= Post::findOrFail($id);
+        return view('post_update',compact('post_fill'));
+        }
+
+
+
+* 5 Delete Controller method 
+
+        public function db_delet(Request $request){
+        Post::where('id', $request->id)->delete();
+        return redirect()->back()->with('update', 'Data Deleted sucessfull');
+        }
+//=====================post methods end =======================
+# web Routes for Post description DB
+// ===========================Start Post routes ===========================
+    
+    Route::get('/post_form', [dbpost::class,'post_fm'])->name('post_myfom');
+
+//DB post for add in data base entry :
+    
+    Route::post('/dbpost', [dbpost::class,'db_post_store'])->name('db_post');
+
+//Db update : 
+    
+    Route::get('/updating/{id}', [dbpost::class,'db_fill'])->name('db_up_data');
+
+//Db edit :
+    
+    Route::post('/db_edit', [dbpost::class,'post_edit'])->name('dbedit');
+
+//delete method :
+    
+    Route::post('/db_deleted', [dbpost::class,'db_delet'])->name('db_dell');
+// ===========================end Post routes ===========================
+
+# For View  required files and code :
+1.  Featch And store  data code 
+        
+        @extends('layouts.master')
+        @section('title', 'Post')
+        @section('subtitle')
+
+        <div class=container>
+        <h1>Post Description Page:</h1>
+        <b style="float: right;">
+        Total:
+        <span class="badge badge-danger">
+        {{count($Post_data)}}
+        </span>
+        </b>
+        <br>
+        @if(session('update'))
+        <div class="alert alert-primary  alert-dismissible fade show" id="alert-success" role="alert">
+        <strong>{{session('update')}}</strong> 
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+        </div> 
+        @endif
+
+        <form method="post" action="{{route('db_post')}}">
+        @csrf
+        
+        <input type="hidden" value="" name="id">
+        
+        <div class="row">
+        <div class="col ">
+        <label for="name"> Title :</label>
+        <input type="text" class="form-control" id="name" name="title" placeholder="Enter Title Name" value="">
+        <label for="name">Desctiptions:</label>
+        <input type="text" class="form-control" id="id_number" name="description" placeholder="Enter your Discriptions"  value="">
+
+        <!-- alert -->
+        @if(session('error'))
+        <div class="alert alert-danger  alert-dismissible fade show" id="alert-success" role="alert">
+        <strong>{{session('error')}}</strong> 
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+        </div> 
+        @endif
+        <!-- end alert -->
+        
+        <br>
+        Submit:        <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+        </div>   
+        </form>
+        <!-- table -->
+        <table class="table table-striped">
+        <thead>
+        <tr class="bg-dark text-white">
+        <th scope="col">ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Desription</th>
+        <th scope="col">Created at </th>
+        <th scope="col">Updated  at </th>
+        <th scope="col">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach($Post_data as $get_data)
+        <tr>
+        <th scope="row">{{$get_data->id}}</th>
+        <td class="text-danger font-weight-bold">{{ucwords($get_data->title)}}</td>
+        <td class="font-weight-bold">{{ucwords($get_data->description)}}</td>
+        <td class="font-weight-bold">{{Carbon\Carbon::parse($get_data->created_at)->diffForHumans()}}</td>
+        <td class="font-weight-bold">{{Carbon\Carbon::parse($get_data->updated_at)->diffForHumans()}}</td>
+        <td >
+        <span class="btn btn-info">
+        <a href="{{route('db_up_data',$get_data->id)}}" class="font-weight-bold">Edit</a>
+        </span>
+        <span class="btn">
+        <form method="post" action="{{route('db_dell')}}" onsubmit="confirm('Do You want to Delete');">
+        @csrf
+        <input type="hidden" value="{{$get_data->id}}" name="id" >
+        <input type="Submit" name="Delete" class=" btn btn-danger font-weight-bold" value="Delete">
+        </form>
+        </span>
+        </td>
+        </tr>
+        @endforeach
+        </tbody>
+        </table>
+        <!-- table end -->
+        </div>
+        @endsection
+
+# For Delete we used in view page:
+
+    <form method="post" action="{{route('db_dell')}}" onsubmit="confirm('Do You want to Delete');">
+    @csrf
+    <input type="hidden" value="{{$get_data->id}}" name="id" >
+    <input type="Submit" name="Delete" class=" btn btn-danger font-weight-bold" value="Delete">
+    </form>
+
+# data update page for Post DB action 
+    @extends('layouts.master')
+    @section('title', 'Updating')
+    @section('subtitle')
+
+    <div class=container>
+    <div><h2>Data Updating section</h2></div>
+    @if(session('postdata'))
+    <div class="alert alert-success  alert-dismissible fade show" id="alert-success" role="alert">
+    <strong>{{session('postdata')}}</strong> 
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+    </button>
+    </div> 
+
+    @endif
+    <form method="post" action="{{ route('dbedit')}}">
+    @csrf
+    <input type="hidden" value="{{ $post_fill->id}}" name="id">
+    <div class="row">
+    <div class="col ">
+    <label for="name"> Title :</label>
+    <input type="text" class="form-control" name="title" placeholder="Enter Title Name" value="{{$post_fill->title}}">
+    <label for="name">Desctiptions:</label>
+    <input type="text" class="form-control" name="description" placeholder="Enter your Discriptions"  value="{{$post_fill->description}}">
+    <br>
+    Submit:<button class="btn btn-primary" type="submit">Submit</button>
+    </div>
+    </div>   
+    </form>
+    </div>
+    @endsection
+# ============== END Crud Opeation for post description in data base =============
+
+
+# ==============Query builder relation method for join table============== 
+    //Controller code
+    public function qbRelation()
+    {
+    # code...
+    $data = DB::table('students')
+    ->join('courses','students.id','=','courses.student_id')
+    //  ->join('attendances', ' students.id', '=', 'attendances.student_id')
+    ->where('students.id',6)
+    ->get();
+    return view('cources',compact('data'));
+    }
+
+# Route code:
+        Route::get('/qb_relation', [dbpost::class,'qbRelation'])->name('qb_rel');
+# View Code:
+
+    @foreach($data as $get_data)
+    <tr>
+      <td scope="row"> {{ $loop->index+1 }}</td>
+      <td class="text-danger font-weight-bold">
+        {{ $get_data->course_name }}
+       </td>
+    </tr>                                                                         @endforeach
+# ORM Topics:
+    table student -> table course //relationship - function
+    //qb join query
+
+* types of relations
+1. One to One
+2. Inverse One to one
+3. One to Many
+4. Many to Many
 
