@@ -746,6 +746,7 @@ in form site i used this below code :
 
 # View Page example code in blade.php format 
 * 1st table data
+
         <center>
         <h1>View Data</h1></center>
         <b style="float: left;">Total Students:
@@ -905,7 +906,7 @@ in form site i used this below code :
         <br>
         <button class="btn btn-primary" type="submit">Submit</button>
         </form>
-
+# ==============Student DB CRUD End ==============
 
 # Crud Opeation for post description in data base
 
