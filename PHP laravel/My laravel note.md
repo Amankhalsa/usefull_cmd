@@ -671,9 +671,11 @@ in form site i used this below code :
             return $next($request);
 # ------------------  end this session  ------------------------------- 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Student Db CRUD Operation:
+# Student DB CRUD Operation:
+
+# =============== Student Crud Start ===============
 * Routes example code: 
-* ========================= Student Crud Start =========================
+
 // update page showing by this 
 
         Route::get('/mac', [dbpost::class,'mac_view'])->name('view_data');
