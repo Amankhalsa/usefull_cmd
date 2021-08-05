@@ -1177,8 +1177,11 @@ in form site i used this below code :
     table student -> table course //relationship - function
     //qb join query
 
-* types of relations
-1. One to One 
+* ========================== Start relations ==============================
+
+# Types of relations
+
+# 1. One to One 
             
             use Illuminate\Database\Eloquent\Model;
             use App\Models\Course;
@@ -1198,8 +1201,9 @@ public function course_add($sid){
 * 3rd Route code 
 
         Route::get('/course_add/{id}', [dbpost::class,'course_add'])->name('Course_add');
-=======================================================
-2. Inverse One to one
+* ========================================================
+
+# 2. Inverse One to one
 * Import this-> 
 * This willbe used in child model class, used for  child to parent relation 
         use App\Models\Students;
@@ -1219,8 +1223,9 @@ public function course_add($sid){
 * 3rd Route code 
 
         Route::get('/child_to_p/{id}', [dbpost::class,'chd_to_pr'])->name('inverse_rel');
-=======================================================
-3. One to Many
+* ========================================================
+
+#  3. One to Many
 * 1st mode class method name 
 
         public function courses()
@@ -1236,7 +1241,7 @@ public function course_add($sid){
 * 3rd Route example code 
 
         Route::get('/course_add_many/{id}', [dbpost::class,'course_many'])->name('Course_add');
-=======================================================
+* =======================================================
 
-4. Many to Many
+#  4. Many to Many
 
