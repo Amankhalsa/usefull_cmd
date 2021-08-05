@@ -6,7 +6,7 @@
 
 
 Version	Released on
--------------------------------------------------------------------------------------
+----------------------------------------------------------------------------
 
     Laravel 1	June 9, 2011
     Laravel 2	November 24, 2011
@@ -23,8 +23,8 @@ Version	Released on
 
 * link=> 
         https://www.w3schools.in/laravel-tutorial/history/
--------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
 
 # 23-7-2021
 * HTTP Methods:
@@ -105,8 +105,8 @@ Version	Released on
 
         Route::post('/user-detail', [SignupController::class, 'addUser'] );
         // Route::get('/create-user', [SignupController::class, 'addUser'] );
--------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
 # 26-7-2021
 1. Required:
 
@@ -174,8 +174,8 @@ in form site i used this below code :
  name shoul be define in routes:   like this ->name('test');
  * for practical i created mylink.php file check it 
 
-------------------------------------------------------------------------------------
-------------------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
 2. Routes and middleware:
 * How to create Groups:
 1. 
@@ -198,7 +198,7 @@ in form site i used this below code :
                 Route::view('about', 'about')->name('about');  
             });
 
-----------------------------------------------------------------------------------
+----------------------------------------------------------------------------
 
 
 3. How to Make resource Controller use this cmd:
@@ -222,7 +222,7 @@ in form site i used this below code :
 * 3. i created a page in view  this file 
 
         create_post.blade 
-----------------------------------------------------------------------------------
+----------------------------------------------------------------------------
 
 4.  New method to define middle ware in controller by  constructor if you use 
 
@@ -234,8 +234,8 @@ in form site i used this below code :
  
 * this will be apply for all below functions in you use ->only(['addUser']) this will be appply for selected.
 
-----------------------------------------------------------------------------------
-----------------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
 # 28 7 21 
 * 1st topic used in database controller to view
 
@@ -309,8 +309,8 @@ in form site i used this below code :
         alert(name);
         </script>
 
-----------------------------------------------------------------------------------
-----------------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
 # My Practical code 
 * 1. Form  code
 
@@ -1138,13 +1138,105 @@ in form site i used this below code :
         {{ $get_data->course_name }}
        </td>
     </tr>                                                                         @endforeach
+# Query builder join and register example code 
+
+    public function qbRelation()
+    {
+    # code...
+    $data = DB::table('students')
+    ->join('courses','students.id','=','courses.student_id')
+    //  ->join('attendances', ' students.id', '=', 'attendances.student_id')
+    // ->where('students.id')
+    ->select('courses.*','students.Name')
+    ->get();
+    return view('cources',compact('data'));
+    }
+    public function co_reg($id){
+    $reg_fill= Student::findOrFail($id);
+    return view('course_reg',compact('reg_fill'));
+    }
+    public function course_reg(Request $request){
+    DB::table('courses')
+    ->join('courses','students.id','=','courses.student_id')->insert([
+    'student_id' => $request->id,
+    'course_name' => $request->course
+    ]);
+    return redirect()->route('qb_rel')->with('update', 'Course inserted sucessfull');
+    }
+
+# Routes 
+
+    Route::get('/qb_relation', [dbpost::class,'qbRelation'])->name('qb_rel');
+    //Register 
+    Route::get('/Register/{id}', [dbpost::class,'co_reg'])->name('co_reg');
+    Route::post('/reg_stration',[dbpost::class,'course_reg'])->name('rg_in');
+
+
+
 # ORM Topics:
     table student -> table course //relationship - function
     //qb join query
 
 * types of relations
-1. One to One
+1. One to One 
+            
+            use Illuminate\Database\Eloquent\Model;
+            use App\Models\Course;
+* 1st Open parent Model class add this code 
+
+        public function course()
+        {
+            return $this->hasOne(Course::class,); // one to one
+        }
+* 2nd Controller code is :
+
+public function course_add($sid){
+
+        $data = Student::find($sid)->course;
+        return $data;
+        }
+* 3rd Route code 
+
+        Route::get('/course_add/{id}', [dbpost::class,'course_add'])->name('Course_add');
+=======================================================
 2. Inverse One to one
+* Import this-> 
+* This willbe used in child model class, used for  child to parent relation 
+        use App\Models\Students;
+
+            public function student()
+            {
+                return $this->belongsTo(Student::class);
+                //for child to paresnt relationship  (inverse relation)
+            }
+ 
+* Controller code 
+
+        public function chd_to_pr($id){
+            $data = Course::find($id)->student;
+            return $data;
+        }
+* 3rd Route code 
+
+        Route::get('/child_to_p/{id}', [dbpost::class,'chd_to_pr'])->name('inverse_rel');
+=======================================================
 3. One to Many
+* 1st mode class method name 
+
+        public function courses()
+        {
+            return $this->hasMany(Course::class); // one to many
+        }
+* 2nd Controller example code:
+
+        public function course_many($sid){
+        $data = Student::find($sid)->courses;
+        return $data;
+        }
+* 3rd Route example code 
+
+        Route::get('/course_add_many/{id}', [dbpost::class,'course_many'])->name('Course_add');
+=======================================================
+
 4. Many to Many
 
