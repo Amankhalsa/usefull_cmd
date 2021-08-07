@@ -531,3 +531,4 @@ URL section 2nd Method:
 
 		public function Allcat(){
 		$cate = DB::table('categories')->join('users','categories.user_id','users.id')->select('categories.*','users.name')->Latest()->paginate(5);
+

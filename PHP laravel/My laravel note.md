@@ -1243,5 +1243,135 @@ public function course_add($sid){
         Route::get('/course_add_many/{id}', [dbpost::class,'course_many'])->name('Course_add');
 * =======================================================
 
-#  4. Many to Many
+# my View page practical code:
 
+* if you want to access student name from student table in course table 
+* in this way we will use child to parent method 
+       
+        public function student()
+        {
+            return $this->belongsTo(Student::class);
+            //for child to paresnt relationship  (inverse relation)
+        }
+
+* then in the route area 
+ * //ORM 2 
+        
+        // view page ORM 1
+        Route::get('/orm_rel_view', [dbpost::class,'orm_view'])->name('orm_rel');
+
+* Controller code :
+
+        public function orm_view(){
+        $orm_get_data= Course::all();
+        // dd($orm_get_data->first()->student);    
+        return view('orm_relation',compact('orm_get_data'));
+        }
+
+* view area code:
+
+        @foreach( $orm_get_data as $get_orm)
+        <tr>
+        <td scope="row" class="font-weight-bold"> {{$loop->index+1}} </td>
+        <td scope="row" class="font-weight-bold"> {{$get_orm->student_id}} </td>
+        <td scope="row" class="font-weight-bold">
+        {{$get_orm->student->Name}}
+        </td>
+        <td scope="row" class="text-danger font-weight-bold">
+        {{$get_orm->course_name}}
+        </td>
+        <td class="text-danger font-weight-bold">
+        <button class="btn btn-warning">Button</button>
+        <!--  <form method="post" action="" onsubmit="confirm('Do You want to Delete');">
+        @csrf
+        <input type="hidden" value="" name="id">
+        <input type="Submit" name="Delete" class=" btn btn-danger" value="Delete">
+        </form> -->
+        </td>
+        @endforeach
+        </tr>
+
+# in view area if you 
+* want to combine subject name in single ID 
+* you need same route and controller method will we change with view area code 
+
+* 1st controller code 
+
+        public function orm_view2(){
+        $orm_get_= Student::all();
+        // dd($orm_get_data->first()->student);    
+        return view('orm_relation2',compact('orm_get_'));
+        }
+* 2nd route code:
+
+        //ORM 2 
+        Route::get('/orm_rel_', [dbpost::class,'orm_view2'])->name('orm');
+
+* 3rd model classs code :
+
+        public function student()
+        {
+        return $this->belongsTo(Student::class);
+        //for child to paresnt relationship  (inverse relation)
+        }
+* 4th view page code with two loop
+
+        @foreach( $orm_get_ as $get_orm)
+        <tr>
+        <td scope="row" class="font-weight-bold"> {{$loop->index+1}} </td>
+        <td scope="row" class="font-weight-bold"> {{$get_orm->id}} </td>
+        <td scope="row" class="font-weight-bold">
+        {{$get_orm->Name}}
+        </td>
+       
+        <td scope="row" class="text-danger font-weight-bold">
+        @foreach($get_orm->courses as $course)
+        {{ $course->course_name }}
+        @endforeach
+        </td>
+
+        <td class="text-danger font-weight-bold">
+        <button class="btn btn-warning">Button</button>
+        <!--  <form method="post" action="" onsubmit="confirm('Do You want to Delete');">
+        @csrf
+        <input type="hidden" value="" name="id">
+        <input type="Submit" name="Delete" class=" btn btn-danger" value="Delete">
+        </form> -->
+        </td>
+        @endforeach
+        </tr>
+
+
+#  4. Many to Many
+* model class code 
+
+# 1st create Role model class then add below code:
+
+        public function users()
+        {
+        return $this->belongsToMany(User::class, 'users_role');
+        }
+
+* use previous User model class with same table name 
+
+        public function roles()
+        {
+        return $this->belongsToMany(Role::class, 'users_role');
+        }                                                                      
+
+# 2nd controller code:
+
+        public function user_role(){
+        //    $user = User::find(1);
+        $role = Role::find(1);
+        //return $user->roles; //->first()->name;
+        return $role->users;
+        }
+ 
+# 3rd Route example code :
+
+        // many to many route 
+        Route::get('/roles', [dbpost::class,'user_role'])->name('userrole');  
+
+# end many to many ORM method for assign role Principal teacher student 
+# ===============end many to many ORM =========================
