@@ -532,3 +532,154 @@ URL section 2nd Method:
 		public function Allcat(){
 		$cate = DB::table('categories')->join('users','categories.user_id','users.id')->select('categories.*','users.name')->Latest()->paginate(5);
 
+# 26  Eloquent ORM Edit & Update & Query Builder Edit & Update Data
+
+		public  function Edit($id){
+		//ORM 
+		// $cate2 = Category::find($id);
+		
+		//Query builder
+		$cate2=DB::table('categories')->where('id',$id)->first();
+		return view('admin.category.edit',compact('cate2'));
+		}
+	
+
+	public function update(Request $request,$id){
+		//ORM
+		//   $update=   Category::find($id)->update([
+		//         'categories_name'=>$request->categories_name,
+		//         'user_id'=>Auth::user()->id
+		// ]);
+		
+		//Query builder
+		$data= array();
+		$data['categories_name']=$request->categories_name;
+		$data['user_id']=Auth::user()->id;
+		DB::table('categories')->where('id',$id)->update($data);
+		return redirect()->route('all.Category')->with('sucess', 'Category updated sucessfull');
+		}
+
+
+# web Routes 
+
+		Route::get('/category/edit/{id}', [Categorycontroller::class,'Edit']);
+		Route::post('category/update/{id}', [Categorycontroller::class,'update']);
+
+# View page edit and delete button code :
+
+		</td>
+		<td class="font-weight-bold">
+		<a href="{{url('category/edit/'.$category->id)}}" class="btn btn-info">Edit</a>
+		<a href="{{url('softdelete/category/'.$category->id)}}" class="btn btn-danger">Delete</a>
+		</td> 
+
+# 28. Soft Delete ,Data Restore & ForceDelete Part 1
+* in controller side 
+
+    	public function Allcat(){
+        $cate = Category::Latest()->paginate(5); 
+        $trashcate = Category::onlyTrashed()->latest()->paginate(3); 
+        return view('admin.category.index',compact('cate','trashcate'));
+    	}
+
+* update view page for showing below side deleted data  example code of view 
+* Restore page code 
+
+		<tbody>
+
+		@foreach($trashcate as $category)
+		<tr>
+		<th scope="row">{{ $cate->firstitem()+$loop->index}}</th>
+		<td class="text-success font-weight-bold">{{ Ucwords($category->categories_name)}} </td>
+		<td class="font-weight-bold">{{ $category->user->name}}</td>     
+		<td class="font-weight-bold"> 
+
+		@if($category->created_at == NULL)
+		<span class="text-danger bd-highlight">No date set</span>
+		@else
+		{{Carbon\Carbon::parse($category->created_at)->diffforHumans()}}
+		@endif
+
+		</td>
+		<td class="font-weight-bold">
+		<a href="{{url('category/restore/'.$category->id)}}" class="btn btn-info">Restore</a>
+		<a href="{{url('pdelete/category/'.$category->id)}}" class="btn btn-danger">P Delete</a>
+		</td>     
+		</tr>
+		
+		@endforeach
+		</tbody>
+		</table>
+		{{$trashcate ->Links()}}
+
+# delete and restore 
+# Controller code del or restore:
+
+		public function Softdelete($id){
+		$delete= Category::find($id)->delete();
+		return  redirect()->back()->with('sucess', 'Category softdeleted sucessfull');
+		}
+		public function Restore($id){
+		$delete= Category::withTrashed()->find($id)->restore();
+		return  redirect()->back()->with('sucess', 'Category Restore sucessfull');
+		}
+		public function pdelete($id){
+		$delete =Category::onlyTrashed()->find($id)->forceDelete();
+		return  redirect()->back()->with('sucess', 'Category paramently deleteed ');
+		}
+# Web routes of del or restore :
+* import use App\Http\Controllers\Categorycontroller; 
+
+		Route::get('/softdelete/category/{id}', [Categorycontroller::class,'Softdelete']);
+		Route::get('/category/restore/{id}', [Categorycontroller::class,'Restore']);
+		Route::get('/pdelete/category/{id}', [Categorycontroller::class,'pdelete']);	
+
+# 30. Setup Brand Page
+* Add Menu bar  from navigation 
+
+# required new model class  Brand then add below method 
+* Import         use App\Models\Brand;
+
+		public function Allbrand(){
+		$get_brand =Brand::Latest()->paginate(5);
+		return view('admin.brand.index',compact('get_brand'));
+		} 
+
+# edit migration file then migrate it 
+
+	   public function up()
+	    {
+	        Schema::create('brands', function (Blueprint $table) {
+	            $table->id();
+	            $table->string('brand_name');
+	            $table->string('brand_image');
+	            $table->timestamps();
+	        });
+	    }
+
+# Brand Route  then import brand 
+
+	use App\Http\Controllers\Brandcontroller;
+
+		//for brand page 
+		Route::get('/brand/all', [Brandcontroller::class,'Allbrand'])->name('all.brand');
+
+# Brand view page code :
+
+	@foreach($get_brand as $brand)
+	<tr>
+	<th scope="row">{{ $brand->firstitem()+$loop->index}}</th>
+	<td class="text-success font-weight-bold">{{ ucwords($brand->brand_name)}} </td>
+	<td class="font-weight-bold"><img src="" alt=""></td>     
+	<td class="font-weight-bold"> @if($brand->created_at == NULL)
+	<span class="text-danger bd-highlight">No date set</span>
+	@else
+	{{Carbon\Carbon::parse($brand->created_at)->diffforHumans()}}
+	@endif
+	</td>
+	<td class="font-weight-bold">
+	<a href="{{url('brand/edit/'.$brand->id)}}" class="btn btn-info">Edit</a>
+	<a href="{{url('brand/delete/'.$brand->id)}}" class="btn btn-danger">Delete</a>
+	</td>     
+	</tr>
+	@endforeach 

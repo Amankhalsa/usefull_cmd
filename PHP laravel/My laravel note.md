@@ -1374,4 +1374,96 @@ public function course_add($sid){
         Route::get('/roles', [dbpost::class,'user_role'])->name('userrole');  
 
 # end many to many ORM method for assign role Principal teacher student 
-# ===============end many to many ORM =========================
+# =============== end many to many ORM =========================
+
+
+# Validation topic:
+* 1st we need controller 
+* 2nd view page form 
+
+* in contoller side we need this below code:
+
+        // ORM way to insert data by request 
+        public function db_add(Request $request){
+      
+        $request->validate( [
+        'name' => 'required|max:100',
+        'email' => 'required|email',
+        'phone' => 'required|digits:10',
+        'number' => 'required|integer'],
+      
+        //for Custom message 
+        [            'name.required' => 'name is neccessary']);
+      
+* 2nd Way  old method for check
+
+        //$validator = Validator::make($request->all(), ['name' => 'required']);
+        // if($validator->fails()) {
+        //     return redirect()->back()->withErrors($validator);
+        // }
+
+# view page code :
+
+        <div class="row">
+           @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+        </div>
+
+# for custom fields:
+
+        @if($errors->has('name'))
+        <span class="text-danger">{{ $errors->first('name') }}</span><br>
+        @endif                                                                     
+
+# 10 -8-2021
+* Import two class  Session & Cookie:
+
+        use Session;
+        use Cookie;
+        class Storage extends Controller
+        {
+        public function setData()
+        {
+        // forever for 5 year
+        // Cookie::queue(Cookie::forever('localFile', 'my name is aman'));
+        // for One min 
+        Cookie::queue('localFile', 'my name is aman',1);
+        return 'done';
+        }
+        public function getData()
+        {
+        // cookie del
+        Cookie::queue(Cookie::forget('localFile')); 
+        // cookie get
+        return Cookie::get('localFile', 'default value');
+        }  
+
+        //sesstion methods:
+        public function set_Data(){
+        $a = ['apple', 'banana', 'orange'];
+        Session::put('my_data', $a);
+        return 'done';
+        }  
+        public function get_Data(){
+        Session::forget('my_data');
+        dd(Session::has('my_data'));
+        return Session::get('my_data', 'def v');
+        // return 'my_data';
+        } 
+
+* 2nd Make diff diff reoutes to perform this actions 
+
+        Route::get('/storage/cokies', [Storage::class,'setData']);
+
+        Route::get('/get/cookies', [Storage::class,'getData']);
+
+        Route::get('/session/set', [Storage::class,'set_Data']);
+
+        Route::get('/session/get', [Storage::class,'get_Data']);
