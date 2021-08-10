@@ -1374,7 +1374,7 @@ public function course_add($sid){
         Route::get('/roles', [dbpost::class,'user_role'])->name('userrole');  
 
 # end many to many ORM method for assign role Principal teacher student 
-# =============== end many to many ORM =========================
+# ======= end many to many ORM ==========
 
 
 # Validation topic:
