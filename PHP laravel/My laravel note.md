@@ -1421,6 +1421,24 @@ public function course_add($sid){
         @if($errors->has('name'))
         <span class="text-danger">{{ $errors->first('name') }}</span><br>
         @endif                                                                     
+# 2nd way of validation with practical code:
+
+        $validatedData = $request->validate([
+        'brand_name' => 'required|unique:brands|min:4',
+        'brand_image' => 'required|mimes:jpg,jpeg,png',
+        ],
+        [
+        'brand_name.required' => 'Please input brand name',
+        'brand_image.min' => 'Category longer then 4 characters',
+        ]);
+
+# with Message variable:
+
+            @error('brand_name') 
+    <span class="text-danger">{{ $message }} </span>
+    @enderror 
+---------------------------------------------------------------------------
+---------------------------------------------------------------------------
 
 # 10 -8-2021
 * Import two class  Session & Cookie:
