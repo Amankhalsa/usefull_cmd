@@ -683,3 +683,277 @@ URL section 2nd Method:
 	</td>     
 	</tr>
 	@endforeach 
+# 31. Eloquent ORM Insert Image
+* import this use App\Models\Brand;
+* Make a new controller add validation 
+* import this 
+
+		use App\Models\Brand;
+		use Illuminate\Support\Carbon;
+
+		public function Allbrand(){
+		$get_brand =Brand::Latest()->paginate(5);
+		return view('admin.brand.index',compact('get_brand'));
+		}
+
+		public function storebrand(Request $request){
+		$validatedData = $request->validate([
+		'brand_name' => 'required|unique:brands|min:4',
+		'brand_image' => 'required|mimes:jpg,jpeg,png',
+
+		],
+		[
+		'brand_name.required' => 'Please input brand name',
+		'brand_image.min' => 'Category longer then 4 characters',
+
+		]);
+
+* Image store code:
+
+		$brand_image =$request->file('brand_image');
+		$name_gen= hexdec(uniqid());
+		$img_ext=strtolower($brand_image->getClientOriginalExtension());
+		$img_name=$name_gen.'.'.$img_ext;
+		$up_location= 'image/brand/';
+		$last_img=$up_location.$img_name;
+		$brand_image->move($up_location,$img_name);
+
+		Brand::insert([
+		'brand_name'=>$request->brand_name,
+		'brand_image'=>$last_img,
+		'created_at'=>Carbon::now()
+		]);
+		return redirect()->back()->with('sucess','Brand added successfully');
+		}
+
+#  2nd  config routes:
+
+		//for brand page 
+		Route::get('/brand/all', [Brandcontroller::class,'Allbrand'])->name('all.brand');
+
+		Route::post('/brand/add', [Brandcontroller::class,'storebrand'])->name('store.brand');			
+# 3rd view page code:
+
+	<form action="{{ route('store.brand')}}" method="post" enctype="multipart/form-data">
+ 	 @csrf
+	<div class="form-group">
+	<label for="exampleInputEmail1">brand Image</label>
+
+	<input type="file" name="brand_image" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+	
+	@error('brand_image') 
+	<span class="text-danger">{{ $message }} </span>
+	@enderror 
+
+	<span></span>
+	</div>																	
+*  Image showing code 
+ 
+ 		<td class="font-weight-bold"><img src="{{asset($brand->brand_image)}}" style="height:40px; width:50px;" alt=""></td> 
+
+# 4th Create new Model class with Brand  then add this 
+
+	use HasFactory;
+	protected $fillable = [
+	'brand_name',
+	'brand_image',
+	]; 
+
+# 5th update migration file of brand model 
+
+    public function up()
+    {
+        Schema::create('brands', function (Blueprint $table) {
+            $table->id();
+            $table->string('brand_name');
+            $table->string('brand_image');
+            $table->timestamps();
+        });
+    }																		
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+# 32. Eloquent ORM Edit,Update Data With Image & Without Image Part 1
+* open controller add this below code:
+
+		</td>
+		<td class="font-weight-bold">
+		<a href="{{url('brand/edit/'.$brand->id)}}" class="btn btn-info">Edit</a>
+		<a href="{{url('brand/delete/'.$brand->id)}}" class="btn btn-danger">Delete</a>
+		</td> 
+* After this :
+
+		public function Edit($id){
+		$brand=Brand::find($id);
+		return view('admin.brand.edit',compact('brand'));        
+		}																	
+
+* Route code:
+
+		Route::get('/brand/edit/{id}', [Brandcontroller::class,'Edit']);
+
+* edit view code:
+
+		<div class="py-12">
+		<div class="container">
+		<div class="row">
+		<div class="col-md-8">
+		<div class="card">
+		<div class="card-header">Edit Brand</div>
+		<div class="card-body">
+		<form action="{{ url('brand/update/'.$brand->id)}}" method="post">
+		@csrf
+		<div class="form-group">
+		<label for="exampleInputEmail1">Update brand Name</label>
+		<input type="text" name="brand_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$brand->brand_name}}">
+		@error('brand_name') 
+		<span class="text-danger">{{ $message }} </span>
+		@enderror 
+		</div>
+		<div class="form-group">
+		<label for="exampleInputEmail1">Update brand Image</label>
+		<input type="text" name="brand_image" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$brand->brand_image}}">
+		@error('brand_image') 
+		<span class="text-danger">{{ $message }} </span>
+		@enderror 
+		</div>
+		<div class="form-group">
+		<img src="{{asset($brand->brand_image)}}" style="width: 300px;height:200px;">
+		</div>
+		<button type="submit" class="btn btn-primary">Update brand</button>
+		</form>
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>
+----------------------------------------------------------------------------
+# 33. Eloquent ORM Edit,Update Data With Image & Without Image Part 2
+* 1st Controller code: use App\Models\Brand;
+
+		public function update_image(Request $request,$id){
+		$validatedData = $request->validate([
+		'brand_name' => 'required|min:4'
+		],
+		[
+		'brand_name.required' => 'Please input brand name',
+		'brand_image.min' => 'Category longer then 4 characters',
+		]);
+		$old_image =$request->old_image;
+		$brand_image =$request->file('brand_image');
+		
+		if($brand_image){
+		$name_gen= hexdec(uniqid());
+		$img_ext=strtolower($brand_image->getClientOriginalExtension());
+		$img_name=$name_gen.'.'.$img_ext;
+		$up_location= 'image/brand/';
+		$last_img=$up_location.$img_name;
+		$brand_image->move($up_location,$img_name);
+		unlink($old_image); 
+		//larvel function 
+		Brand::find($id)->update([
+		'brand_name'=>$request->brand_name,
+		'brand_image'=>$last_img,
+		'created_at'=>Carbon::now()
+		]);
+		return redirect()->back()->with('sucess','Brand updated successfully');
+		}
+
+		else{
+		Brand::find($id)->update([
+		'brand_name'=>$request->brand_name,
+		'created_at'=>Carbon::now()
+		]);
+		return redirect()->back()->with('sucess','Brand updated successfully');
+		}
+
+		}
+
+* 2nd Route code :
+			
+			use App\Http\Controllers\Brandcontroller;
+		// update image 
+		Route::post('brand/update/{id}', [Brandcontroller::class,'update_image']);
+
+* 3rd view paga code for updation:
+
+		<form action="{{ url('brand/update/'.$brand->id)}}" method="post" enctype="multipart/form-data">
+		<input type="hidden" name="old_image" value="{{$brand->brand_image}}">
+		@csrf
+		<div class="form-group">
+		<label for="exampleInputEmail1">Update brand Name</label>
+		<input type="text" name="brand_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$brand->brand_name}}">
+		@error('brand_name') 
+		<span class="text-danger">{{ $message }} </span>
+		@enderror 
+		</div>
+		<div class="form-group">
+		<label for="exampleInputEmail1">Update brand Image</label>
+		<input type="file" name="brand_image" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$brand->brand_image}}">
+		@error('brand_image') 
+		<span class="text-danger">{{ $message }} </span>
+		@enderror 
+		</div>
+		<div class="form-group">
+		<img src="{{asset($brand->brand_image)}}" style="width: 300px;height:200px;" >
+		</div>
+		<button type="submit" class="btn btn-primary">Update brand</button>
+		</form>
+---------------------------------------------------------------------------
+---------------------------------------------------------------------------
+# 34. Delete Data With Image
+
+* Controller code for delete
+
+		// delete function 
+		public function delete_img($id){
+		$image= Brand::find($id);
+		$old_image =$image->brand_image;
+		unlink($old_image);
+		Brand::find($id)->delete();
+		return redirect()->back()->with('sucess','Brand deleted successfully');
+		}
+ * 2nd delete Route example code:
+
+		Route::get('/brand/delete/{id}', [Brandcontroller::class,'delete_img']);
+* index view code:
+
+		<a href="{{url('brand/delete/'.$brand->id)}}" onclick="return confirm('Are you confirm for delete')" class="btn btn-danger">Delete</a>
+
+# 35. Image Insert & Resize With Intervention Package
+* Install package from this website 
+* http://image.intervention.io/getting_started/installation
+
+#  with these cmds
+//Install this 
+* composer require intervention/image
+
+* //Add this in  config/app.php  between Package Service Providers: 
+* Intervention\Image\ImageServiceProvider::class
+* add this in 'aliases' 
+* 'Image' => Intervention\Image\Facades\Image::class
+
+* at last run this in cmd 
+* php artisan vendor:publish --provider="Intervention\Image\ImageServiceProviderLaravelRecent"
+
+---------------------------------------------------------------------------
+* Write controller code 
+* Controller code for upload and updation:
+
+		$brand_image =$request->file('brand_image');
+* After this: 
+
+		$name_gen= hexdec(uniqid()).'.'.$brand_image->getClientOriginalExtension();
+		Image::make($brand_image)->resize(300,200)->save('image/brand/'.$name_gen);
+		$last_img='image/brand/'.$name_gen;
+ * Before can use  insert method :
+
+		Brand::insert([
+		'brand_name'=>$request->brand_name,
+		'brand_image'=>$last_img,
+		'created_at'=>Carbon::now()
+		]);
+		return redirect()->back()->with('sucess','Brand added successfully');
+		}																		
+---------------------------------------------------------------------------
+---------------------------------------------------------------------------
