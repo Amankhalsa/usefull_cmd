@@ -1,0 +1,50 @@
+// for ui 
+composer require laravel/ui 
+
+//for auth
+php artisan ui bootstrap --auth  
+
+// for  npm install
+npm install
+
+//make a bundel
+npm run dev 
+
+// for create table in DB
+php artisan migrate
+
+
+for images if public folder:
+
+<img src="{{ asset('images/asr.jpeg')}}"/>
+for CSS js 
+<!-- Styles -->
+<link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+for images if storage folder:
+<img src={{storage_path('folder/')}} />
+
+===========================================
+sample code :
+===========================================
+@auth
+        @if(auth()->user()->id == $post->user_id)
+
+donot show comment section
+
+@else
+
+show coomeent section
+
+@endif
+
+@endauth
+=================================
+        
+@auth
+User is logged in
+@endauth
+
+@guest
+User is not logged in
+@endguest
