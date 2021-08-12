@@ -749,7 +749,9 @@ URL section 2nd Method:
 	</div>																	
 *  Image showing code 
  
- 		<td class="font-weight-bold"><img src="{{asset($brand->brand_image)}}" style="height:40px; width:50px;" alt=""></td> 
+		<td class="font-weight-bold">
+		<img src="{{asset($brand->brand_image)}}" style="height:40px; width:50px;" alt="">
+		</td> 
 
 # 4th Create new Model class with Brand  then add this 
 
@@ -800,7 +802,10 @@ URL section 2nd Method:
 		<div class="card">
 		<div class="card-header">Edit Brand</div>
 		<div class="card-body">
-		<form action="{{ url('brand/update/'.$brand->id)}}" method="post">
+		<form action="{{ url('brand/update/'.$brand->id)}}" method="post" nctype="multipart/form-data">
+
+		<input type="hidden" name="old_image" value="{{$brand->brand_image}}">
+
 		@csrf
 		<div class="form-group">
 		<label for="exampleInputEmail1">Update brand Name</label>
@@ -839,9 +844,10 @@ URL section 2nd Method:
 		'brand_name.required' => 'Please input brand name',
 		'brand_image.min' => 'Category longer then 4 characters',
 		]);
+* image config code:
+
 		$old_image =$request->old_image;
 		$brand_image =$request->file('brand_image');
-		
 		if($brand_image){
 		$name_gen= hexdec(uniqid());
 		$img_ext=strtolower($brand_image->getClientOriginalExtension());
@@ -851,6 +857,8 @@ URL section 2nd Method:
 		$brand_image->move($up_location,$img_name);
 		unlink($old_image); 
 		//larvel function 
+* image insert code:
+
 		Brand::find($id)->update([
 		'brand_name'=>$request->brand_name,
 		'brand_image'=>$last_img,
@@ -935,7 +943,7 @@ URL section 2nd Method:
 
 * at last run this in cmd 
 * php artisan vendor:publish --provider="Intervention\Image\ImageServiceProviderLaravelRecent"
-
+---------------------------------------------------------------------------
 ---------------------------------------------------------------------------
 * Write controller code 
 * Controller code for upload and updation:
@@ -957,3 +965,4 @@ URL section 2nd Method:
 		}																		
 ---------------------------------------------------------------------------
 ---------------------------------------------------------------------------
+php artisan make:Model Multipic -m

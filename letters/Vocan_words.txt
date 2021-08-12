@@ -1,0 +1,423 @@
+﻿1	 Happy 	ਖੁਸ਼
+2	 Healthy	ਤੰਦਰੁਸਤ
+3	 Clever 	ਚਲਾਕ
+4	 Wise 	ਸਮਝਦਾਰ
+5	 Laborious 	ਮਿਹਨਤੀ
+6	 Honest 	ਇਮਾਨਦਾਰ
+7	 Brave 	ਬਹਾਦਰ
+8	 Rich	ਅਮੀਰ
+9	 Kind	ਦਯਾਲੁ
+10	 Intelligent 	ਤੇਜ
+11	 Sad 	ਉਦਾਸ
+12	 Fat 	ਮੋਟਾ
+13	 Thin 	ਪਤਲਾ
+14	 Strong 	ਮਜਬੂਤ
+15	 Hard	ਸਖਤ
+16	 Hungry 	ਭੁੱਖਾ
+17	 Mad 	ਪਾਗਲ
+18	 Beautiful	ਸੁੰਦਰ 
+19	 Weak 	ਕਮਜੋਰ
+20	 Wicked 	ਦੁਸ਼ਟ
+21	 Cruel 	ਸਖਤ
+22	 Timid 	ਡਰਪੋਕ
+23	 Good 	ਚੰਗਾ
+24	 Happy	ਖੁਸ਼
+25	 Farmer 	ਕਿਸਾਨ
+26	 Student 	ਵਿਦਿਆਰਥੀ
+27	 Poet 	ਕਵਿ
+28	 Teacher 	ਅਧਿਆਪਕ
+29	 Servant 	ਨੋਕਰ
+30	 Nurse 	ਨਰਸ
+31	 Artist 	ਕਲਾਕਾਰ
+32	 Singer 	ਗਾਇਕ
+33	 Engineer	ਇੰਜੀਨੀਅਰ
+34	 Leader 	ਨੇਤਾ
+35	 Postman 	ਡਾਕੀਆ
+36	 Doctor 	ਡਾਕਟਰ
+37	 Officer 	ਅਫਸਰ
+38	 Writer 	ਲੇਖਕ
+39	 Dancer 	ਨਚਣ ਵਾਲੀ
+40	 Sad 	ਉਦਾਸ
+41	 Timid 	ਡਰਪੋਕ
+42	 Hungry 	ਭੁਖਾ
+43	 Ready 	ਤਿਆਰ
+44	 Unhealthy 	ਅਸਮਰਥ
+45	 Unwell	ਅਸਮਰਥ
+46	 Fat 	ਮੋਟਾ
+47	 Laborious	ਮਿਹਨਤੀ 
+48	 Mad 	ਪਾਗਲ
+49	 Idle 	ਆਲਸੀ
+50	 Lazy 	ਸੁਸਤ
+51	 Ugly 	ਬਦਸੂਰਤ
+52	 Uneducated 	ਅਨਪੜ
+53	 Children 	ਬਚੇ
+54	 Deaf 	ਬੋਲਾ
+55	 Indian 	ਭਾਰਤੀ
+56	 Rich 	ਅਮੀਰ
+57	 Active 	ਫੁਰਤੀਲਾ
+58	 Happy 	ਖੁਸ਼
+59	 Thief	ਚੋਰ
+60	 Leader 	ਨੇਤਾ
+61	 Engineer	ਇੰਜੀਨੀਅਰ
+62	 Singer 	ਗਾਇਕ
+63	 Mad	ਪਾਗਲ
+64	 Blind 	ਅੰਨਾ
+65	 Ready 	ਤਿਆਰ
+66	 Wrong 	ਗਲਤ
+67	 Tired 	ਥੱਕਣਾ
+68	 Innocent 	ਨਿਰਦੋਸ਼
+69	 Intelligent 	ਤੇਜ
+70	 Wicked 	ਦੁਸ਼ਟ
+71	 Lucky 	ਕਿਸ੍ਮਤ ਵਾਲਾ
+72	 Dishonest 	ਬੇਈਮਾਨ
+73	 Naughty 	ਸ਼ਰਾਰਤੀ
+74	 Wife 	ਪਤਨੀ
+75	 Shy 	ਸ਼ਰ੍ਮੀਲੀ
+76	 The Leader Of Our Country 	ਸਾਡੇ ਦੇਸ਼ ਦੇ ਨੇਤਾ
+77	 Great 	ਮਹਾਨ
+78	 cruel	 ਸਖਤ
+79	 Servant 	ਨੋਕਰ
+80	 Postman 	ਡਾਕੀਆ
+81	 Singer 	ਗਾਇਕ
+82	 Dancer 	ਨਚਣ ਵਾਲੀ
+83	 thief	 ਚੋਰ
+84	 Dishonest	ਬੇਈਮਾਨ 
+85	 Absent 	ਹਾਜਰ
+86	 Innocent 	ਨਿਰਦੋਸ਼
+87	 Angry 	ਗੁੱਸੇ
+88	 Annoyed 	ਗੁੱਸੇ
+89	 Poor 	ਗਰੀਬ
+90	 Troubled 	ਪਰੇਸ਼ਾਨ
+91	 Dishonest 	ਪਰੇਸ਼ਾਨ
+92	 Anxious 	 ਪਰੇਸ਼ਾਨ
+93	 Hungry 	ਭੁੱਖਾ
+94	 Patient 	ਮਰੀਜ
+95	 Sad 	ਉਦਾਸ
+96	 Ugly	ਬਦਸੂਰਤ
+97	 Ill	ਬੀਮਾਰ
+98	 Present 	ਹਾਜਰ
+99	 Beautiful	ਸੁੰਦਰ
+100	 Satisfied 	ਸੰਤੁਸ਼ਟ
+101	 Kind 	ਦਯਾਲੁ
+102	 Gentle 	ਨੇਕ
+103	 Humble 	ਨਰਮ
+104	 Happy 	ਖੁਸ਼
+105	 Glad 	ਖੁਸ਼
+106	 Regular 	ਨਿਯਮਿਤ
+107	 Good Man 	ਚੰਗਾ ਆਦਮੀ
+108	 Thief 	ਚੋਰ
+109	 Leader 	ਨੇਤਾ
+110	 Nurse 	ਨਰਸ
+111	 Heartless 	ਕਠੋਰ
+112	 The Poor 	ਗਰੀਬ
+113	 Snake 	ਸੱਪ
+114	 Faithful	ਵਫ਼ਾਦਾਰ
+115	 Dishonest 	ਬੇਈਮਾਨ
+116	 Immortal 	ਅਮਰ
+117	 Mortal	ਮਰਨਸ਼ੀਲ 
+118	 Fearful	ਭਿਆਨਕ
+119	 Snow	ਬਰਫ਼
+120	 English Medicine	ਅੰਗ੍ਰੇਜੀ ਦਵਾਈ 
+121	 Artificial Flower 	ਬਨਾਵਟੀ ਫੂਲ
+122	 Coal	ਕੋਲਾ
+123	 Gentle 	ਨੇਕ
+124	 Cuckoo	ਕੋਇਲ
+125	 Poor	ਗਰੀਬ
+126	 Beautifull 	 ਸੁੰਦਰl
+127	 Medicine 	ਦਵਾਈ
+128	 Useful	ਲਾਭਦਾਇਕ
+129	 Faithful	ਵਫ਼ਾਦਾਰ
+130	 Gentle 	ਨੇਕ
+131	 Sugar 	ਚੀਨੀ
+132	 Wolf 	ਭੇੜਿਆ
+133	 Dangerous 	ਭਿਆਨਕ
+134	 Blue 	ਨੀਲਾ
+135	 Sun 	ਸੂਰਜ
+136	 Music 	ਸੰਗੀਤ
+137	 Sweet 	ਮਿੱਠਾ
+138	 Pleasant 	ਸੁਹਾਵਨਾ
+139	 Cruel 	ਸਖਤ
+140	 Heartless 	ਕਠੋਰ
+141	 Mortal 	ਮਰਨਸ਼ੀਲ
+142	 Right 	ਸਹੀ
+143	 Wrong 	ਗਲਤ
+144	 Bright 	ਚਮਕੀਲਾ
+145	 Bad 	ਬੁਰਾ
+146	 Honest 	ਇਮਾਨਦਾਰ
+147	 Proud 	 ਘਮੰਡੀ
+148	 Humble	ਨਰਮ
+149	 Active 	ਫੁਰਤੀਲਾ
+150	 Strong 	ਮਜਬੂਤ
+151	 So 	ਇਸਲਈ 
+152	 Old 	ਬੁਢਾ
+153	 Educated	ਪੜ੍ਹਿਆਲਿਖਿਆ 
+154	 Useful	ਲਾਭਦਾਇਕ
+155	 Regular 	ਨਿਯਮਿਤ
+156	 Satisfied 	ਸੰਤੁਸ਼ਟ
+157	 Absent 	ਗੈਰਹਾਜਰ
+158	 Beggar 	ਭਿਖਾਰੀ
+159	 Present 	ਹਾਜਰ
+160	 Foolish 	ਮੂਰਖ
+161	 Great 	ਮਹਾਨ
+162	 Player 	ਖਿਡਾਰੀ
+163	 Poet 	ਕਵਿ
+164	 Writer	ਲੇਖਕ
+165	 Teacher	ਅਧਿਆਪਕ
+166	 Advocate	ਵਕੀਲ
+167	 Lawyer	ਵਕੀਲ 
+168	 Faithful	ਵਫ਼ਾਦਾਰ
+169	 Fair	ਗੋਰੀ
+170	 Learned	ਵਿਦਵਾਨ
+171	 Regular	ਨਿਯਮਿਤ
+172	 Foolish	ਮੂਰਖ
+173	 Robber	ਡਾਕੂ
+174	 Guilty	ਦੋਸ਼ੀ
+175	 Story	ਕਹਾਣੀ
+176	 Interesting	ਦਿਲਚ੍ਪ੍ਸੀ
+177	 Right 	ਸਹੀ
+178	 Wrong 	ਗਲਤ
+179	 Educated 	ਪੜਿਆ ਲਿਖਿਆ
+180	 Bad 	ਬੁਰਾ
+181	 Busy 	ਵਿਅਸਥ
+182	 Artist	
+183	 Player 	ਖਿਡਾਰੀ
+184	 Engineer 	ਇੰਜੀਨੀਅਰ
+185	 Singer 	ਗਾਇਕ
+186	 Typist	ਟਾਈਪਿਸਟ
+187	 Thief	 
+188	 Saint 	ਸਾਧੂ
+189	 Kind 	ਦਆਲੂ
+190	 Queen	
+191	 Wrong 	ਗਲਤ
+192	 Right	ਸਹੀ
+193	 Mad	ਪਾਗਲ
+194	 Honest 	ਇਮਾਨਦਾਰ
+195	 Indian People	ਭਾਰਤੀ ਜਨਤਾ
+196	 Cautious	ਜਾਗਰੂਕ
+197	 Unripe 	ਕਚਾ
+198	 Tasty 	ਸਵਾਦੀ
+199	 Tasteful	ਸਵਾਦੀ
+200	 Face	ਚਿਹਰਾ
+201	 Bright	ਚਮਕੀਲਾ
+202	 Weather 	ਮੋਸਮ
+203	 Pleasant 	ਸੁਹਾਵਨਾ
+204	 Thirsty	ਪਿਆਸਾ’
+205	 Villager	ਪਿੰਡ ਵਾਸੀ
+206	 Book Seller	ਕਿਤਾਬਾਂ ਵੇਚਣ ਵਾਲਾ
+207	 Enemy 	ਦੁਸ਼ਮਨ
+208	 Plural Enemies’ਅਤੇ ਇਸਦਾ 	
+209	 His Face/Her Face  	ਉਸਦਾ ਚਿਹਰਾ
+210	 Cruel	ਨਿਰਦਈ
+211	 Heartless	 ਨਿਰਦਈ
+212	 Tired 	ਥੱਕਣਾ
+213	 Helpless	ਬੇਸਹਾਰਾ
+214	 Lucky 	ਕਿਸਮਤਵਾਲਾ
+215	 Surprised 	ਹੈਰਾਨੀਜਨਕ
+216	 Astonished 	ਹੈਰਾਨੀਜਨਕ
+217	 Regular	ਨਿਯਮਿਤ
+218	 Wrong 	ਗਲਤ
+219	 Great 	ਮਹਾਨ 
+220	 Angry 	ਗੁੱਸੇ
+221	 Annoyed 	ਗੁੱਸੇ
+222	 Satisfied 	ਸੰਤੁਸ਼ਟ
+223	 Door 	ਦਰਵਾਜਾ
+224	 Open 	ਖੁੱਲਾ
+225	 Faithful	ਵਫ਼ਾਦਾਰ
+226	 Silent 	ਸ਼ਾਂਤ 
+227	 Proud 	ਘਮੰਡੀ
+228	 Behavior	ਵਰਤਾਉ
+229	 Bad	ਬੁਰਾ
+230	 Indecent	ਬੁਰਾ
+231	 Actor 	ਅਭਿਨੇਤਾ
+232	 Tired 	ਥੱਕਣਾ
+233	 Gentle	ਨੇਕ 
+234	 Right	ਸਹੀ
+235	 Wrong	ਗਲਤ
+236	 The standard of your living	ਰਹਿਣ ਸਹਿਣ ਦਾ ਤਰੀਕਾ 
+237	 Helpless	ਬੇਸਹਾਰਾ
+238	 Everyman	ਹਰੇਕ ਆਦਮੀ
+239	 Attractive	ਅਕਰਸ਼ਕ
+240	 Ruler 	ਸ਼ਾਸ਼ਕ
+241	 Helpless	ਬੇਸਹਾਰਾ
+242	 The English	ਅੰਗਰੇਜ 
+243	 The rich 	ਅਮੀਰ
+244	 Troubled 	ਪਰੇਸ਼ਾਨ
+245	 Surprised 	ਹੈਰਾਨੀਜਨਕ
+246	 Astonished 	ਹੈਰਾਨੀਜਨਕ
+247	 The door 	ਦਰਵਾਜਾ
+248	 Competent 	ਪੜਿਆ ਲਿਖਿਆ
+249	 Qualified 	 ਪੜਿਆ ਲਿਖਿਆ
+250	 Illiterate 	ਅਨਪੜ 
+251	 Mod of living 	ਰਹਿਣ ਸਹਿਣ
+252	 Simple 	ਸਧਾਰਨ
+253	 Standard of living 	ਰਹਿਣ ਸਹਿਣ ਦਾ ਤਰੀਕਾ
+254	 Mode of living	 ਰਹਿਣ ਸਹਿਣ ਦਾ ਤਰੀਕਾ 
+255	 Tall	ਲੰਬਾ
+256	 Simple 	ਸਧਾਰਨ
+257	 Trouble	ਪਰੇਸ਼ਾਨ
+258	 Satisfied 	ਸੰਤੁਸ਼ਟ
+259	 Player of cricket 	ਕ੍ਰਿਕੇਟ ਦੇ ਖਿਡਾਰੀ
+260	 Angry	ਗੁੱਸੇ 
+261	 Helper 	ਮਦਦਗਾਰ
+262	 Learned 	ਵਿਦਵਾਨ
+263	 Wife	ਪਤਨੀ
+264	 Country 	ਦੇਸ਼
+265	 Bright 	ਚਮਕੀਲਾ
+266	 Always 	ਹਮੇਸ਼ਾ
+267	 Egg	ਅੰਡੇ
+268	 Umbrella	ਛੱਤਰੀ
+269	 Ink pot	ਦਵਾਤ
+270	 Owl 	ਉੱਲੂ
+271	 Ant	ਕੁਹਾੜੀ
+272	 Axe	ਚਿਂਟੀ  
+273	 Orange 	 ਨਾਰੰਗੀ
+274	 Writer 	ਲੇਖਕ
+275	 Officer 	ਅਫਸਰ
+276	 Indian 	ਭਾਰਤੀ
+277	 Hindu 	ਹਿੰਦੂ
+278	 Editor 	ਸੰਪਾਦਕ
+279	 Poet	ਕਵੀ 
+280	 Famous 	ਮਸ਼ਹੂਰ
+281	 Dishonest 	ਬੇਈਮਾਨ
+282	 Intelligent	ਤੇਜ
+283	 Actor 	ਅਭਿਨੇਤਾ
+284	 Dirty	ਗੰਦਾ
+285	 Rotten 	ਸੜਿਆ
+286	 Honest man ਇਮਾਨਦਾਰ ਆਦਮੀ	
+287	 Urdu poet 	ਉਰਦੂ ਕਵੀ
+288	 University professor 	ਯੂਨੀਵਰਸਿਟੀ ਪ੍ਰੋਫੇਸੋਰ 
+289	 European	ਯੂਰੋਪੀਯਨ 
+290	 Union of labour	 ਮਜਦੂਰਾਂ ਦੀ ਯੂਨੀਅਨ
+291	 One sided  game 	ਇੱਕ ਤਰਫਾ ਖੇਡ
+292	 One rupees  note 	ਇੱਕ ਰੂਪਏ ਦਾ ਨੋਟ
+293	 Ideal girl	ਆਦਰਸ਼ਕ ਕੁੜੀ
+294	 Useful book 	ਲਾਭਦਾਇਕ ਕਿਤਾਬ
+295	 Hotel 	ਹੋਟਲ
+296	 Umbrella	ਛੱਤਰੀ
+297	 Strong 	ਮਜਬੂਤ
+298	 Useful 	ਲਾਭਦਾਇਕ
+299	 Faithful 	ਵਫ਼ਾਦਾਰ 
+300	 Four footed 	ਚਾਰ ਲੱਤਾਂ ਵਾਲੇ
+301	 Active 	ਚਤੁਰ, ਫੁਰਤੀਲਾ 
+302	 Honey 	ਸ਼ਹੀਦ
+303	 Gold 	ਸੋਨਾ
+304	 Yellow 	ਪੀਲਾ
+305	 Coal 	ਕੋਲਾ
+306	 Iron 	ਲੋਹਾ
+307	 Salt 	ਨਮਕ
+308	 Silver 	ਚਾਂਦੀ
+309	 Costly	ਕੀਮਤੀ
+310	 Clever 	ਚਲਾਕ
+311	 New	ਨਵਾਂ
+312	 Old 	ਪੁਰਾਣਾ
+313	 Hot 	ਗਰਮ
+314	 The bible 	ਬਾਈਬਲ
+315	 The gita 	ਗੀਤਾ
+316	 The Koran 	ਕੁਰਾਨ
+317	 Epic 	ਗ੍ਰੰਥ
+318	 The ganges	ਗੰਗਾ 
+319	 Long 	ਲੰਬਾ
+320	 River 	ਨਦੀ
+321	 Famous 	ਮਸ਼ਹੂਰ
+322	 The himalays 	ਹਿਮਾਲਿਆ 
+323	 In the north of india 	ਭਾਰਤ ਦੇ ਉੱਤਰ ਵਿੱਚ
+324	 News paper	ਅਖਬਾਰ  
+325	 Table 	ਤਬਲਾ
+326	 Harmonium 	ਹਰਮੋਨੀਅਮ
+327	 Musical instrument 	ਵਾਦਯ ਯੰਤਰ
+328	 The red fort 	ਲਾਲ ਕਿਲਾ
+329	 Marble 	ਸੰਗਮਰਮਰ
+330	 Is made of 	ਦਾ ਬਣਿਆ ਹੋਇਆ
+331	 Repulse 	ਰਿਪ੍ਲ੍ਜ
+332	 Ship	ਜਹਾਜ
+333	 The pacific ocean	ਪ੍ਰਸ਼ਾਂਤ ਮਹਾਸਾਗਰ 
+334	 Deep	ਡੂੰਘਾ 
+335	 The way of Bengal	ਬੰਗਾਲ ਦੀ ਖਾੜੀ 
+336	 The most beautiful  girl 	ਸਭ ਤੋ ਸੁੰਦਰ ਲੜਕੀ
+337	 The most intelligent boy 	ਸਭ ਤੋ ਤੇਜ  ਲੜਕਾ 
+338	 For the examination	ਪਰੀਖਿਆ ਦੇ ਲਈ  
+339	 The most important questions 	ਸਭ ਤੋ ਜਰੂਰੀ ਪ੍ਰਸ਼ਨ 
+340	 Hopeless	 ਨਿਰਾਸ਼ਾਵਾਦੀ
+341	 To help 	ਮਦਦ ਕਰਨਾ
+342	 Sun	 ਸੂਰਜ
+343	  round 	ਗੋਲ 
+344	 Hot 	ਗਰਮ
+345	 Earth 	ਧਰਤੀ
+346	 Immortal 	ਅਮਰ
+347	 Moon 	ਚੰਦ੍ਰਮਾ 
+348	 Lovely	ਆਦਰਸ਼ਕ
+349	  Attractive	ਆਕਰਸ਼ਕ
+350	 Sky 	ਅਸਮਾਨ
+351	 Blue 	ਨੀਲਾ
+352	 Star 	ਸੂਰਜ
+353	 Bright	ਚਮਕੀਲਾ
+354	 The first girl	ਪਹਿਲੀ ਔਰਤ 
+355	 The first month of the year	ਸਾਲ ਦਾ ਪਹਿਲਾ ਮਹੀਨਾ  
+356	 Honesty 	ਇਮਾਨਦਾਰੀ
+357	 Policy 	ਨੀਤੀ
+358	 Dirty 	ਗੰਦਾ 
+359	 Dangerous 	ਖਤਰਨਾਕ
+360	 Town 	ਸ਼ਹਿਰ
+361	 Beauty 	ਸੁੰਦਰਤਾ 
+362	 Costly 	ਕੀਮਤੀ
+363	 Gem 	ਰਤਨ
+364	 Friendship 	ਦੋਸਤੀ
+365	 Rare 	ਕੀਮਤੀ
+366	 True	ਸੱਚ 
+367	 the best thing	ਸਭ ਤੋ ਚੰਗੀ ਨੀਤੀ 
+368	 the friendship between Krishna and sudama 	ਕ੍ਰਿਸ਼ਨ ਅਤੇ ਸੁਦਾਮਾ ਦੀ ਦੋਸਤੀ
+369	 rich	ਅਮੀਰ 
+370	 language 	ਭਾਸ਼ਾ
+371	 interesting 	ਦਿਲਚਪ੍ਸੀ
+372	 football 	ਫੂਟਬਾਲ
+373	 world 	ਸੰਸਾਰ
+374	 cricket 	ਕ੍ਰਿਕੇਟ 
+375	 week	ਹਫਤਾ 
+376	 the last day 	ਆਖਰੀ ਦਿਨ 
+377	 month 	ਮਹੀਨਾ
+378	 full of festival 	ਤਿਉਹਾਰਾ ਨਾਲ ਭਰਿਆ
+379	 winter	ਸਰਦੀ
+380	 summer 	ਗਰਮੀ
+381	 rainy 	ਵਰਖਾ
+382	 season 	ਰੁੱਤ
+383	 important 	ਮਹਤੱਵਪੂਰਨ
+384	 season 	ਰੁੱਤ 
+385	 full of difficulties	ਮੁਸੀਬਤਾ ਨਾਲ ਭਰਿਆ
+386	 painful 	ਦੁਖਦਾਈ
+387	 paralysis 	ਲਕਵਾ
+388	 dangerous 	ਖਤਰਨਾਕ
+389	 disease 	ਬਿਮਾਰੀ
+390	 officer 	ਅਫਸਰ
+391	 dishonest  officer	ਬੇਈਮਾਨ ਅਫਸਰ 
+392	 ideal	ਆਦਰਸ਼ 
+393	 artist 	ਕਲਾਕਾਰ
+394	 foolish 	ਮੂਰਖ 
+395	 clean 	ਸਾਫ਼
+396	 helpless 	ਬੇਸਹਾਰਾ 
+397	 the most intelligent boy	ਸਭ ਤੋ ਤੇਜ ਲੜਕਾ  
+398	 one of the seven wonders of the world	 ਵਿਸ਼ਵ ਦੇ ਸੱਤ ਅਜੂਬਿਆਂ ਵਿੱਚੋਂ  ਇੱਕ   
+399	 tenth 	ਦੰਦ 
+400	 the best policy	ਚੰਗੀ ਨੀਤੀ 
+401	 Indian 	ਭਾਰਤੀ
+402	 Always	ਹਮੇਸ਼ਾ
+403	 Praise,  worthy	ਤਾਰੀਫ਼ ਦੇ ਲਾਇਕ
+404	  True friendship 	ਸੱਚੀ ਮਿੱਤਰਤਾ 
+405	 Rare 	ਕੀਮਤੀ
+406	  	
+407		
+408	  	
+409	  	
+410	  	
+411	  	
+412	  	
+413		
+414	  	
+415	  	
+416	  	
+		
+		
+		
+		
+		
+		
+		
