@@ -1,0 +1,3 @@
+mask simple shape
+blur
+mask apply

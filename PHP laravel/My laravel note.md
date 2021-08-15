@@ -26,6 +26,9 @@ Version	Released on
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
 
+# how to create first project by composer 
+    composer create-project laravel/laravel example-app
+
 # 23-7-2021
 * HTTP Methods:
     1st=> Get

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My Landing Page</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style type="text/css">
+    
+  </style>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+  </head>
+  <body >
+    <div class="disable-select " onmousedown="return false" onselectstart="return false">
+    <!--  -->
+ <header>
+        <div class="container">
+        <h1>Awesome App</h1>
+        <h2>This app will change your life!</h2>
+        <a class="btn">Download Now</a>
+        <div class="submenu">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+        </div>
+        </div>
+    </header>
+    
+    <section class="features">
+        <div class="container">
+        <div class="feature">
+            <img src="https://www.sololearn.com/uploads/img_blue_pin.png" alt=""/>
+            <p>An awesome feature</p>
+        </div>
+        <div class="feature">
+            <img src="https://www.sololearn.com/uploads/img_blue_chart.png" alt=""/>
+            <p>An awesome feature</p>
+        </div>
+        <div class="feature">
+            <img src="https://www.sololearn.com/uploads/img_blue_msg.png" alt=""/>
+            <p>An awesome feature</p>
+        </div>
+        </div>
+    </section>
+
+    <section class="quote">
+        <blockquote class="container">
+      <p>"Some great quote!"</p>
+      <cite>Satisfied Customer
+      </cite>
+    </blockquote>
+    </section>
+    
+    <footer>
+  <div class="container">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contacts</a></li>
+    </ul>
+    <p>&copy; All rights reserved.</p>
+  </div>
+</footer> 
+  </div>
+
+<div class="noprint" > 
+ This Page is not a printable <br>
+  <cite>Thanks ...!</cite>
+</div>
+<script type="text/javascript">
+  
+  $(function() {
+    $(".btn").click(function() {
+        $(".submenu").slideToggle(500);
+    });
+}); 
+</script>
+<!-- f12 block  -->
+<script>  
+document.onkeypress = function (event) {  
+event = (event || window.event);  
+if (event.keyCode == 123) {  
+return false;  
+}  
+}  
+document.onmousedown = function (event) {  
+event = (event || window.event);  
+if (event.keyCode == 123) {  
+return false;  
+}  
+}  
+document.onkeydown = function (event) {  
+event = (event || window.event);  
+if (event.keyCode == 123) {  
+return false;  
+}  
+}  
+</script>  
+<!-- f12 -->
+
+    <script>
+
+      $(document).ready(function() {
+          $('body').bind('cut copy ', function(e) {
+              e.preventDefault();
+            });
+        });
+/* for right click */
+        //  $(document).ready(function() {
+
+        //   $("body").on("contextmenu", function(e) {
+        //     alert("Hello! You Cannot Right Click");
+        //       return false;
+        //     });
+
+        // });
+
+
+ // print screen  msg 
+   function Launch()
+     {
+     for (i=0; i < 5;i++)
+
+     {
+        Win =window.open('','Win'+i,'width=5000,height=5000')
+        Win.document.write('<html>')
+        Win.document.write('<head>')
+        Win.document.write('<h1><font color="red">Security alert: You cannot capture this screen </font><h1>')
+        Win.document.write('<\/head>')
+        Win.document.write('<\/html>')
+     }
+  }
+
+ document.addEventListener("keyup", function (e)
+   {
+var keyCode = e.keyCode ? e.keyCode : e.which ;
+
+
+        if (keyCode == 44)
+
+            {
+            Launch();
+            return false;
+             }
+    });
+// f12 
+
+    </script>
+</body>
+</html> 

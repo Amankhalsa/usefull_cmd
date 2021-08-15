@@ -1,0 +1,8 @@
+part 18 =>13 no video
+part 3=>7create guard for admin 
+3=>7 create guard for admin 
+35=>6 student marksheet  genrate 
+p6 
+
+
+https://freecoursesite.com/laravel-8-advance-course-build-school-management-system/?unapproved=102258&moderation-hash=0a7f52cfecc17805d13911de474d0793&bs-comment-added=1#comment-102258
