@@ -10,6 +10,8 @@ npm install
 //make a bundel
 npm run dev 
 
+//1st create database by .env file register it 
+
 // for create table in DB
 php artisan migrate
 
