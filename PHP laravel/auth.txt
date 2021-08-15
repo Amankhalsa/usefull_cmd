@@ -8,7 +8,7 @@ php artisan ui bootstrap --auth
 npm install
 
 //if error :
-Del node module and package lock json file 
+Del node module and package-lock.json file 
    
 //make a bundel
 npm run dev 
