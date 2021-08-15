@@ -1,3 +1,6 @@
+//for New Project  run project command 1st :
+composer create-project laravel/laravel example-app
+
 // for ui 
 composer require laravel/ui 
 
