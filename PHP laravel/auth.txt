@@ -1,3 +1,6 @@
+//for New Project  run project command 1st :
+composer create-project laravel/laravel example-app
+
 // for ui 
 composer require laravel/ui 
 
@@ -7,8 +10,13 @@ php artisan ui bootstrap --auth
 // for  npm install
 npm install
 
+//if error :
+Del node module and package-lock.json file 
+   
 //make a bundel
 npm run dev 
+
+//1st create database by .env file register it 
 
 // for create table in DB
 php artisan migrate
