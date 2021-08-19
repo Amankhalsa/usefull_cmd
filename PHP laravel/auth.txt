@@ -14,6 +14,15 @@ npm run dev
 php artisan migrate
 
 
+auth group :
+
+Route::group(['middleware'=>'auth'],function (){
+ //paste here all route s
+Route::get('/about-us', [Pagehandle::class,'about'])->name('about');
+ 
+});
+
+
 for images if public folder:
 
 <img src="{{ asset('images/asr.jpeg')}}"/>
@@ -39,7 +48,7 @@ show coomeent section
 @endif
 
 @endauth
-=================================
+
         
 @auth
 User is logged in
@@ -48,3 +57,8 @@ User is logged in
 @guest
 User is not logged in
 @endguest
+
+
+===================
+html_entity_decode()
+=================================
