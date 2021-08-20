@@ -1,0 +1,10 @@
+--------------------------
+How to create new project 
+--------------------------
+#first need composer command to do this
+=====================================
+composer create-project laravel/laravel example-app
+=====================================
+-----------------------
+2nd use blade template:
+-----------------------

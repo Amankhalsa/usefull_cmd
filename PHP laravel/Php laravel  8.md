@@ -965,4 +965,228 @@ URL section 2nd Method:
 		}																		
 ---------------------------------------------------------------------------
 ---------------------------------------------------------------------------
-php artisan make:Model Multipic -m
+
+# 36. Multiple Image Upload Part 1 
+
+* 1st create model class 
+
+		php artisan make:Model Multipic -m
+
+* 2nd open this model migration file and add some fields
+	
+		$table->id();
+		$table->string('image');											       
+
+* 3rd  then migrate it  by 
+	
+			php artisan migrate 
+			then check data base 
+* 4th edit model class with protected fields:
+
+		protected $fillable = [
+		'name',
+		];
+* 5th add menu 
+* goto view area & open navigation menu.blade.php
+
+		<x-jet-nav-link href="{{ route('multi.image') }}">
+		Multi_image
+		</x-jet-nav-link>
+
+* 7th step  create route for multipic 
+			
+			//Multi image view page
+			Route::get('/multi/image', [Brandcontroller::class,'Multipic'])->name('multi.image');
+
+			//Multi image =========================
+			Route::post('multi/add', [Brandcontroller::class,'store_multi'])->name('store.image');
+
+* 8th make a methon in controller
+
+		public function Multipic(){
+		$images= Multipic::all();
+		//Create new folder in admin with this name
+		return view('admin.Multipic.index', compact('images'));
+		}
+* import model class
+			
+			use App\Models\Multipic;
+* 9th Update view page 
+
+		for view pics 
+		@foreach($images as $multi)
+		<div class="col-md-4 mt-5">
+		<div class="card">
+		<img src="{{asset($multi->image)}}">
+		</div>
+		</div>
+		@endforeach
+
+# For store 
+
+	<div class="col-md-4">
+	<div class="card">
+	<div class="card-header">Multi Images</div>
+	<div class="card-body">
+	<form action="{{route('store.image')}}" method="post" enctype="multipart/form-data">
+	@csrf
+
+	<!-- for image  -->
+	<div class="form-group">
+	<label for="exampleInputEmail1">brand Image</label>
+	<input type="file" name="image[]" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" multiple="">
+	@error('image') 
+	<span class="text-danger">{{ $message }} </span>
+	@enderror 
+	<span></span>
+	</div>
+# multiple=""   name="image[]" use this 
+
+	<button type="submit" class="btn btn-primary">Add Image</button>
+	</form>
+	</div>
+	</div>
+	</div>
+	</div>
+---------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+
+# store image controller code 
+* 1st required route on   action="{{route('store.image')}}"
+		
+		//store Multi image 
+		Route::post('multi/add', [Brandcontroller::class,'store_multi'])->name('store.image');
+
+* 2nd controller code required 
+
+		public function store_multi(Request $request){
+		$image =$request->file('image');
+		foreach($image as $multi_img){
+		$name_gen= hexdec(uniqid()).'.'.$multi_img->getClientOriginalExtension();
+		Image::make($multi_img)->resize(300,200)->save('image/Multi/'.$name_gen);
+		$last_img='image/Multi/'.$name_gen;
+		Multipic::insert([
+		'image'=>$last_img,
+		'created_at'=>Carbon::now()
+		]);
+		}
+		return redirect()->back()->with('sucess','Multiple images inserted successfully');
+		}
+
+# for show message 
+
+		@if(session('sucess'))
+		<div class="alert alert-success alert-dismissible fade show" role="alert">
+		<strong>{{session('sucess')}}</strong> 
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		<span aria-hidden="true">&times;</span>
+		</button>
+		</div>
+		@endif	                                                                  
+
+# 38. Update User Profile and Change Password
+* 1st copy image address
+
+http://localhost/storage/profile-photos/fHUN2Nbxm7vedSruw1PCmwLTtdF5MSXPY1a7jICN.jpg
+
+
+* 2 Run this 
+	
+		php artisan storage:link
+
+* 3 copy this http://127.0.0.1:8000/ and paste before local host on image address
+
+* example url 
+
+		http://127.0.0.1:8000/storage/profile-photos/fHUN2Nbxm7vedSruw1PCmwLTtdF5MSXPY1a7jICN.jpg
+* Update this server  open .env file edit APP URL to this http://127.0.0.1:8000/
+
+* Restart server then profile pic will we showing 
+# if you want to change API token showing on profile:
+
+* Open Config folder>Jetstream.php>   'features' => (can Change API) 
+* fortify.php can change any thing 
+* Provider route services > RouteServiceProvider.php can change it for url 
+---------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+
+# 39. Forgot Password & Password Reset
+* 1st  for education you need facke account on mailtrap 
+* 2nd update .env file 
+* 3rd remove APP URL => APP_URL=shoud be null 
+
+		Signup 
+		Thank You For
+		Signing Up!
+		admin@123
+		https://mailtrap.io/register/success
+
+* 4th got to > MAIL_MAILER=smtp option and update with these name 
+
+		* 1 MAIL_MAILER=smtp
+		* MAIL_HOST=smtp.mailtrap.io
+		* MAIL_PORT=2525
+		* MAIL_USERNAME=59d909a8677d29
+		* MAIL_PASSWORD=067e0b3f17d313
+		* MAIL_ENCRYPTION=null
+		* MAIL_FROM_ADDRESS=email
+		* MAIL_FROM_NAME="${APP_NAME}"
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+
+# 40. Email Verify in Laravel
+* 1st  we need update user model class with  required use and (implements MustVerifyEmail ) for Model Preparation
+
+		namespace App\Models;
+
+		use Illuminate\Contracts\Auth\MustVerifyEmail;
+		use Illuminate\Database\Eloquent\Factories\HasFactory;
+		use Illuminate\Foundation\Auth\User as Authenticatable;
+		use Illuminate\Notifications\Notifiable;
+		use Laravel\Fortify\TwoFactorAuthenticatable;
+		use Laravel\Jetstream\HasProfilePhoto;
+		use Laravel\Sanctum\HasApiTokens;
+
+		class User extends Authenticatable implements MustVerifyEmail
+		{
+		use HasApiTokens;
+		use HasFactory;
+		use HasProfilePhoto;
+		use Notifiable;
+		use TwoFactorAuthenticatable;
+
+		//Database Preparation
+		php artisan migrate
+* 2nd Update Route part with default laravel  route 
+
+		Route::get('/email/verify', function () {
+		    return view('auth.verify-email');
+		})->middleware('auth')->name('verification.notice');
+* 3rd .env file should be cofigured 
+
+		MAIL_MAILER=smtp
+		MAIL_HOST=smtp.mailtrap.io
+		MAIL_PORT=2525
+		MAIL_USERNAME=59d909a8677d29
+		MAIL_PASSWORD=067e0b3f17d313
+		MAIL_ENCRYPTION=null
+		MAIL_FROM_ADDRESS=example@gmail.com
+		MAIL_FROM_NAME="${APP_NAME}"
+       
+* 4th config >fortify > should be un comment   
+		
+			Features::emailVerification(),
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+# 41. Middleware Auth Users Access Control
+* if user accessing with url by this error will not show redirect to login page 
+* Add this in all controller 
+
+		public function __construct(){
+		$this->middleware('auth');
+		}	                                                                  
+ 
+# 41 to 43. Admin Panel Setup Part 2 Done 
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+
