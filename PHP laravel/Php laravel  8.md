@@ -1209,7 +1209,7 @@ http://localhost/storage/profile-photos/fHUN2Nbxm7vedSruw1PCmwLTtdF5MSXPY1a7jICN
 ----------------------------------------------------------------------------------
 # login page updated  manualy check now login.blade.php
 
-52. Setup Home Slider Page Part 3 done
+----------------------------------------------------------------------------------
 
 # for slider we need model class and controller and view pages 
 
