@@ -1189,4 +1189,138 @@ http://localhost/storage/profile-photos/fHUN2Nbxm7vedSruw1PCmwLTtdF5MSXPY1a7jICN
 # 41 to 43. Admin Panel Setup Part 2 Done 
 ----------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------
+# 44 How to add logout feature 
 
+* 1st update view page  with logout route in href
+		
+			{{route('user.logout')}}
+* make a route
+
+		Route::get('/logout/user', [Brandcontroller::class,'Logout'])->name('user.logout');
+
+* make a controller method for logout 
+* import this ->Use Auth;
+
+		public function Logout(){
+		Auth::logout();
+		return redirect()->route('login')->with('success','User logout successfully');
+		}
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+# login page updated  manualy check now login.blade.php
+
+52. Setup Home Slider Page Part 3 done
+
+# for slider we need model class and controller and view pages 
+
+# slider create 
+
+		public function Homeslider(){
+		$sliders= Slider::latest()->get();
+		return view('admin.slider.index',compact('sliders'));
+		}
+* for  Return create  page 
+
+		public function Addslider(){
+		return view('admin.slider.create');
+		}
+
+# Slider add method 
+* use App\Models\Slider;
+* use Illuminate\Support\Carbon;
+* use Illuminate\Support\Facades\DB; 
+
+		public function storeslider(Request $request){
+		$slider_image =$request->file('image');
+		$name_gen= hexdec(uniqid()).'.'.$slider_image->getClientOriginalExtension();
+		Image::make($slider_image)->resize(1920,1088)->save('image/slider/'.$name_gen);
+		$last_img='image/slider/'.$name_gen;
+		Slider::insert([
+		'title'=>$request->title,
+		'description'=>$request->description,
+		'image'=>$last_img,
+		'created_at'=>Carbon::now()
+		]);
+		return redirect()->route('home.slider')->with('sucess','Slider added successfully');
+		}
+
+# slider add method 
+* Slider image edit and update 
+
+		public function editslider($id){
+		$updatesliders = Slider::find($id);
+		return view('admin.slider.edit',compact('updatesliders'));
+		}
+
+		public function updatesilder(Request $request,$id ){
+		$old_image =$request->old_image;
+		$slider_image =$request->file('image');
+
+		if( $slider_image){
+		$name_gen= hexdec(uniqid()).'.'.$slider_image->getClientOriginalExtension();
+		Image::make($slider_image)->resize(1920,1088)->save('image/slider/'.$name_gen);
+		$last_img='image/slider/'.$name_gen;
+		unlink($old_image); 
+		Slider::find($id)->update([
+		'title'=>$request->title,
+		'description'=>$request->description,
+		'image'=>$last_img,
+		'updated_at'=>Carbon::now()
+		]);
+		return redirect()->route('home.slider')->with('sucess','slider updated successfully');
+		}
+
+		else{
+		Slider::find($id)->update([
+		'title'=>$request->title,
+		'description'=>$request->description,
+		'updated_at'=>Carbon::now()
+		]);
+		return redirect()->route('home.slider')->with('sucess','slider updated successfully');
+		}
+		}
+
+#  slider image edit and del section done  22 - 8 - 2021
+
+* Controller code 
+
+		    public function Del_silder($id){
+		        $image= Slider::find($id);
+		        $old_image =$image->image;
+		        unlink($old_image);
+		        Slider::find($id)->delete();
+		return redirect()->route('home.slider')->with('sucess','slider deleted successfully');
+		    }
+
+* Route code:
+
+		Route::get('slider/delete/{id}', [HomeController::class,'Del_silder']);
+
+* view button 
+
+		<a href="{{url('slider/delete/'.$slider->id)}}" onclick="return confirm('Are you confirm for delete')" class="btn btn-danger">Delete</a>
+
+# Note:
+* For sliding on view page we should required foreach loop with key  example :
+		
+		@php
+		$sliders =DB::table('sliders')->get();
+		@endphp
+
+		@foreach( $sliders as $key => $slider)
+* See here : 
+
+		<div class="carousel-item {{ $key ==0 ? 'active' :'' }}" 
+
+		style="background-image: url({{$slider->image}});">
+		<div class="carousel-container">
+		<div class="carousel-content animate__animated animate__fadeInUp">
+		<h2>welcome to <span>{{$slider->title}}</span></h2>
+		<p>{{$slider->description}}</p>
+		<div class="text-center"><a href="" class="btn-get-started">Read More</a></div>
+		</div>
+		</div>
+		</div>
+		@endforeach
+
+# ======== End slider section ==============
