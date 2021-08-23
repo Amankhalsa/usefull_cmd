@@ -1324,3 +1324,104 @@ http://localhost/storage/profile-photos/fHUN2Nbxm7vedSruw1PCmwLTtdF5MSXPY1a7jICN
 		@endforeach
 
 # ======== End slider section ==============
+
+
+# About page front end and backend example code 
+* 1st create a model class  and controller  and use these some files 
+
+		use App\Models\HomeAbout;
+		use Illuminate\Support\Carbon;
+		use Illuminate\Support\Facades\DB;
+		use Auth;								
+
+* Home Page controller for view content 
+
+		// Home page vide code 
+		public function homeabout(){
+		$home_about = HomeAbout::latest()->get();
+		return view('admin.home.index',compact('home_about'));
+		}
+  
+# 2nd add  message on databse  and create view page 
+
+		//add about controller
+		public function Addabout(){
+		return view('admin.home.create');
+		}
+
+
+//Store about 
+
+		public function store_about(Request $resquest){
+        HomeAbout::insert([
+
+        'title'=>$resquest->title,
+        'short_dis'=>$resquest->short_dis,
+        'long_dis'=>$resquest->long_dis,
+        'created_at'=>Carbon::now()
+
+
+
+    ]);
+     return redirect()->route('home.about')->with('sucess','About Message inserted successfully');
+
+}
+
+# 3rd Edit update and delete 
+
+		//edit page vide code 
+		public function editabout($id){
+		$get_about= HomeAbout::find($id);
+		return view('admin.home.edit',compact('get_about'));
+		}
+//update about
+
+	public function update_about(Request $request, $id){
+    HomeAbout::find($id)->update([
+        'title'=>$request->title,
+        'short_dis'=>$request->short_dis,
+        'long_dis'=>$request->long_dis,
+        'updated-at'=>Carbon::now()
+    ]);
+    return redirect()->route('home.about')->with('sucess','About Message Updated successfully');
+}
+
+	//Delete method 
+	public function delete_about($id){
+	HomeAbout::find($id)->delete();
+	return redirect()->route('home.about')->with('sucess','About Message Deleted successfully');
+	}
+
+# 2nd Route for this crud operation on about page 
+
+	// home about all route
+	Route::get('home/about/', [AboutController::class,'homeabout'])->name('home.about');
+	Route::get('add/about/', [AboutController::class,'Addabout'])->name('add.about');
+
+	//Store 
+	Route::post('store/about/', [AboutController::class,'store_about'])->name('store.about');
+
+	//edit about
+	Route::get('about/edit/{id}', [AboutController::class,'editabout']);
+
+	//update home about 
+	Route::post('about/update/{id}', [AboutController::class,'update_about']);
+
+	//Delete  about message 
+	Route::get('about/delete/{id}', [AboutController::class,'delete_about']);
+
+
+# Example Code can use for view data on  frontend 
+		
+		Route::get('/', function () {
+		$breads =DB::table('brands')->get();
+		$abouts=DB::table('home_abouts')->first();
+		return view('home',compact('breads','abouts'));
+		});
+# Note:
+* When you use edit method in view page no need foreach loop for show data on view page directly use ($get_data->title)
+
+For this operation we need index page, edit page, create page in backend  
+-----------------------------------------------------------------------------
+End Home About message section   
+-----------------------------------------------------------------------------
