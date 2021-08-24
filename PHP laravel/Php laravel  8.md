@@ -1420,8 +1420,121 @@ http://localhost/storage/profile-photos/fHUN2Nbxm7vedSruw1PCmwLTtdF5MSXPY1a7jICN
 		});
 # Note:
 * When you use edit method in view page no need foreach loop for show data on view page directly use ($get_data->title)
+* Delete any image by <A></A> tag  we need  on view page  
+
+		<a href="{{url('multi/delete/'.$multi->id)}}" onclick="return confirm('Are you confirm for delete ?')"  class="badge badge-danger"> 
+
+* Route and controller 
+
+		Route::get('multi/delete/{id}', [Brandcontroller::class,'multi_del']);
+		
+		public function multi_del($id){   
+		$img= Multipic::find($id);   //img is variable 
+		$old_image =$img->image;  //DB filed name is image
+		unlink($old_image);
+		Multipic::find($id)->delete();
+		
+		return redirect()->back()->with('sucess','image  deleted  successfully');
+		}
 
 For this operation we need index page, edit page, create page in backend  
 -----------------------------------------------------------------------------
 End Home About message section   
 -----------------------------------------------------------------------------
+# 59. Setup  Portofolio Page done
+*  for Portofolio Page we need new folder the create new file then extend with home blade 
+
+		@extends('layouts.master_home')
+		@section('title', 'Portfolio')
+		@section('home_content')
+			//content 
+		@endsection 
+
+* Make a route or controller then pass value by foreach loop to view page 
+
+# controller 
+
+		//portfolio  controller method 
+		public function Portfolio(){
+		    $images=Multipic::all();
+		    return view('pages.portfolio',compact('images'));
+		}
+# Route 
+
+		//portfolio pages route 
+		Route::get('/portfolio', [AboutController::class,'Portfolio'])->name('Portfolio');
+Note
+---------------------------------------------------------------------------
+End above  Portofolio Page setup
+---------------------------------------------------------------------------
+# for contact page setup 
+
+* Required Model  with migration file and controller 
+
+		public  function Admin_contact(){
+		$contacts =Contact::all();
+		return view('admin.contact.index', compact('contacts'));
+		}
+
+		public function Add_contact(){
+		return view('admin.contact.create');
+		}
+
+		public function store_Contacts(Request $request){
+		Contact::insert([
+		'address'=>$request->address,
+		'email'=>$request->email,
+		'phone'=>$request->phone,
+		'created_at'=>Carbon::now()
+
+		]);
+		return redirect()->route('Admin_contact')->with('success','Contact inserted successfully');
+		}
+
+		//edit method 
+		public function edit_contact($id ){
+		$fill_Contact=Contact::find($id);
+
+		return view('admin.contact.edit',compact('fill_Contact'));
+		}
+
+//update method 
+
+	public function contact_update(Request $resuest, $id){
+    Contact::find($id)->update([
+        'address'=>$resuest->address,
+        'email'=>$resuest->email,
+        'phone'=>$resuest->phone,
+        'updated_at'=>Carbon::now()
+    ]);
+
+		return redirect()->route('Admin_contact')->with('success','Contact updated successfully');
+		}
+
+		//del method 
+		public function del_Contacts($id){
+		Contact::find($id)->delete();
+		return redirect()->route('Admin_contact')->with('success','Contact deleted successfully');
+		}
+# Routes 
+
+		//Admin contact page 
+		Route::get('/admin/contact', [ContactController::class,'Admin_contact'])->name('Admin_contact');
+
+		Route::get('/add/contact', [ContactController::class,'Add_contact'])->name('add_contact');
+
+		//store contact 
+		Route::post('/store/contact', [ContactController::class,'store_Contacts'])->name('store_Contacts');
+
+		//Edit contact 
+		Route::get('contact/edit/{id}', [ContactController::class,'edit_contact']);
+
+		//update
+		Route::post('contact/update/{id}', [ContactController::class,'contact_update']);
+
+		//del contact 
+		Route::get('contact/delete/{id}', [ContactController::class,'del_Contacts']);
+
+* in view area for crud required 3 file index, edit, create
+
+61. Setup Contact Page Part 2 done 
