@@ -1537,4 +1537,76 @@ End above  Portofolio Page setup
 
 * in view area for crud required 3 file index, edit, create
 
-61. Setup Contact Page Part 2 done 
+# contact Admin panel and home page code 
+
+* Contact controller code:
+
+		//View on home page 
+		public function contact(){
+		$contacts= DB::table('contacts')->first();
+		return view('pages.contact', compact('contacts') );
+		}
+
+* Routes:
+
+		//Home contact route 
+		Route::get('/contact', [ContactController::class,'contact'])->name('Contact');
+
+
+* View page 
+
+		<p>{{ $contacts->address}}</p>
+
+		<h4>Email:</h4>
+		<p>{{ $contacts->email}}</p>
+
+		<h4>Call:</h4>
+		<p>{{ $contacts->phone}}</p>
+
+# Admin panel user message view code 
+* Controller code:
+
+		public function admin_msg(){
+		$messages= ContactForm::all();
+		return view('pages.message' , compact('messages'));
+		}
+
+
+		// del funtion 
+
+		public function Del_msg($id){
+		ContactForm::find($id)->delete();
+		return redirect()->back()->with('success','Message deleted successfully');
+		}
+
+# Routes 
+
+
+	Route::get('/admin/message', [ContactController::class,'admin_msg'])->name('admin_message');
+
+	//delete message
+	Route::get('message/delete/{id}', [ContactController::class,'Del_msg']);
+
+* View page 
+
+
+		@foreach($messages as $msg)
+
+		<tr>
+		<th scope="row">{{$loop->index+1}}</th>
+		<td class="text-success font-weight-bold">{{ ucwords($msg->name)}} </td>
+		<td class="text-primary font-weight-bold">{{ ucwords($msg->email	)}} </td>
+		<td class="text-dark font-weight-bold">{{ ucwords($msg->subject	)}} </td> 
+		<td class="text-dark font-weight-bold">{{ ucwords($msg->message	)}} </td>   
+		<td class="font-weight-bold">
+		<a href="{{url('message/delete/'.$msg->id)}}" onclick="return confirm('Are you confirm for delete ?')"
+		class="btn btn-danger">Delete</a>
+		</td>     
+		</tr>
+
+		@endforeach
+End 
+---------------------------------------------------------------------------
+Backend and frontend contact page end 
+---------------------------------------------------------------------------
+
