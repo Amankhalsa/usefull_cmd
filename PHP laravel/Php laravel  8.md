@@ -1609,4 +1609,114 @@ End
 ---------------------------------------------------------------------------
 Backend and frontend contact page end 
 ---------------------------------------------------------------------------
+# Note: pass word change method is diff 
 
+# Controller code: 
+
+		public function update_pass(Request $request){
+		$validateData = $request->validate([
+		'old_pass'=> 'required',
+		'password' => 'required|confirmed'
+		]);
+
+		$hashedPassword =Auth::user()->password;
+		if(Hash::check($request->old_pass,$hashedPassword)){
+		$user =User::find(Auth::id());
+		$user->password=Hash::make($request->password);
+		$user->save();
+		Auth::logout();
+		return redirect()->route('login')->with('success','Password Changed Successfully');
+		}
+
+		else{
+		return redirect()->back()->with('error','Invalid password entered ');
+		}
+
+		}
+
+# Route code 
+
+		Route::post('/update/password', [Changepass::class,'update_pass'])->name('pass_update');
+* View part 
+
+		<form class="form-pill" action="{{route('pass_update')}}" method="post"> 
+		@csrf
+		<div class="form-group">
+		<label for="exampleFormControlInput3">Current Password : </label>
+		<input  class="form-control" id="password" type="password" name="old_pass" 
+		placeholder="Current Password">
+
+		@error('old_pass') 
+		<span class="text-danger">{{ $message }} </span>
+		@enderror 
+
+		</div>
+		<div class="form-group">
+		<label for="exampleFormControlPassword3">New  Password : </label>
+		<input id="password" type="password"  class="form-control" name="password"  
+		placeholder="New  Password">
+
+		@error('password') 
+		<span class="text-danger">{{ $message }} </span>
+		@enderror
+
+		</div>
+		<div class="form-group">
+		<label for="exampleFormControlPassword3"> Confirm Password :</label>
+		<input id="password_confirmation" type="password"  name="password_confirmation" 
+		class="form-control" placeholder="Confirm Password">
+
+		@error('password_confirmation') 
+		<span class="text-danger">{{ $message }} </span>
+		@enderror 
+
+		</div>
+		<button class="btn btn-danger" tyle="submit"> Change Password </button>
+		</form>
+		</div>
+
+		@endsection
+end
+-----------------------------------------------------------------------------
+Password section end 
+-----------------------------------------------------------------------------
+
+# Update profile section 
+ * Required new update page in view 
+ * Route and controller for view updatepage and next route  or controller for store detail in DB 
+ * Controller code:
+     // update detail 
+
+		public function update_profile(Request $request){
+		$user =User::find(Auth::user()->id);
+		if($user){
+		$user->name=$request['name'];
+		$user->email=$request['email'];
+		$user->save();
+		return redirect()->back()->with('success','Profile  updated Successfully');     
+		}else{}
+		return redirect()->back();
+		}
+
+* Route code :
+
+		//update user profile 
+		Route::post('/update/profile', [Changepass::class,'update_profile'])->name('update_profile');
+ * View Code :
+
+		<form class="form-pill" action="{{route('update_profile')}}" method="post"> 
+		@csrf
+		<div class="form-group">
+		<label for="exampleFormControlInput3">User name : </label>
+		<input  class="form-control" id="name" type="text" name="name" 
+		value="{{ $user['name']}}">
+		</div>
+		<div class="form-group">
+		<label for="exampleFormControlInput3">User email : </label>
+		<input  class="form-control" id="email" type="email" name="email" 
+		value="{{ $user['email']}}" />
+		</div>
+end
+-----------------------------------------------------------------------------
+Profile detain section end 
+-----------------------------------------------------------------------------
