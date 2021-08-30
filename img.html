@@ -1,0 +1,23 @@
+<html>
+<head>
+  <title>Select Image</title>
+  <script type="text/javascript">
+ function displayImage() {
+    var image = document.getElementById("canvas"),
+        select = document.getElementsByTagName('select')[0];
+    image.src = select.value;
+    console.log('set src to ' + select.value);
+}
+  </script>
+</head>
+<body>
+  <form name="controls">
+    <img id="canvas" src="a.png" />
+
+
+
+
+<input type="file" name="imageList" onchange="displayImage();" >
+  </form>
+</body>
+</html>

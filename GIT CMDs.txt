@@ -1,3 +1,13 @@
+﻿echo "# khalsa" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Amankhalsa/khalsa.git
+git push -u origin main
+
+git remote remove origin
+
 Create folder where you downloaded files 
 select clone repository  with https then copy link 
 

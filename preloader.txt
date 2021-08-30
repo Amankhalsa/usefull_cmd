@@ -1,0 +1,23 @@
+   <div class="page-loading">
+        <img src="assets/images/loader.gif" alt="" />
+    </div><!--page-loading end-->
+    
+
+.page-loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 9999;
+}
+
+
+
+
+$(window).on("load", function() {
+    "use strict";
+
+ $(".page-loading").fadeOut();
+}

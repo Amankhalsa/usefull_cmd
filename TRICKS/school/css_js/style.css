@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+}
+
+.imgbox {
+  float: left;
+  text-align: center;
+  width: 120px;
+  border: 1px solid gray;
+  margin: 4px;
+  padding: 6px;
+ 
+
+}
+
+
+.contain{
+	 margin-left:  auto;
+  margin-right: auto ;
+  width: 50%;
+}
+
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}

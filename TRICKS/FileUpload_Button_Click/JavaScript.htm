@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+        body
+        {
+            font-family: Arial;
+            font-size: 10pt;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" id="btnFileUpload" value="Select File" />
+    <span id="spnFilePath"></span>
+    <input type="file" id="FileUpload1" style="display: none" />
+    <script type="text/javascript">
+        window.onload = function () {
+            var fileupload = document.getElementById("FileUpload1");
+            var filePath = document.getElementById("spnFilePath");
+            var button = document.getElementById("btnFileUpload");
+            button.onclick = function () {
+                fileupload.click();
+            };
+            fileupload.onchange = function () {
+                var fileName = fileupload.value.split('\\')[fileupload.value.split('\\').length - 1];
+                filePath.innerHTML = "<b>Selected File: </b>" + fileName;
+            };
+        };
+    </script>
+</body>
+</html>
