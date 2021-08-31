@@ -10,3 +10,12 @@ https://www.google.com/search?q=php+developer+in+mohali&rlz=1C1ASVC_enIN960IN960
 
 
 php artisan make:Model Multipic -m
+
+
+
+// success
+// You have successfully logged out of Online SBI
+
+// Thank you for using Online SBI
+
+// Click here to logon to OnlineSBI
