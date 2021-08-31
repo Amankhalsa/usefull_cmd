@@ -1134,7 +1134,7 @@ http://localhost/storage/profile-photos/fHUN2Nbxm7vedSruw1PCmwLTtdF5MSXPY1a7jICN
 ----------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------
 
-# 40. Email Verify in Laravel
+# 40. Email Verify in Laravel (email Verification part)
 * 1st  we need update user model class with  required use and (implements MustVerifyEmail ) for Model Preparation
 
 		namespace App\Models;
