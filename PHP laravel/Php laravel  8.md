@@ -1147,7 +1147,7 @@ http://localhost/storage/profile-photos/fHUN2Nbxm7vedSruw1PCmwLTtdF5MSXPY1a7jICN
 		use Laravel\Jetstream\HasProfilePhoto;
 		use Laravel\Sanctum\HasApiTokens;
 
-		class User extends Authenticatable implements MustVerifyEmail
+		class User extends Authenticatable implements MustVerifyEmail  //ad this line
 		{
 		use HasApiTokens;
 		use HasFactory;

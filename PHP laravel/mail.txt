@@ -1,0 +1,13 @@
+SMTP
+Host:
+smtp.mailtrap.io
+Port:
+25 or 465 or 587 or 2525
+Username:
+aac675939c5fb1
+Password:
+d0c01a0bd0324e
+Auth:
+PLAIN, LOGIN and CRAM-MD5
+TLS:
+Optional (STARTTLS on all ports)
