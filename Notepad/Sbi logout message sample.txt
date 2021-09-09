@@ -1,0 +1,6 @@
+success
+You have successfully logged out of Online SBI
+
+Thank you for using Online SBI
+
+Click here to logon to OnlineSBI

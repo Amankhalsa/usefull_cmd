@@ -1,0 +1,145 @@
+﻿echo "# khalsa" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Amankhalsa/khalsa.git
+git push -u origin main
+
+git remote remove origin
+
+Create folder where you downloaded files 
+select clone repository  with https then copy link 
+
+1st Main Commands 
+
+   1. git clone (link paste here  or Run)
+   2. git status Run 
+   3. git add 2nd file.js
+   3. git add. (for all)
+   4. git status Run
+   5. git commit -m "Type Message here"
+   6. git push Run  enter psw 
+      check repository on git hub
+  
+2nd step for branch 
+  
+   1 git branch (Enter  Name) Run it 
+   2 Git checkout (Enter name)
+   3 breanch will be created 
+   4 git status 
+   5 git add.html
+   6 git commit - "MSG"
+   7 git push (Run)
+   8 Copy error or paste 
+     Check now 
+
+3rd Advance big feartue 
+
+    1 git branch bigfeature 
+    2 git checkout 'bigfeature'
+    3 git status 
+    4 git add index.html
+    5 git commit -m "MSG"
+    6 git push (run)
+    if error copy paste cmd
+    
+Cmd  line commands  
+   * 1. change dir =>Cd 
+   * 2. clear screen=> cls  
+   * 3. Two folder navigatecd => downloads\me 
+   * 4. for open folder or file=>start.   
+   * 5. for make dir=>mkdir 
+   * 6. for create  file=> echo> index.html    
+   * 7. for Rename => mv index.html index2.html
+   * 8. for Remove => rm filename 
+   * 9.for delete file => del =>rm file remove 
+   * 10. for delete => del -r folder name  
+
+=============
+React
+=============
+
+    *  #first:
+    *  #npm install --global expo-cli
+
+    *  #2nd 
+    *  #create new project 
+    *  #expo init my-project
+    *  #expo init rn-first-app
+
+    *  #3rd 
+    *  #cd rn-first-app/
+
+    *  #4th 
+    *  #npm start 
+
+
+      https://amankhalsa.github.io/Mysite/
+
+‎Accessed+>Today, ‎June ‎14, ‎2021, ‏‎24 minutes ago
+
+Modified=>‎Sunday, ‎June ‎14, ‎2020, ‏‎6:28:38 PM
+
+‎Created=>Saturday, ‎May ‎29, ‎2021, ‏‎9:37:42 PM
+
+
+=============
+React
+=============
+
+npm init
+npm install -g live-server 
+npm i -g npm 
+
+if installed for check type 
+live-server 
+
+===============================================
+Git hub CMD
+===============================================
+Quick setup — if you’ve done this kind of thing before
+or	
+https://github.com/Amankhalsa/Amankhalsa.git
+Get started by creating a new file or uploading an existing file. We recommend every repository include a README, LICENSE, and .gitignore.
+
+…or create a new repository on the command line
+echo "# Amankhalsa" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Amankhalsa/Amankhalsa.git
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin https://github.com/Amankhalsa/Amankhalsa.git
+git branch -M main
+git push -u origin main
+…or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+================================
+Eclips  to github
+===============================
+https://www.youtube.com/watch?v=LPT7v69guVY
+Free Courses - https://automationstepbystep.com/
+Today we will learn:
+1. How to create github repository
+2. How to clone repository in eclipse
+3. How to add eclipse project to github repository
+4. How to commit, push and pull the changes
+
+Step 1 : Create GitHub account and SignIn
+
+Step 2 : Start a Project = Create a repository
+
+Step 3 : Start Eclipse
+
+Step 4 : Goto Perspective - Git Repositories and click on Add Git Repo
+
+Step 5 : Create a project in Eclipse
+
+Step 6 : Do a right click on Project - Team - Share - Add to git repo
+
+Step 7 : Commit and Push the project to the repo
+
+Step 8 : Commit and Push every change to the repo

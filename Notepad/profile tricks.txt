@@ -1,0 +1,15 @@
+<button type="button" class="inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-md font-semibold text-xs text-gray-700 uppercase tracking-widest shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:ring focus:ring-blue-200 active:text-gray-800 active:bg-gray-50 disabled:opacity-25 transition mt-2 mr-2" x-on:click.prevent="$refs.photo.click()">
+    Select A New Photo
+</button>
+
+<img src="{{Auth::user()->profile_photo_url}}"  style="width:50px; height:50px; border-radius: 100%;" /> 
+
+on change 
+<img id="output" src="" width="100" height="100">
+
+<input name="photo" type="file" accept="image/*" onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])">
+
+
+/storage/profile-photos/
+
+

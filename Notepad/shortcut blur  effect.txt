@@ -1,0 +1,6 @@
+mask simple shape
+blur
+mask apply
+
+Tie 3 sec 
+https://youtu.be/tM4-opav7HE

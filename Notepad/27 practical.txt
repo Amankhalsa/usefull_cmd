@@ -1,0 +1,2 @@
+how middleware in route checkuser
+prefix done or working 

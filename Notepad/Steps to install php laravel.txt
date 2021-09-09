@@ -1,0 +1,46 @@
+====================== Copy all file and paste in cmd====================== 
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('sha384', 'composer-setup.php') === '756890a4488ce9024fc62c56153228907f1545c228516cbf63f885e036d37e9a59d27d63f46af1d4d07ee0f76181c7d3') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+
+====================== 2nd step is install laravel ====================== 
+
+2nd Run this 
+composer create-project laravel/laravel example-app
+====================== 3rd step is install jetstream ====================== 
+
+go to link becoz laravel seprate this from docx
+https://jetstream.laravel.com/2.x/installation.html
+thenrun this cmd:
+1st 
+composer require laravel/jetstream
+2nd 
+php artisan jetstream:install livewire
+3rd 
+php artisan jetstream:install livewire --teams
+4th 
+npm install && npm run dev"
+====================== end  ====================== 
+
+Create database name and migrate it 
+
+====================== For show profile photo  ====================== 
+1st click on photo and inspect and copy add and paste in browser 
+then you can see address of our pic now need to update env file by http://127.0.0.1:8000/
+then run this 
+
+php artisan storage:link
+
+====================== 3rd step is Admin login and user login ====================== 
+make a new controller 
+ and then make a new model class  then in migration file from user to admin copy all fields  and paste in admin  fields
+
+Copy everything from  user model and paste in admin model class
+then migrate table 
+
+php artisan make:seeder UserSeeder
+php artisan make:factory PostFactory
+
+then update Admin factory and databse with below code 
+\App\Models\Admin::factory()->create();

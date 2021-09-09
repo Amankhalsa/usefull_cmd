@@ -1,0 +1,8 @@
+smtp.hostinger.com
+
+465
+info@amankhalsa.in
+Admin@77625
+ php artisan config:cache 
+ php artisan cache:clear
+ php artisan view:clear
