@@ -33,3 +33,9 @@ Redirect 301 /robots/ https://printerphonesupport.com/robots.txt
     </FilesMatch>
 
 </IfModule>
+
+# RewriteOptions inherit
+
+# RewriteEngine on
+# RewriteCond %{HTTP_HOST} ^.*$
+# RewriteRule ^/?$ "https\:\/\/printerphonesupport\.com\/" [R=301,L]
