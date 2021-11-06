@@ -1,0 +1,2 @@
+select this option for export database
+IF NOT EXISTS (less efficient as indexes will be generated during table creation)
