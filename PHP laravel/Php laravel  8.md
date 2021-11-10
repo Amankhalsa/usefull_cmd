@@ -127,6 +127,12 @@ URL section 2nd Method:
 		composer require laravel/jetstream
 
 * 2nd CMD: 
+	* first you have to install node js in pc for win 7 follow below link 
+	* https://nodejs.org/dist/v13.9.0/
+	* select 
+	* node-v13.9.0-x64.msi                               18-Feb-2020 18:54            29888512
+	* then run below cmds 
+	
 	
 		php artisan jetstream:install livewire
 
