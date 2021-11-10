@@ -17,3 +17,7 @@
 # Using python code 
 * <a href="https://github.com/Amankhalsa/usefull_cmd/blob/main/Wifi_Password_finder.ipynb"> Wifi password </a>
 
+# node js link
+# https://nodejs.org/dist/v13.9.0/
+* select this 
+* node-v13.9.0-x64.msi                               18-Feb-2020 18:54            29888512
