@@ -1,3 +1,6 @@
+https://getcomposer.org/download/
+from this site copy code then paste 
+in cmd 
 --------------------------
 How to create new project 
 --------------------------
