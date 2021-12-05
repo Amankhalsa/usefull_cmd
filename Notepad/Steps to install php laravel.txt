@@ -1,3 +1,5 @@
+* To quickly install Composer in the current directory, run the following script in your terminal. To automate the installation, use the guide on installing Composer programmatically.
+# https://getcomposer.org/download/
 ====================== Copy all file and paste in cmd====================== 
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 php -r "if (hash_file('sha384', 'composer-setup.php') === '756890a4488ce9024fc62c56153228907f1545c228516cbf63f885e036d37e9a59d27d63f46af1d4d07ee0f76181c7d3') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
@@ -20,8 +22,16 @@ php artisan jetstream:install livewire
 3rd 
 php artisan jetstream:install livewire --teams
 4th 
-npm install && npm run dev"
+npm install && npm run dev
 ====================== end  ====================== 
+
+
+
+# I found the same problem before and try this :
+
+Delete node_modules folder and package-lock.json
+reinstall package using npm install
+Try run npm run dev again.
 
 Create database name and migrate it 
 
