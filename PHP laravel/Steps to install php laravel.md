@@ -23,7 +23,9 @@ thenrun this cmd:
 			4th 
 			npm install && npm run dev"
 ========== end ==========
-
+# if NPM not instaaled on your sysytem then run this command 
+			npm cache clean -f
+Re installing node and reinstalling npm. Nothing worked.
 Create database name and migrate it 
 
 ========== For show profile photo  ==========
