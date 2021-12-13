@@ -25,7 +25,8 @@ thenrun this cmd:
 ========== end ==========
 # if NPM not instaaled on your sysytem then run this command 
 			npm cache clean -f
-Re installing node and reinstalling npm. Nothing worked.
+# Re installing node and reinstalling npm. Nothing worked.
+# [crash] npm ERR! cb() never called!
 Create database name and migrate it 
 
 ========== For show profile photo  ==========
