@@ -1,25 +1,32 @@
 # laravel full project installation steps 
 
-# laravel project installation steps 
-* 1st go to https://getcomposer.org/download/ site 
+* laravel project installation steps 
+		
+			1st go to https://getcomposer.org/download/ site 
+
 ------------------------------------------------
-#copy all code and paste in cmd 
+* copy all code and paste in cmd 
 ------------------------------------------------
-# 2nd go to laravel official site  click on Installation Via Composer
+* 2nd go to laravel official site  click on Installation Via Composer
 Run this below command 
 ------------------------------------------------
-# composer create-project laravel/laravel example-app
+
+			composer create-project laravel/laravel example-app
 ------------------------------------------------
-# if you want to make login system then install jetsteam 
+* if you want to make login system then install jetsteam 
 for installation go to by below link 
 ------------------------------------------------
-* https://jetstream.laravel.com/2.x/installation.html
+
+			https://jetstream.laravel.com/2.x/installation.html
 ------------------------------------------------
-# run these cmd's
+* run these cmd's
 * 1st 
-# composer require laravel/jetstream
+		
+		composer require laravel/jetstream
 * 2nd 
-* php artisan jetstream:install livewire
+	
+		php artisan jetstream:install livewire
+
 
 
 
