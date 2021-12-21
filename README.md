@@ -2,7 +2,7 @@
 
 * laravel project installation steps 
 		
-			1st go to <a href="https://getcomposer.org/download/">https://getcomposer.org/download/</a> site 
+			1st go to https://getcomposer.org/download/ site 
 
 ------------------------------------------------
 * copy all code and paste in cmd 
