@@ -27,7 +27,9 @@ for installation go to by below link
 	
 		php artisan jetstream:install livewire
 
-
+* 3rd 
+		
+		npm install && npm run dev
 
 
 # usefull Django _cmd
