@@ -1,3 +1,28 @@
+# laravel full project installation steps 
+
+# laravel project installation steps 
+* 1st go to https://getcomposer.org/download/ site 
+------------------------------------------------
+#copy all code and paste in cmd 
+------------------------------------------------
+# 2nd go to laravel official site  click on Installation Via Composer
+Run this below command 
+------------------------------------------------
+# composer create-project laravel/laravel example-app
+------------------------------------------------
+# if you want to make login system then install jetsteam 
+for installation go to by below link 
+------------------------------------------------
+* https://jetstream.laravel.com/2.x/installation.html
+------------------------------------------------
+# run these cmd's
+* 1st 
+# composer require laravel/jetstream
+* 2nd 
+* php artisan jetstream:install livewire
+
+
+
 # usefull Django _cmd
 # <a href="https://dev.to/vumanhtrung/setup-an-htaccess-file-for-redirecting-to-laravel-s-public-folder-1e1j"> htaccess link</a>
 * <a href="https://github.com/Amankhalsa/usefull_cmd/blob/main/Clean_Django%20CMDs.txt">ORDER TO INSTALL DJANGO WIN7</a>
