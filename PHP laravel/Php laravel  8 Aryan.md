@@ -934,7 +934,7 @@ URL section 2nd Method:
 
 		<a href="{{url('brand/delete/'.$brand->id)}}" onclick="return confirm('Are you confirm for delete')" class="btn btn-danger">Delete</a>
 
-# 35. Image Insert & Resize With Intervention Package
+# 35. Image Insert & Resize With Image Intervention Package
 * Install package from this website 
 * http://image.intervention.io/getting_started/installation
 
@@ -943,6 +943,8 @@ URL section 2nd Method:
 * composer require intervention/image
 
 * //Add this in  config/app.php  between Package Service Providers: 
+*    'providers' => [  * Package Service Providers...
+------------------------------------------------------
 * Intervention\Image\ImageServiceProvider::class
 * add this in 'aliases' 
 * 'Image' => Intervention\Image\Facades\Image::class
@@ -970,6 +972,46 @@ URL section 2nd Method:
 		return redirect()->back()->with('sucess','Brand added successfully');
 		}																		
 ---------------------------------------------------------------------------
+# by object method 
+
+			public function store_blog_content(Request $request){
+			$validated = $request->validate([
+			'usertype' => 'required|max:255',
+			'link' => 'required',
+			'title' => 'required',
+			'blog_text' => 'required',
+			'image' => 'required',
+			]);
+            $data =new  Blog_post();
+            $data->usertype = $request->usertype;
+            $data->title = $request->title;
+            $data->link = $request->link;
+            $data->blog_text = $request->blog_text;
+  
+            if ($request->File('image')) {
+               
+                $file = $request->file('image');
+                <!-- object way  -->
+                // @unlink(public_path('upload/user_image/'.$data->image));
+                //name genrate here 
+                // $name_gen = hexdec(uniqid());
+                // $filename =$file->getClientOriginalExtension();
+                //new name saved  in $img_name  
+                // $img_name=$name_gen.'.'.$filename;
+                // to finally create image instances
+                // $file->move(public_path('blog/'),$img_name);
+
+                //object method  with image intervation package 
+                $img_name= hexdec(uniqid()).'.'.$file->getClientOriginalExtension();
+                Image::make($file)->resize(780,520)->save('blog/'.$img_name);
+                $data['image']=$img_name;
+            } //end if
+            $data->save();
+        
+        return redirect()->route('blog.view')->with('sucess','blog data inserted successfully');
+    		}
+
+
 ---------------------------------------------------------------------------
 
 # 36. Multiple Image Upload Part 1 
