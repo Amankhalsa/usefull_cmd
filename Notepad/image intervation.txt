@@ -39,3 +39,9 @@
             // );
         return redirect()->route('blog.view')->with('sucess','blog data inserted successfully');
     }
+    
+    ---------------------------------------------------------------------------
+    in cpanel 
+         $img_name= hexdec(uniqid()).'.'.$file->getClientOriginalExtension();
+         Image::make($file)->resize(780,520)->save(public_path('blog/'.$img_name));
+           $data['image']=$img_name;
