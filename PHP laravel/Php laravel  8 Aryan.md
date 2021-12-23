@@ -1013,7 +1013,12 @@ URL section 2nd Method:
 
 
 ---------------------------------------------------------------------------
-
+# for capnel image intervation method in controller
+     $img_name= hexdec(uniqid()).'.'.$file->getClientOriginalExtension();
+         Image::make($file)->resize(780,520)->save(public_path('blog/'.$img_name));
+           $data['image']=$img_name;
+	   
+---------------------------------------------------------------------------
 # 36. Multiple Image Upload Part 1 
 
 * 1st create model class 
