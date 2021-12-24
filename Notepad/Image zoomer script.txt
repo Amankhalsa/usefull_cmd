@@ -1,0 +1,35 @@
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+$('#page').mouseenter(function(){
+	
+	$('#page').fadeOut(1000);
+})
+
+$('.show').mouseenter(function(){
+	
+	$('#page').show('fast');
+})
+
+
+	// new code 
+
+	    $('img').mouseenter(function(){  //click, dblclick also can use, mouseenter , 
+            /*alert('you click on image');*/
+        $(this).css({
+            'transform':'scale(1.5,1.5)',
+            'transition':'0.5s ease'
+        });
+    });
+       
+    $('img').mouseout(function(){  //click, dblclick also can use, mouseenter 
+    $(this).css({
+        'transform':'scale(1,1)',
+        'transition':'0.5s ease'
+    });
+    $(this).Toggle('slow');   
+});
+
+});
+</script>
