@@ -30,7 +30,8 @@ for installation go to by below link
 * 3rd 
 		
 		npm install && npm run dev
-
+# storage image link cmd
+* php artisan storage:link
 
 # usefull Django _cmd
 # <a href="https://dev.to/vumanhtrung/setup-an-htaccess-file-for-redirecting-to-laravel-s-public-folder-1e1j"> htaccess link</a>
