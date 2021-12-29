@@ -1,3 +1,14 @@
+Prefect image intervation method            if ($request->File('image')) {
+                $file = $request->file('image');
+            
+        $file_name=time()."_".$file->getClientOriginalName();
+        $path = public_path('backend/assets/img/printers')."/".$file_name;
+        Image::make($file->getRealPath())->resize(362,320)->save($path);
+    
+               $data['image']=$file_name;
+  =====================================================================================================
+
+
 
       public function store_blog_content(Request $request){
             
