@@ -1,0 +1,977 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Kashmir Tour &amp; Holiday Packages with Vacation Trip Pvt. Ltd.</title>
+<meta name="Description" content="Kashmir Tour Packages - Vacation Trip Pvt. Ltd. offers best deals on Kashmir Tour Packages. Contact us to explore all Holiday Tour Packages in India at lowest price." />
+<meta name="Keywords" content="Kashmir tour, Kashmir holiday tour package, Kashmir tour package, Kashmir tours, 5n/6d Kashmir tour, Vacation Trip Pvt. Ltd." />
+<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link href="css/slick.css" rel="stylesheet" type="text/css" media="screen">
+<link href="css/slick-theme.css" rel="stylesheet" type="text/css" media="screen">
+<link rel="stylesheet" href="css/slicknav.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css" integrity="sha512-EaaldggZt4DPKMYBa143vxXQqLq5LE29DG/0OoVenoyxDrAScYrcYcHIuxYO9YNTIQMgD8c8gIUU8FQw7WpXSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>Overlay Page</title>
+    <link rel="stylesheet" href="/css-2/style.css">
+</head>
+
+<body>
+    <section class="top-bar">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="logo"> <a href="index.php"><img src="images/logo.png"
+                            alt="Vacation Trip Pvt. Ltd. - No #1 Tour operator in Kashmir"
+                            class="img-fluid"></a> </div>
+                <div class="logo-m  text-center"> <a href="index.php"><img src="images/logo.png" width="250px"></a> </div>
+            </div>
+            <div class="col-md-9">
+                <div class="head-cnt">
+                    <ul>
+                        <!-- <li><i><img src="images/call-info.png" alt=""> </i><a
+                                href="tel:+91-85878-33570">+91-85878-33570</a></li> -->
+                        <li><a href="#free-quote" style="color: #fff;" class="btn btn-enq">Get Free Quotes</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>    <section id="banner" class="Sticky-typofloan-nav">
+        <div class="banner-warp">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="banner-text">
+                            <h1>Welcome to Kashmir</h1>
+                            <ul class="destination">
+                                <li>Srinagar</li>
+                                <li>Gulmarg</li>
+                                <li>Pahalgam</li>
+                                <li>Sonmarg</li>
+                                <li>Jammu</li>
+                                <li>Katra</li>
+                                <li>Ladakh</li>
+                            </ul>
+                            <h4>Lowest Price Guaranteed</h4>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="free-quotes tab--section" id="free-quote" data-anchor="free-quote">
+                            <div class="sale-30"><img src="images/sale-30.png" alt="" class="img-fluid"></div>
+                            <div class="get-free"><i></i>Book Your Kashmir Package</div>
+                            <div class="get-free-qoute">
+                                <form method="POST" name="myForm" action="thank-you.php"
+                                    onSubmit="return validateForm()">
+                                    <div class="form-group">
+                                        <input type="text" name="name" id="name" class="form-control" placeholder="Name"
+                                            required="">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" name="email" id="email" class="form-control"
+                                            placeholder="Email" required="">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="phone" id="phone" class="form-control"
+                                            placeholder="Mobile No." required="">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Date of Travel" style="height:38px;"
+                                            class="form-control" onfocus="(this.type = 'date')" id="dateoftravel"
+                                            name="dateoftravel">
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea class="form-control" placeholder="Write your Message" id="requirement"
+                                            rows="2" name="requirement"></textarea>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit" id="submit" name="submit" class="btn btn-enq ">Send
+                                            Enquiry</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="banner-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul>
+                        <li>
+                            <div class="abt-cmpny">
+                                <figure> <img src="images/icon-1.png" alt="" class="img-fluid"> </figure>
+                                <h6>Tour Package<br>
+                                    All Inclusive</h6>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="abt-cmpny">
+                                <figure> <img src="images/icon-2.png" alt="" class="img-fluid"> </figure>
+                                <h6>Hotel<br>
+                                    Twin Sharing Basis</h6>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="abt-cmpny">
+                                <figure> <img src="images/icon-3.png" alt="" class="img-fluid"> </figure>
+                                <h6>Sightseeing<br>
+                                    with Private Car</h6>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="abt-cmpny">
+                                <figure> <img src="images/icon-5.png" alt="" class="img-fluid"> </figure>
+                                <h6>Food<br>
+                                    Veg &amp; Non Veg</h6>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="abt-cmpny">
+                                <figure> <img src="images/icon-7.png" alt="" class="img-fluid"> </figure>
+                                <h6>Transfers<br>
+                                    in Private Car</h6>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="abt-cmpny">
+                                <figure> <img src="images/icon-6.png" alt="" class="img-fluid"> </figure>
+                                <h6>Discount<br>
+                                    Air Tickets</h6>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="best-deal">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="tour-img"> <img src="images/best-shimla-manali.jpg" alt="" class="img-fluid d-img"> <img
+                            src="images/best-shimla-manali-mobile.jpg" alt="" class="img-fluid m-img"> </div>
+                    <div class="packge-detail">
+                        <h2>Kashmir Valley Trip</h2>
+                        <h3><i class="fa fa-clock-o" aria-hidden="true"></i> 03 Nights / 04 Days</h3>
+                        <p>Starting From</p>
+                        <div class="pkg-price"> <i class="fa fa-inr" aria-hidden="true"></i>5,500 /- </div>
+                        <div class="off"> <img src="images/25off.png" alt="" class="img-fluid"> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about-sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <h1>Kashmir<span> Travel Guide</span></h1>
+                    <p>Kashmir is unarguably known as Paradise on Earth, primarily for its captivating climate all
+                        throughout the year distinctively categorized into the four main seasons of winter, autumn,
+                        summer and spring. Rightfully the weather of Kashmir has been compared to that of Switzerland,
+                        with it snow capped mountains and picturesque landscapes and as a result millions of people have
+                        been visiting Srinagar for their Kashmir tour package.<br>
+                        Get the best Kashmir Tour Package, Srinagar Tour, Kashmir Honeymoon, Kashmir with Vaishno Devi
+                        Tour deals from Vacation Trip Pvt. Ltd. Consultant FREE!</p>
+                </div>
+                <div class="col-md-7">
+                    <div class="m-hidden">
+                        <div class="why-bx">
+                            <h1>Why <span>Us</span></h1>
+                            <ul class="why-us">
+                                <li>
+                                    <figure><img src="images/why-us-1.png" alt="" class="img-fluid"></figure>
+                                    <h4>Approved by Ministry of Tourism, Government of India</h4>
+                                </li>
+                                <li>
+                                    <figure><img src="images/why-us-2.png" alt="" class="img-fluid"></figure>
+                                    <h4>Trusted name in <br>
+                                        Kashmir Tour Packages</h4>
+                                </li>
+                                <li>
+                                    <figure><img src="images/why-us-3.png" alt="" class="img-fluid"></figure>
+                                    <h4>Best B2C <br>
+                                        Service Provider </h4>
+                                </li>
+                                <li>
+                                    <figure><img src="images/why-us-4.png" alt="" class="img-fluid"></figure>
+                                    <h4>Value for <br>
+                                        Money Packages</h4>
+                                </li>
+                                <li>
+                                    <figure><img src="images/why-us-5.png" alt="" class="img-fluid"></figure>
+                                    <h4>Customized <br>
+                                        Solutions</h4>
+                                </li>
+                                <li>
+                                    <figure><img src="images/why-us-6.png" alt="" class="img-fluid"></figure>
+                                    <h4>Personalized <br>
+                                        Services</h4>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="top-packages">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 class="h1-global">Kashmir Tour Packages - India No. 1 Destination</h1>
+                    <p class="lead">Kashmir, Srinagar, Gulmarg, Pahalgam, Katra, Leh-Ladakh...</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="packages">
+                        <figure>
+                            <div class="overlay"></div>
+                            <img src="images/1200x658_Srinagar.webp" alt="" class="img-fluid">
+                            <div class="tag">30% OFF</div>
+                            <div class="budget"> <img src="images/popular.png" alt="" class="img-fluid"> </div>
+                        </figure>
+                        <h2>Sizzling Kashmir Tour</h2>
+                        <h3>Duration: <span>05 Nights / 06 Days</span> </h3>
+                        <ul class="itnry">
+                            <li class="active">
+                                <figure> <img src="images/flight-icon.png" alt="" class="img-fluid"> </figure>
+                                <p>Flight</p>
+                            </li>
+                            <li>
+                                <figure> <img src="images/hotel-icon.png" alt="" class="img-fluid"> </figure>
+                                <p>Hotels</p>
+                            </li>
+                            <li>
+                                <figure> <img src="images/Sightseeing-icon.png" alt="" class="img-fluid"> </figure>
+                                <p>Sightseeing</p>
+                            </li>
+                            <li>
+                                <figure> <img src="images/meals-icon.png" alt="" class="img-fluid"> </figure>
+                                <p>Meals</p>
+                            </li>
+                            <li>
+                                <figure> <img src="images/transfer-icon.png" alt="" class="img-fluid"> </figure>
+                                <p>Transfers</p>
+                            </li>
+                        </ul>
+                        <div class="inclusions">
+                            <h5>Package Inclusions:</h5>
+                            <ul class="pkg-incusion">
+                                <li>Accommodation: On DBL Sharing</li>
+                                <li>Breakfast and Dinner</li>
+                            </ul>
+                            <div class="collapse" id="collapseExample4">
+                                <ul class="pkg-incusion">
+                                    <li>Welcome Drink (Non Alcoholic) On Arrival</li>
+                                    <li>Morning Tea</li>
+                                    <li>All Sight seen as per itinerary</li>
+                                    <li>10% Discount on Additional Food, Beverages and Laundry</li>
+                                    <li>Child below 5 Yrs. Complimentary Sharing With Parents</li>
+                                    <li>Pick Up and Drop From Ex. Srinagar</li>
+                                    <li>All Applicable Taxes.</li>
+                                </ul>
+                            </div>
+                            <a class="read-collpse" data-toggle="collapse" href="#collapseExample4" role="button"
+                                aria-expanded="false" aria-controls="collapseExample4"> <span>Read More</span> <i>Close
+                                </i> </a>
+                        </div>
+                        <div class="price-tag">
+                            <div class="price"> <i class="fa fa-rupee"></i> 8,700 /- Onwards </div>
+                            <div class="btn-detail btn-dsktp"> <a href="#free-quote" class="btn btn-detail">Send
+                                    Enquiry</a> </div>
+                            <div class="btn-detail btn-mobile"> <a href="#free-quote" class="btn btn-detail">Send
+                                    Enquiry</a> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="packages">
+                        <figure>
+                            <div class="overlay"></div>
+                            <img src="images/Aru Valley.webp" alt="" class="img-fluid">
+                            <div class="tag">25% OFF</div>
+                            <div class="budget"> <img src="images/popular.png" alt="" class="img-fluid"> </div>
+                        </figure>
+                        <h2>Beauty of Kashmir Tour</h2>
+                        <h3>Duration: <span>06 Nights / 07 Days</span></h3>
+                        <ul class="itnry">
+                            <li class="active">
+                                <figure> <img src="images/flight-icon.png" alt="" class="img-fluid"> </figure>
+                                <p>Flight</p>
+                            </li>
+                            <li>
+                                <figure> <img src="images/hotel-icon.png" alt="" class="img-fluid"> </figure>
+                                <p>Hotels</p>
+                            </li>
+                            <li>
+                                <figure> <img src="images/Sightseeing-icon.png" alt="" class="img-fluid"> </figure>
+                                <p>Sightseeing</p>
+                            </li>
+                            <li>
+                                <figure> <img src="images/meals-icon.png" alt="" class="img-fluid"> </figure>
+                                <p>Meals</p>
+                            </li>
+                            <li>
+                                <figure> <img src="images/transfer-icon.png" alt="" class="img-fluid"> </figure>
+                                <p>Transfers</p>
+                            </li>
+                        </ul>
+                        <div class="inclusions">
+                            <h5>Package Inclusions:</h5>
+                            <ul class="pkg-incusion">
+                                <li>Accommodation: On DBL Sharing</li>
+                                <li>Breakfast and Dinner</li>
+                            </ul>
+                            <div class="collapse" id="collapseExample5">
+                                <ul class="pkg-incusion">
+                                    <li>Welcome Drink (Non Alcoholic) On Arrival</li>
+                                    <li>Morning Tea</li>
+                                    <li>All Sight seen as per itinerary</li>
+                                    <li>10% Discount on Additional Food, Beverages and Laundry</li>
+                                    <li>Child below 5 Yrs. Complimentary Sharing With Parents</li>
+                                    <li>Pick Up and Drop From Ex. Srinagar</li>
+                                    <li>All Applicable Taxes.</li>
+                                </ul>
+                            </div>
+                            <a class="read-collpse" data-toggle="collapse" href="#collapseExample5" role="button"
+                                aria-expanded="false" aria-controls="collapseExample5"> <span>Read More</span> <i>Close
+                                </i> </a>
+                        </div>
+                        <div class="price-tag">
+                            <div class="price"> <i class="fa fa-rupee"></i> 9,999 Onwards </div>
+                            <div class="btn-detail btn-dsktp"> <a href="#free-quote" class="btn btn-detail">Send
+                                    Enquiry</a> </div>
+                            <div class="btn-detail btn-mobile"> <a href="#free-quote" class="btn btn-detail">Send
+                                    Enquiry</a> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="packages">
+                        <figure>
+                            <div class="overlay"></div>
+                            <img src="images/The-sunset-on-Dal-lake.webp" alt="" class="img-fluid">
+                            <div class="tag">30% OFF</div>
+                            <div class="budget"> <img src="images/popular.png" alt="" class="img-fluid"> </div>
+                        </figure>
+                        <h2>Amazing Kashmir Tour</h2>
+                        <h3>Duration: <span>07 Nights / 08 Days</span></h3>
+                        <ul class="itnry">
+                            <li class="active">
+                                <figure> <img src="images/flight-icon.png" alt="" class="img-fluid"> </figure>
+                                <p>Flight</p>
+                            </li>
+                            <li>
+                                <figure> <img src="images/hotel-icon.png" alt="" class="img-fluid"> </figure>
+                                <p>Hotels</p>
+                            </li>
+                            <li>
+                                <figure> <img src="images/Sightseeing-icon.png" alt="" class="img-fluid"> </figure>
+                                <p>Sightseeing</p>
+                            </li>
+                            <li>
+                                <figure> <img src="images/meals-icon.png" alt="" class="img-fluid"> </figure>
+                                <p>Meals</p>
+                            </li>
+                            <li>
+                                <figure> <img src="images/transfer-icon.png" alt="" class="img-fluid"> </figure>
+                                <p>Transfers</p>
+                            </li>
+                        </ul>
+                        <div class="inclusions">
+                            <h5>Package Inclusions:</h5>
+                            <ul class="pkg-incusion">
+                                <li>Accommodation: On DBL Sharing</li>
+                                <li>Breakfast and Dinner</li>
+                            </ul>
+                            <div class="collapse" id="collapseExample6">
+                                <ul class="pkg-incusion">
+                                    <li>Welcome Drink (Non Alcoholic) On Arrival</li>
+                                    <li>Morning Tea</li>
+                                    <li>All Sight seen as per itinerary</li>
+                                    <li>10% Discount on Additional Food, Beverages and Laundry</li>
+                                    <li>Child below 5 Yrs. Complimentary Sharing With Parents</li>
+                                    <li>Pick Up and Drop From Ex. Srinagar</li>
+                                    <li>All Applicable Taxes.</li>
+                                </ul>
+                            </div>
+                            <a class="read-collpse" data-toggle="collapse" href="#collapseExample6" role="button"
+                                aria-expanded="false" aria-controls="collapseExample6"> <span>Read More</span> <i>Close
+                                </i> </a>
+                        </div>
+                        <div class="price-tag">
+                            <div class="price"> <i class="fa fa-rupee"></i> 14,500 Onwards </div>
+                            <div class="btn-detail btn-dsktp"> <a href="#free-quote" class="btn btn-detail">Send
+                                    Enquiry</a> </div>
+                            <div class="btn-detail btn-mobile"> <a href="#free-quote" class="btn btn-detail">Send
+                                    Enquiry</a> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="packages">
+                        <figure>
+                            <div class="overlay"></div>
+                            <img src="images/Traditional Houseboat on Dal Lake.webp" alt="" class="img-fluid">
+                            <div class="tag">30% OFF</div>
+                            <div class="budget"> <img src="images/popular.png" alt="" class="img-fluid"> </div>
+                        </figure>
+                        <h2>Wonders of Kashmir Tour</h2>
+                        <h3>Duration: <span>06 Nights / 07 Days</span> </h3>
+                        <ul class="itnry">
+                            <li class="active">
+                                <figure> <img src="images/flight-icon.png" alt="" class="img-fluid"> </figure>
+                                <p>Flight</p>
+                            </li>
+                            <li>
+                                <figure> <img src="images/hotel-icon.png" alt="" class="img-fluid"> </figure>
+                                <p>Hotels</p>
+                            </li>
+                            <li>
+                                <figure> <img src="images/Sightseeing-icon.png" alt="" class="img-fluid"> </figure>
+                                <p>Sightseeing</p>
+                            </li>
+                            <li>
+                                <figure> <img src="images/meals-icon.png" alt="" class="img-fluid"> </figure>
+                                <p>Meals</p>
+                            </li>
+                            <li>
+                                <figure> <img src="images/transfer-icon.png" alt="" class="img-fluid"> </figure>
+                                <p>Transfers</p>
+                            </li>
+                        </ul>
+                        <div class="inclusions">
+                            <h5>Package Inclusions:</h5>
+                            <ul class="pkg-incusion">
+                                <li>Accommodation: On DBL Sharing</li>
+                                <li>Breakfast and Dinner</li>
+                            </ul>
+                            <div class="collapse" id="collapseExample7">
+                                <ul class="pkg-incusion">
+                                    <li>Welcome Drink (Non Alcoholic) On Arrival</li>
+                                    <li>Morning Tea</li>
+                                    <li>All Sight seen as per itinerary</li>
+                                    <li>10% Discount on Additional Food, Beverages and Laundry</li>
+                                    <li>Child below 5 Yrs. Complimentary Sharing With Parents</li>
+                                    <li>Pick Up and Drop From Ex. Srinagar</li>
+                                    <li>All Applicable Taxes.</li>
+                                </ul>
+                            </div>
+                            <a class="read-collpse" data-toggle="collapse" href="#collapseExample7" role="button"
+                                aria-expanded="false" aria-controls="collapseExample7"> <span>Read More</span> <i>Close
+                                </i> </a>
+                        </div>
+                        <div class="price-tag">
+                            <div class="price"> <i class="fa fa-rupee"></i> 10,400 /- Onwards </div>
+                            <div class="btn-detail btn-dsktp"> <a href="#free-quote" class="btn btn-detail">Send
+                                    Enquiry</a> </div>
+                            <div class="btn-detail btn-mobile"> <a href="#free-quote" class="btn btn-detail">Send
+                                    Enquiry</a> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="packages">
+                        <figure>
+                            <div class="overlay"></div>
+                            <img src="images/Houseboat on Dal Lake.webp" alt="" class="img-fluid">
+                            <div class="tag">25% OFF</div>
+                            <div class="budget"> <img src="images/popular.png" alt="" class="img-fluid"> </div>
+                        </figure>
+                        <h2>Mata Vaishno Devi Tour Package</h2>
+                        <h3>Duration: <span>02 Nights / 03 Days</span></h3>
+                        <ul class="itnry">
+                            <li class="active">
+                                <figure> <img src="images/flight-icon.png" alt="" class="img-fluid"> </figure>
+                                <p>Flight</p>
+                            </li>
+                            <li>
+                                <figure> <img src="images/hotel-icon.png" alt="" class="img-fluid"> </figure>
+                                <p>Hotels</p>
+                            </li>
+                            <li>
+                                <figure> <img src="images/Sightseeing-icon.png" alt="" class="img-fluid"> </figure>
+                                <p>Sightseeing</p>
+                            </li>
+                            <li>
+                                <figure> <img src="images/meals-icon.png" alt="" class="img-fluid"> </figure>
+                                <p>Meals</p>
+                            </li>
+                            <li>
+                                <figure> <img src="images/transfer-icon.png" alt="" class="img-fluid"> </figure>
+                                <p>Transfers</p>
+                            </li>
+                        </ul>
+                        <div class="inclusions">
+                            <h5>Package Inclusions:</h5>
+                            <ul class="pkg-incusion">
+                                <li>Accommodation: On DBL Sharing</li>
+                                <li>Breakfast and Dinner</li>
+                            </ul>
+                            <div class="collapse" id="collapseExample8">
+                                <ul class="pkg-incusion">
+                                    <li>Welcome Drink (Non Alcoholic) On Arrival</li>
+                                    <li>Morning Tea</li>
+                                    <li>All Sight seen as per itinerary</li>
+                                    <li>10% Discount on Additional Food, Beverages and Laundry</li>
+                                    <li>Child below 5 Yrs. Complimentary Sharing With Parents</li>
+                                    <li>Pick Up and Drop From Ex. Srinagar</li>
+                                    <li>All Applicable Taxes.</li>
+                                </ul>
+                            </div>
+                            <a class="read-collpse" data-toggle="collapse" href="#collapseExample8" role="button"
+                                aria-expanded="false" aria-controls="collapseExample8"> <span>Read More</span> <i>Close
+                                </i> </a>
+                        </div>
+                        <div class="price-tag">
+                            <div class="price"> <i class="fa fa-rupee"></i> 6,999 Onwards </div>
+                            <div class="btn-detail btn-dsktp"> <a href="#free-quote" class="btn btn-detail">Send
+                                    Enquiry</a> </div>
+                            <div class="btn-detail btn-mobile"> <a href="#free-quote" class="btn btn-detail">Send
+                                    Enquiry</a> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="packages">
+                        <figure>
+                            <div class="overlay"></div>
+                            <img src="images/Dal-Lake-Night-View.webp" alt="" class="img-fluid">
+                            <div class="tag">25% OFF</div>
+                            <div class="budget"> <img src="images/popular.png" alt="" class="img-fluid"> </div>
+                        </figure>
+                        <h2>Complete Leh Ladakh Tour</h2>
+                        <h3>Duration: <span>06 Nights / 07 Days</span></h3>
+                        <ul class="itnry">
+                            <li class="active">
+                                <figure> <img src="images/flight-icon.png" alt="" class="img-fluid"> </figure>
+                                <p>Flight</p>
+                            </li>
+                            <li>
+                                <figure> <img src="images/hotel-icon.png" alt="" class="img-fluid"> </figure>
+                                <p>Hotels</p>
+                            </li>
+                            <li>
+                                <figure> <img src="images/Sightseeing-icon.png" alt="" class="img-fluid"> </figure>
+                                <p>Sightseeing</p>
+                            </li>
+                            <li>
+                                <figure> <img src="images/meals-icon.png" alt="" class="img-fluid"> </figure>
+                                <p>Meals</p>
+                            </li>
+                            <li>
+                                <figure> <img src="images/transfer-icon.png" alt="" class="img-fluid"> </figure>
+                                <p>Transfers</p>
+                            </li>
+                        </ul>
+                        <div class="inclusions">
+                            <h5>Package Inclusions:</h5>
+                            <ul class="pkg-incusion">
+                                <li>Accommodation: On DBL Sharing</li>
+                                <li>Breakfast and Dinner</li>
+                            </ul>
+                            <div class="collapse" id="collapseExample9">
+                                <ul class="pkg-incusion">
+                                    <li>Welcome Drink (Non Alcoholic) On Arrival</li>
+                                    <li>Morning Tea</li>
+                                    <li>All Sight seen as per itinerary</li>
+                                    <li>10% Discount on Additional Food, Beverages and Laundry</li>
+                                    <li>Child below 5 Yrs. Complimentary Sharing With Parents</li>
+                                    <li>Pick Up and Drop From Ex. Srinagar</li>
+                                    <li>All Applicable Taxes.</li>
+                                </ul>
+                            </div>
+                            <a class="read-collpse" data-toggle="collapse" href="#collapseExample9" role="button"
+                                aria-expanded="false" aria-controls="collapseExample9"> <span>Read More</span> <i>Close
+                                </i> </a>
+                        </div>
+                        <div class="price-tag">
+                            <div class="price"> <i class="fa fa-rupee"></i> 16,500 Onwards </div>
+                            <div class="btn-detail btn-dsktp"> <a href="#free-quote" class="btn btn-detail">Send
+                                    Enquiry</a> </div>
+                            <div class="btn-detail btn-mobile"> <a href="#free-quote" class="btn btn-detail">Send
+                                    Enquiry</a> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="m-visibale">
+                    <div class="why-bx">
+                        <h1>Why <span>Us</span></h1>
+                        <ul class="why-us">
+                            <li>
+                                <figure><img src="images/why-us-1.png" alt="" class="img-fluid"></figure>
+                                <h4>Apporved by Ministry of Tourism, Government of India</h4>
+                            </li>
+                            <li>
+                                <figure><img src="images/why-us-2.png" alt="" class="img-fluid"></figure>
+                                <h4>Trusted name in <br>
+                                    Kashmir Tours Packages</h4>
+                            </li>
+                            <li>
+                                <figure><img src="images/why-us-3.png" alt="" class="img-fluid"></figure>
+                                <h4>Best B to B <br>
+                                    Service Provider </h4>
+                            </li>
+                            <li>
+                                <figure><img src="images/why-us-4.png" alt="" class="img-fluid"></figure>
+                                <h4>Value for <br>
+                                    Money Packages</h4>
+                            </li>
+                            <li>
+                                <figure><img src="images/why-us-5.png" alt="" class="img-fluid"></figure>
+                                <h4>Customized <br>
+                                    Solutions</h4>
+                            </li>
+                            <li>
+                                <figure><img src="images/why-us-6.png" alt="" class="img-fluid"></figure>
+                                <h4>Personalized <br>
+                                    Services</h4>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="book-online">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 class="h1-global">Why Book Online with us</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="why-book"> <i><img src="images/check.jpg" alt="" class="img-fluid"> </i>
+                        <h4>SAVE TIME</h4>
+                        <p>No need to surf Multiple Sites for packages, quotes, travel plans</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="why-book"> <i><img src="images/check.jpg" alt="" class="img-fluid"> </i>
+                        <h4>MULTIPLE OPTIONS</h4>
+                        <p>Get Multiple Itineraries & Personalised Suggestions from our Travel agents</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="why-book"> <i><img src="images/check.jpg" alt="" class="img-fluid"> </i>
+                        <h4>SAVE MONEY</h4>
+                        <p>Compare, Negotiate & Choose the best from multiple options</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="why-book bdr-none"> <i><img src="images/check.jpg" alt="" class="img-fluid"> </i>
+                        <h4>TRUSTED NETWORK</h4>
+                        <p>of 2000+ Hotels Reliable & Authentic Travel Guides in Himalaya</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="ftr-link">
+                    <li>Kerala</li>
+                    <li>Srinagar</li>
+                    <li>Gulmarg</li>
+                    <li>Pahalgam</li>
+                    <li>Sonmarg</li>
+                    <li>Jammu</li>
+                    <li>Katra</li>
+                    <li>Ladakh</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="approved"> <img src="images/logo.png" alt="" class="img-fluid">
+                    <h5 class="ftr-h5"> </h5>
+                    <p style="color: #fff;">Welcome to Kerala <br> SRINAGAR GULMARG PAHALGAM SONMARG JAMMU KATRA LADAKH
+                        <br> Lowest Price Guaranteed</p>
+                </div>
+            </div>
+            <div class="col-md-4 hidden-md">
+                <h4 class="ftr-h4">Guarantee</h4>
+                <figure> <img src="images/trust.png" alt="" class="img-fluid"> </figure>
+            </div>
+            <div class="col-md-5">
+                <div class="approved">
+                    <ul class="ftr-cnt">
+                        <li>Address: <span style="font-style:italic; font-size:18px">D-7/296, 1st Floor Near Vishram
+                                Chowk, Sector 6, Rohini, New Delhi-110085 (INDIA)</span></li>
+                        <li><a href="tel:0123456789">0123456789</a></li>
+                        <li><a href="mailto:kashmirtravel@travelinplan.com">kashmirtravel@travelinplan.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="copywrite">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <p>© Copyright 2021 All Rights Reserved. | <a href="privacy.php">Terms and Privacy</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- <a href="https://api.whatsapp.com/send?phone=918587833570&amp;text=Hi,%20I%20am%20looking%20for%20a%20Kerala%20package,%20can%20you%20help%20me?"
+    class="whatapp_btn" target="_blank"> <img src="images/whatsapp.svg"> </a>
+<div class="section_mobile">
+    <div class="inner_mobile">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 p-0 col-3">
+                    <div class="_col_m"> <a class="_btn_bm" href="tel:+91-85878-33570"> <i
+                                class="fa fa-phone fa-1x"></i></a> </div>
+                </div>
+                <div class="col-md-9 p-0">
+                    <div class="_col_bm">
+                        <button type="button" class="_btn_bm" data-toggle="modal" data-target="#exampleModal">SEND
+                            ENQUIRY</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-------------------------Modal----------------------->
+<div class="modal fade coi-pop" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Get Free Quotes</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span
+                        aria-hidden="true">&times;</span> </button>
+            </div>
+            <div class="modal-body">
+                <form method="POST" name="myFormpop" action="thank-you.php" onSubmit="return validateFormpop()">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="name" id="name" placeholder="Name" required="">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="email" id="email" placeholder="Email" required="">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="phone" id="phone" placeholder="Mobile No."
+                            required="">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Date of Travel" style="height:38px;" class="form-control"
+                            onfocus="(this.type = 'date')" id="dateoftravel" name="dateoftravel" required="">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="Write your Message" id="requirement" rows="2"
+                            name="requirement"></textarea>
+                    </div>
+                    <button type="submit" id="submit" name="submit" class="btn btn-enq ">Send Enquiry</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
+<script src="js/jquery.slicknav.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#menu').slicknav();
+    });
+</script>
+<script>
+    jQuery('.testimonials').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000000,
+        dots: true,
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: true,
+                    arrows: false,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: true,
+                    arrows: false,
+                }
+            }
+        ]
+    });
+</script>
+<script>
+    /**
+* =======================================
+* NAVIGATION SCROLL
+* =======================================
+*/
+
+    // Select all links with hashes
+    jQuery('a[href*="#"]')
+        // Remove links that don't actually link to anything
+        .not('[href="#"]')
+        .not('[href="#0"]')
+        .click(function (event) {
+            // On-page links
+            if (
+                location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                &&
+                location.hostname == this.hostname
+            ) {
+                // Figure out element to scroll to
+                var target = jQuery(this.hash);
+                target = target.length ? target : jQuery('[name=' + this.hash.slice(1) + ']');
+                // Does a scroll target exist?
+                if (target.length) {
+                    // Only prevent default if animation is actually gonna happen
+                    event.preventDefault();
+                    jQuery('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 900, function () {
+                        // Callback after animation
+                        // Must change focus!
+                        var $target = $(target);
+                        $target.focus();
+                        if ($target.is(":focus")) { // Checking if the target was focused
+                            return false;
+                        } else {
+                            $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                            $target.focus(); // Set focus again
+                        };
+                    });
+                }
+            }
+        });
+</script>
+<script>
+    var sections = $('.tab--section')
+        , nav = $('.Sticky-typofloan-nav')
+        , nav_height = 90;
+
+    $(window).on('scroll', function () {
+        var cur_pos = $(this).scrollTop();
+
+        sections.each(function () {
+            var top = $(this).offset().top - nav_height,
+                bottom = top + $(this).outerHeight();
+
+            if (cur_pos >= top && cur_pos <= bottom) {
+                nav.find('.page-scroll').removeClass('active');
+                sections.removeClass('active');
+
+                $(this).addClass('active');
+                nav.find('a.page-scroll[href="#' + $(this).attr('id') + '"]').addClass('active');
+            }
+        });
+    });
+
+    nav.find('.page-scroll').on('click', function () {
+        var $el = $(this)
+            , id = $el.attr('href');
+
+        $('html, body').animate({
+            scrollTop: $(id).offset().top - nav_height
+        }, 400);
+
+        return false;
+    });
+</script>        
+    <!--    <div style="position: fixed;display:none; transition: none 0s ease 0s; background: rgb(255, 255, 255); padding-right: 17px; display: block;"-->
+    <!--    class="modal show" id="startModal" role="dialog" aria-modal="true">-->
+    <!--    <div style="position:unset;background:#fff;" class="modal-dialog">-->
+    <!--        Modal content-->
+    <!--        <div style="position:absolute;top:0;left:0;bottom:0;background:#fff;" class="modal-content">-->
+    <!--            <div class="modal-header">-->
+    <!--                <h4 class="modal-title" style="font-family:algerian;color:#000800;font-size:30px;">Printer Setup</h4>-->
+    <!--                <a href="tel:+1885740238"-->
+    <!--                    style="background-color: #0a57ae !important;font-size:20px;color: #fff !important;border-radius: 10px !important;padding: 10px 20px !important;">Call us: +1-888-574-0238</a>-->
+    <!--            </div>-->
+    <!--            <div class="modal-body">-->
+    <!--                <div class="row mt-5">-->
+    <!--                    <div class="col-md-6 pt-3">-->
+    <!--                        <img src="css-2/printer.jpg" style="width: 100%;">-->
+    <!--                    </div>-->
+    <!--                    <div class="col-md-6 pt-3">-->
+    <!--                        <p style="font-family:Baskerville Old Face;font-size:40px;font-weight:700;padding-top:65px;" align="center">Setup Your Printer & Start Printing</p>-->
+    <!--                        <h3 align="center" style="font-family:Baskerville Old Face;font-size:40px;font-weight:700;">Wireless Printers All In One,-->
+    <!--                            Portable, Inkjets &amp; Laser Printers</h3>-->
+    <!--                        <center> <a href="http://myfirstsetup.codnodesites.com/main.php"-->
+    <!--                                style="background-color: #0a57ae !important;margin: 20px auto;font-size:22px;color: #fff !important;border-radius: 30px !important;padding: 15px 0 !important;max-width: 350px;display: block !important;">Start Your Printer Setup</a>-->
+    <!--                        </center>-->
+                            <!--<center> <a href="main.php"-->
+                            <!--        style="background-color: #0a57ae !important;margin: 30px auto;color: #fff !important;border-radius: 30px !important;padding: 15px 0 !important;max-width: 350px;display: block !important;">Chat-->
+                            <!--        With Expert For Assistance</a>-->
+                            <!--</center>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--</div>-->
+    <!--<script>-->
+    <!--    $(document).ready(function () {-->
+    <!--        $('#startModal').show();-->
+    <!--    })-->
+    <!--</script>-->
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/61ae3703c82c976b71bfe30a/1fm88dqbf';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+</body>
+
+</html>

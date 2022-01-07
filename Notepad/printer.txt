@@ -1,0 +1,53 @@
+
+
+<div style="position:unset;background:#fff;" class="modal-dialog">
+            Modal content
+            <div style="position:absolute;top:0;left:0;bottom:0;background:#fff;" class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" style="font-family:algerian;color:#000800;font-size:30px;">Printer Setup</h4>
+                    <a href="tel:+1885740238" style="background-color: #0a57ae !important;font-size:20px;color: #fff !important;border-radius: 10px !important;padding: 10px 20px !important;">Call us: +1-888-574-0238</a>
+                </div>
+                <div class="modal-body">
+                    <div class="row mt-5">
+                        <div class="col-md-6 pt-3">
+                            <img src="css-2/printer.jpg" style="width: 100%;">
+                        </div>
+                        <div class="col-md-6 pt-3">
+                            <p style="font-family:Baskerville Old Face;font-size:40px;font-weight:700;padding-top:65px;" align="center">Setup Your Printer &amp; Start Printing</p>
+                            <h3 align="center" style="font-family:Baskerville Old Face;font-size:40px;font-weight:700;">Wireless Printers All In One,
+                                Portable, Inkjets &amp; Laser Printers</h3>
+                            <center> <a href="http://myfirstsetup.codnodesites.com/main.php" style="background-color: #0a57ae !important;margin: 20px auto;font-size:22px;color: #fff !important;border-radius: 30px !important;padding: 15px 0 !important;max-width: 350px;display: block !important;">Start Your Printer Setup</a>
+                            </center>
+                            <!--<center> <a href="main.php"-->
+                            <!--        style="background-color: #0a57ae !important;margin: 30px auto;color: #fff !important;border-radius: 30px !important;padding: 15px 0 !important;max-width: 350px;display: block !important;">Chat-->
+                            <!--        With Expert For Assistance</a>-->
+                            <!--</center>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+/html/body/section[6]/div[3]/div/div<div style="position:absolute;top:0;left:0;bottom:0;background:#fff;" class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" style="font-family:algerian;color:#000800;font-size:30px;">Printer Setup</h4>
+                    <a href="tel:+1885740238" style="background-color: #0a57ae !important;font-size:20px;color: #fff !important;border-radius: 10px !important;padding: 10px 20px !important;">Call us: +1-888-574-0238</a>
+                </div>
+                <div class="modal-body">
+                    <div class="row mt-5">
+                        <div class="col-md-6 pt-3">
+                            <img src="css-2/printer.jpg" style="width: 100%;">
+                        </div>
+                        <div class="col-md-6 pt-3">
+                            <p style="font-family:Baskerville Old Face;font-size:40px;font-weight:700;padding-top:65px;" align="center">Setup Your Printer &amp; Start Printing</p>
+                            <h3 align="center" style="font-family:Baskerville Old Face;font-size:40px;font-weight:700;">Wireless Printers All In One,
+                                Portable, Inkjets &amp; Laser Printers</h3>
+                            <center> <a href="http://myfirstsetup.codnodesites.com/main.php" style="background-color: #0a57ae !important;margin: 20px auto;font-size:22px;color: #fff !important;border-radius: 30px !important;padding: 15px 0 !important;max-width: 350px;display: block !important;">Start Your Printer Setup</a>
+                            </center>
+                            <!--<center> <a href="main.php"-->
+                            <!--        style="background-color: #0a57ae !important;margin: 30px auto;color: #fff !important;border-radius: 30px !important;padding: 15px 0 !important;max-width: 350px;display: block !important;">Chat-->
+                            <!--        With Expert For Assistance</a>-->
+                            <!--</center>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
