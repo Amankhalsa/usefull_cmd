@@ -1,3 +1,8 @@
+#Before publish project run this cmd
+
+		* php artisan config:cache
+		* php artisan cache:clear
+		* php artisan view:clear
 # laravel full project installation steps 
 
 * laravel project installation steps 
