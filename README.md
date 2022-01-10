@@ -62,3 +62,45 @@ for installation go to by below link
 # https://nodejs.org/dist/v13.9.0/
 * select this 
 * node-v13.9.0-x64.msi                               18-Feb-2020 18:54            29888512
+------------------------
+php artisan config:cache
+php artisan cache:clear
+php artisan view:clear
+php artisan route:cache
+php artisan optimize --force
+
+-----------------------
+php artisan cache:clear
+php artisan view:clear
+php artisan route:clear
+php artisan clear-compiled
+php artisan config:cache
+-----------------------
+php artisan optimize
+
+$ php artisan view:clear
+$ php artisan config:clear
+$ php artisan route:clear
+$ php artisan cache:clear
+$ php artisan clear-compiled
+
+php artisan optimize:clear
+
+Laravel project->bootstarp->cache->delete all files
+
+
+----------------------------------------
+Reoptimized class loader:
+
+php artisan optimize
+Clear Cache facade value:
+
+php artisan cache:clear
+Clear Route cache:
+
+php artisan route:cache
+Clear View cache:
+
+php artisan view:clear
+Clear Config cache:
+
