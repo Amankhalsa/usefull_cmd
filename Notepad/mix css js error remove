@@ -1,0 +1,7 @@
+       example open this resources/views/layouts/guest.blade.php
+       then add this 
+       <!-- Styles -->
+        <link rel="stylesheet" href="{{ asset(mix('/css/app.css')) }}">
+
+        <!-- Scripts -->
+        <script src="{{asset(mix('js/app.js')) }}" defer></script>
