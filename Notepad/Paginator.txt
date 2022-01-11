@@ -1,0 +1,29 @@
+1st for pagination required 
+=============================
+use this type method in controller 
+      	$data['get_data']=Hp_printer::paginate(9);
+            return view('backend.test_table',$data);
+=============================
+2nd in view page 
+@foreach($get_data as $key => $value)
+@endforeach
+use this below code in last of div
+{{$get_data->links()}}
+=============================
+3rd if showing any error 
+=============================
+add this below selected code 
+in app/Providers/
+just make sure you have this in your AppServiceProvider.
+
+use Illuminate\Pagination\Paginator;
+
+public function boot()
+{
+     Paginator::useBootstrap();
+}
+
+=========================
+if Total result not showing use this method 
+
+       Showing {{ $get_data->firstItem() }}–{{ $get_data->lastItem() }} of {{ $get_data->total() }} results
