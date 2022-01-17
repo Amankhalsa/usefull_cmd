@@ -29,7 +29,11 @@ $data['trashdata']=Category::onlyTrashed()->paginate(3);
 ----------------------------------------
 4th Restore trashed use this below method 
 ----------------------------------------
-    $data=Category::withTrashed()->find($id)->restore();
+    	 $image= Brand::onlyTrashed()->find($id);
+        $old_image =$image->brand_image;
+		// dd($old_image);
+        unlink($old_image);
+    	$data= Brand::onlyTrashed()->find($id)->forcedelete();
 
 ----------------------------------------
 5th Force delete data use this below method 
