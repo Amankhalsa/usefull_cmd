@@ -1,0 +1,38 @@
+=========================
+Steps For soft delete 
+=========================
+
+Note: can use delete(old) method for trashed delete 
+    $data=Category::find($id)->delete();
+----------------------------------------------
+1st creating model and class use 
+----------------------------------------
+ 
+         $table->SoftDeletes();
+
+----------------------------------------
+2nd need model class and  below code and use 
+----------------------------------------
+use Illuminate\Database\Eloquent\SoftDeletes;
+              use SoftDeletes;
+               protected $fillable = [
+        'brand_name',
+        'brand_image',
+ 
+    ];
+----------------------------------------
+3rd for view trashed data use thia below in controller 
+----------------------------------------
+
+$data['trashdata']=Category::onlyTrashed()->paginate(3);
+
+----------------------------------------
+4th Restore trashed use this below method 
+----------------------------------------
+    $data=Category::withTrashed()->find($id)->restore();
+
+----------------------------------------
+5th Force delete data use this below method 
+----------------------------------------
+
+    $data=Category::onlyTrashed()->find($id)->forceDelete();
