@@ -1,0 +1,22 @@
+* Image intervention package link 
+* 1st step
+-----------------------------------------
+* composer.phar require intervention/image
+-----------------------------------------
+* open config app.php file open  scroll page in package serveice provider area
+
+* 2nd step
+-----------------------------------------
+* Intervention\Image\ImageServiceProvider::class,
+-----------------------------------------
+
+* Add the facade of this package to the $aliases array.
+
+* 3rd step
+-----------------------------------------
+* 'Image' => Intervention\Image\Facades\Image::class
+-----------------------------------------
+* then Save & publish image intervation in project
+
+* php artisan vendor:publish --provider="Intervention\Image\ImageServiceProviderLaravelRecent"
+
