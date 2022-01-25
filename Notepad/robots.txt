@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: 
+Disallow: /preview/
+Disallow: /cgi-bin/
+Sitemap: https://nextgenrations.com/sitemap.xml
