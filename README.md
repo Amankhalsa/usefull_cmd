@@ -1,3 +1,4 @@
+* for npm error delete node modules and package-lock.json
 #Before publish project run this cmd
 
 		* php artisan config:cache
