@@ -1,4 +1,12 @@
-* for npm error delete node modules and package-lock.json
+# for npm error delete node modules and package-lock.json
+* if you using mac then use
+
+* rm package-lock.json
+
+* and for window user use
+
+* del package-lock.json
+* node-module 
 #Before publish project run this cmd
 
 		* php artisan config:cache
