@@ -1,0 +1,25 @@
+1st composer require laravel/ui
+
+2nd php artisan ui vue --auth
+3rd npm install && npm run dev
+
+Other commans avilable 
+-----------------
+npm install
+for css and jason
+npm run watch
+-----------------
+npm install && npm run dev
+DB: name
+aman_project
+npm audit fix
+npm audit fix --force
+
+if you using mac then use
+
+rm package-lock.json
+
+and for window user use
+
+del package-lock.json
+node-module 
