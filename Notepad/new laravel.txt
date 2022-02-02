@@ -1,0 +1,11 @@
+if you have new project in laravel 
+& want to run new machine then run this below cmd
+Run composer with --no-scripts
+
+composer update --no-scripts  
+
+
+composer install
+=====================
+
+php artisan key:generate
