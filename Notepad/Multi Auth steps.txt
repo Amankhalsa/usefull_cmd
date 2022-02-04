@@ -1,0 +1,102 @@
+====================================
+#MUlti Auth Steps:-
+====================================
+1st Make Admin Controller
+=====================
+2nd make Model Class admin by using below commands
+----------------
+For Controller:-
+----------------
+php artisan make:Controller AdminController
+----------------
+for ModelL:- 
+----------------
+php artisan make:Model Admin -m
+=====================
+3rd Copy all data from user migration file and 
+paste into admin migration file like this below code:
+            $table->id();
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password');
+            $table->rememberToken();
+            $table->foreignId('current_team_id')->nullable();
+            $table->string('profile_photo_path', 2048)->nullable();
+            $table->timestamps();
+=====================
+4th Copy data from user model Class and paste into admin Model Class
+then change Class name user to admin in admin class
+
+=====================
+5th Run migration comand
+php artisan migrate 
+Check Database 
+=====================
+6th Make Admin Factory 
+php artisan make:factory Adminfactory
+=====================
+7th copy some data from user factory  like below 
+public function definition()
+paste into return array
+
+            'name' => $this->faker->name(),
+            'email' => $this->faker->unique()->safeEmail(),
+            'email_verified_at' => now(),
+            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+            'remember_token' => Str::random(10),
+-------
+=====================
+8th then user model classes in admin model class 
+use App\Models\User;
+use Illuminate\Support\Str;
+=====================
+9th open seeder file and uncomment out and change name User to Admin
+like this :-> 
+        \App\Models\Admin::factory()->create();
+
+
+=====================
+10th to insert data run seeder command 
+php artisan migrate --seed
+----------------------------------------------------------------------------
+11th After take rest Create Guard 
+Opne Config folder and open auth file then edit or add some below code
+under guard copy web code and edit using admin like below 
+1st 
+-------------------------------------
+     'admin' => [
+            'driver' => 'session',
+            'provider' => 'admins',
+        ],
+-------------------------------------
+2nd  add provider like below 
+-------------------------------------
+       'admins' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Admin::class,
+        ],
+-------------------------------------
+3rd add password like same  way 
+-------------------------------------
+           'admins' => [
+            'provider' => 'admins',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+--------------------------------------
+Take rest 
+--------------------------------------
+12th open sublime text press controll key search 
+Authsessioncontroller file  admin controller 
+
+After creating Guard  steps
+
+------------------------------
+i missed this if need can comment me 
+
+
+
+
+
