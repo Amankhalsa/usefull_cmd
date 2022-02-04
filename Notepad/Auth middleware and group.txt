@@ -1,0 +1,10 @@
+//for auth middleware 
+Route::group(['middleware'=>'auth'],function (){
+    //for prefix 
+    Route::prefix('admin')->group(function(){
+
+
+
+});
+
+});
