@@ -1,4 +1,21 @@
+==== for index use this below example code ==========
 User-agent: *
 Disallow: /preview/
 Disallow: /cgi-bin/
-Sitemap: https://e-martworld.com/sitemap.xml
+Sitemap: https://example.com/sitemap.xml
+
+
+==== for no-index use this below example code ==========
+file name =>robots.txt
+User-Agent: *
+Disallow: /blog/wp-admin/
+Disallow: /blog/wp-content/plugins/
+Allow: /blog/wp-admin/admin-ajax.php
+
+Disallow: https://example.com/download/
+
+Noindex: https://example.com/download/
+
+
+
+
