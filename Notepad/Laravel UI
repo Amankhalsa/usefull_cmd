@@ -1,0 +1,42 @@
+1st composer require laravel/ui
+
+2nd php artisan ui vue --auth
+3rd npm install && npm run dev
+
+Other commans avilable 
+-----------------
+npm install
+for css and jason
+npm run watch
+-----------------
+npm install && npm run dev
+DB: name
+aman_project
+npm audit fix
+npm audit fix --force
+
+if you using mac then use
+
+rm package-lock.json
+
+and for window user use
+
+del package-lock.json
+node-module 
+========================
+Make Controller 
+Plain Controller
+php artisan make:Controller ProductController
+--------------------------------------------
+php artisan make:Controller Test --resource
+
+----------------------------
+laravel six  methods 
+1. Get  	->for get database 
+2. Post		->for store database
+3. Put  	->update data 
+4. Delete 	->Delete data  
+5. Patch 	->single field update data
+6. Options 
+--------------------
+
