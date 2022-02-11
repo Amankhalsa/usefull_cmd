@@ -1,3 +1,7 @@
+* composer require laravel/ui
+* php artisan ui vue --auth
+Email 
+* <a href="https://www.youtube.com/watch?v=sKDz7zcMVMg">Email config</a>
 # for npm error delete node modules and package-lock.json
 * if you using mac then use
 
