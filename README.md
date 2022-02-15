@@ -1,3 +1,5 @@
+* Laravel Model and controller in single command:
+* php artisan make:model Admin -mc
 * composer require laravel/ui
 * php artisan ui vue --auth
 Email 
