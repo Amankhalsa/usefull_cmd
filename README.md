@@ -1,7 +1,8 @@
-* Laravel Model and controller in single command:
-* php artisan make:model Admin -mc
-* composer require laravel/ui
-* php artisan ui vue --auth
+# Laravel Model and controller in single command:
+	
+	php artisan make:model Admin -mc
+	 composer require laravel/ui
+	 php artisan ui vue --auth
 Email 
 * <a href="https://www.youtube.com/watch?v=sKDz7zcMVMg">Email config</a>
 # for npm error delete node modules and package-lock.json
