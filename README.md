@@ -1,3 +1,8 @@
+# File upload exception handle 
+
+ /home/s2vmarinelife/public_html/vendor/symfony/http-foundation/File/UploadedFile.php
+<a href="https://prnt.sc/26xfuj7">Link</a> 
+
 # Laravel Model and controller in single command:
 	
 	php artisan make:model Admin -mc
