@@ -2,7 +2,7 @@
 
 * public_html/vendor/symfony/http-foundation/File/UploadedFile.php
  
-* <a href="https://prnt.sc/26xfuj7" target="_blank">Link</a> 
+* <a href="https://prnt.sc/26xfuj7" target="_blank">File Link</a> 
 
 # Laravel Model and controller in single command:
 	
