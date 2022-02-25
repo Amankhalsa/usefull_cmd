@@ -1,3 +1,4 @@
+# some  usefull tricks and commands for me 
 # if route is ...
 	
 		@if(Request::is('/'))
