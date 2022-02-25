@@ -1,0 +1,22 @@
+ 
+        .reach_printer{
+                  width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            position: relative;
+       text-rendering: optimizeLegibility;
+            
+        }
+      .reach_printer::before  {
+                        content: "";
+            background-image: url(/assets/img/bgimages/banner-bg-all-1200x420.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            bottom: 0 ;
+            right: 0;
+            left: 0;
+            opacity: 25%;
+        }
