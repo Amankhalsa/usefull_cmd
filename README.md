@@ -1,3 +1,8 @@
+# if route is ...
+	
+		@if(Request::is('/'))
+		@include('home_page.body.slider')
+		@endif
 # File upload exception handle 
 
 * public_html/vendor/symfony/http-foundation/File/UploadedFile.php
