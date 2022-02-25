@@ -1,23 +1,94 @@
-   <div class="page-loading">
-        <img src="assets/images/loader.gif" alt="" />
-    </div><!--page-loading end-->
-    
-
-.page-loading {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  z-index: 9999;
-}
+PreLoader 
+	<div id="loader" class="center"></div>
 
 
+------------------
+CSS for loader 
+------------------
+#loader {
+		border: 5px solid #f3f3f3;
+		border-radius: 50%;
+		border-top: 5px solid skyblue;
+		width: 30px;
+		height: 30px;
+		animation: spin 1s linear infinite;
+		}
 
+@keyframes spin {
+		50%{
+		border-top: 5px solid #d80005;
+		}
+		80%{
+		border-top: 5px solid green;
+		}
+		100% {
+		transform: rotate(360deg);
+		}
+		}
+--------------------------------------------------
+# Javascript 
+<script>
+	document.onreadystatechange = function() {
+	if (document.readyState !== "complete") {
+	document.querySelector(
+	"body").style.visibility = "hidden";
+	document.querySelector(
+	"#loader").style.visibility = "visible";
+	} else {
+	document.querySelector(
+	"#loader").style.display = "none";
+	document.querySelector(
+	"body").style.visibility = "visible";
+	}
+	};
+</script>
 
-$(window).on("load", function() {
-    "use strict";
+<!-- javascript end -->
 
- $(".page-loading").fadeOut();
-}
+=============================================================
+/* loader css */
+    #loader {
+      border: 5px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 5px solid skyblue;
+      width: 30px;
+      height: 30px;
+      animation: spin 1s linear infinite;
+      } 
+
+      @keyframes spin {
+        50%{
+        border-top: 5px solid #d80005;
+        }
+        80%{
+        border-top: 5px solid green;
+        }
+        100% {
+        transform: rotate(360deg);
+        }
+        }
+        		.center {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+        /* end loader css */
+=============================================================
+ <script>
+	document.onreadystatechange = function() {
+	if (document.readyState !== "complete") {
+	document.querySelector(
+	"body").style.visibility = "hidden";
+	document.querySelector(
+	"#loader").style.visibility = "visible";
+	} else {
+	document.querySelector(
+	"#loader").style.display = "none";
+	document.querySelector(
+	"body").style.visibility = "visible";
+	}
+	};
+</script>
