@@ -1,4 +1,15 @@
 # some  usefull tricks and commands for me 
+
+
+			@auth
+			@if(auth()->user()->id ==  1)
+			<li><a class="nav-link scrollto" href="{{route('view_blog')}}">View Blog</a></li>
+
+
+			<li><a class="nav-link scrollto" href="{{route('user.logout')}}">logout</a></li>
+			@endif
+			@endauth
+
 # if route is ...
 	
 		@if(Request::is('/'))
