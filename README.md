@@ -11,6 +11,15 @@
 			\App\Http\Middleware\HttpsProtocol::class,
 # some  usefull tricks and commands for me 
 
+				MAIL_MAILER=smtp
+				MAIL_HOST=smtp.mailtrap.io
+				MAIL_PORT=587
+				MAIL_USERNAME=user
+				MAIL_PASSWORD=password
+				MAIL_ENCRYPTION=null
+				MAIL_FROM_ADDRESS=email
+				MAIL_FROM_NAME="${APP_NAME}"
+
 
 			@auth
 			@if(auth()->user()->id ==  1)
