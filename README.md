@@ -1,3 +1,14 @@
+# Get Secure url using middleware
+
+				============ Name ===========
+				       HttpsProtocol
+				---------------------------------
+			if (!$request->secure()) {
+			return redirect()->secure($request->getRequestUri());
+			}
+			-----------------------------------
+			===========Kernal class ============
+			\App\Http\Middleware\HttpsProtocol::class,
 # some  usefull tricks and commands for me 
 
 
