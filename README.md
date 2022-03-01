@@ -1,3 +1,8 @@
+# onchange image
+
+<img id="output" src="" width="100" height="100">
+
+<input name="photo" type="file" accept="image/*" onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])">
 # Get Secure url using middleware
 
 				============ Name ===========
