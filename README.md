@@ -1,3 +1,9 @@
+# Laravel Breez package installation steps
+--------------------------------------
+	1st =>composer require laravel/breeze --dev
+	2nd => php artisan breeze:install
+	3rd =>npm install && npm run dev
+
 # onchange image
 			src=" " onmouseover="this.src=''" onmouseout="this.src=''" 
 			
