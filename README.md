@@ -3,7 +3,7 @@
 	1st =>composer require laravel/breeze --dev
 	2nd => php artisan breeze:install
 	3rd =>npm install && npm run dev
-
+<a href="https://www.tutsmake.com/laravel-7-6-google-login-tutorial-with-socialite-demo-example/">Google login </a>
 # onchange image
 			src=" " onmouseover="this.src=''" onmouseout="this.src=''" 
 			
