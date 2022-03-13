@@ -1,0 +1,20 @@
+========================================
+	    	Slider::insert([
+	    		'title'=>$request->title,
+	    		'discription'=>$request->discription,
+	    		'image'=>$last_img,
+	    		'created_at'=>Carbon::now()
+	    	]);
+========================================
+		// $data = new HomeAbout();
+    			// $data->title = $request->title;
+    			// $data->shortdis = $request->shortdis;
+    			// $data->longdis= $request->longdis;
+    			// $data->save();
+
+//=============== Quesry builder way to insert data ===============
+        // $data =array();
+        // $data['category_name']=$request->category_name;
+        // $data['user_id']=  Auth::user()->id;
+        // $data['created_at']=  Carbon::now();
+        // DB::table('categories')->insert($data);
