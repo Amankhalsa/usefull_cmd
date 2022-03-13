@@ -1,0 +1,8 @@
+   	$request->validate([
+    		'brand_name_en' =>'required',
+    		'brand_name_hin'=>'required',
+    		'brand_image' =>'required',
+    	],[
+    		'brand_name_en.required' => 'Input brand name english',
+
+    	]);
