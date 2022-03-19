@@ -1,0 +1,47 @@
+ <script type="text/javascript">
+      $(document).ready(function() {
+        $('select[name="category_id"]').on('change', function(){
+            var category_id = $(this).val();
+            if(category_id) {
+                $.ajax({
+                    url: "{{  url('/category/subcategory/ajax') }}/"+category_id,
+                    type:"GET",
+                    dataType:"json",
+                    success:function(data) {
+                       var d =$('select[name="subcategory_id"]').empty();
+                          $.each(data, function(key, value){
+                              $('select[name="subcategory_id"]').append('<option value="'+ value.id +'">' + value.subcategory_name_en + '</option>');
+                          });
+                    },
+                });
+            } else {
+                alert('danger');
+            }
+        });
+    });
+    </script>
+
+
+// ========================== select sub cat with ajax ================
+ public function GetSubCategory($category_id){
+
+        $subcat = SubCategory::where('category_id',$category_id)->orderBy('subcategory_name_en','ASC')->get();
+        return json_encode($subcat);
+     }
+
+//================================================
+Route::get('/subcategory/ajax/{category_id}', [SubCategoryController::class, 'GetSubCategory']);
+
+//==================================================
+		  <div class="form-group">
+	<h5>SubCategory Select <span class="text-danger">*</span></h5>
+	<div class="controls">
+		<select name="subcategory_id" class="form-control"  >
+			<option value="" selected="" disabled="">Select SubCategory</option>
+
+		</select>
+	@error('subcategory_id') 
+	 <span class="text-danger">{{ $message }}</span>
+	 @enderror 
+	 </div>
+		 </div>
