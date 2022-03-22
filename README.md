@@ -1,3 +1,4 @@
+<a href="https://stackoverflow.com/questions/15124438/jquery-autoplay-video"> Auto Play Article </a>
 # Laravel Breez package installation steps
 --------------------------------------
 	1st =>composer require laravel/breeze --dev
