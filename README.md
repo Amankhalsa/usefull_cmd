@@ -14,7 +14,16 @@
 
 			<input name="photo" type="file" accept="image/*" onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])">
 # single page app
- * npm install --save turbolinks
+* npm install --save turbolinks
+* npm audit fix
+* npm install
+* npm run dev
+* npm run watch
+
+* resources/js/app.js
+* add this 
+* var Turbolinks = require("turbolinks");
+* Turbolinks.start();
 # Get Secure url using middleware
 
 				============ Name ===========
