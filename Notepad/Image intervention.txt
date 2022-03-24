@@ -1,7 +1,24 @@
 * Image intervention package link 
+
+
+
+* composer require intervention/image
+
+------------------------
+
+* Intervention\Image\ImageServiceProvider::class,
+
+-------------------
+* php artisan vendor:publish --provider="Intervention\Image\ImageServiceProviderLaravelRecent"
+
+
+
+
+
 * 1st step
 -----------------------------------------
 * composer.phar require intervention/image
+composer require intervention/image
 -----------------------------------------
 * open config app.php file open  scroll page in package serveice provider area
 
