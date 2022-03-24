@@ -1,0 +1,3 @@
+go to xampp->php> php.ini( also called php configuration setting in type ) this file will be located right after php.exe
+
+search for ;extension=gd remove(uncomment) ; as extension=gd save it should work if not then restart xampp
