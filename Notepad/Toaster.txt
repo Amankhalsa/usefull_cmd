@@ -28,10 +28,27 @@
  }
  @endif 
 </script>
-
+===============================================
 
 
   		  $notification = array(
         'message' => 'User profile Updated successfully',
         'alert-type' => 'success'
     );
+    
+===================Custom css ========================
+<style type="text/css">
+.toast-success {
+  background-color: #51A351 !important;
+}
+.toast-error {
+  background-color: #BD362F !important;
+}
+.toast-info {
+  background-color: #2F96B4 !important;
+}
+.toast-warning {
+  background-color: #F89406 !important;
+}
+</style>
+
