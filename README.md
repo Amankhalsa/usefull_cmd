@@ -29,6 +29,9 @@
 * var Turbolinks = require("turbolinks");
 * Turbolinks.start();
 # Get Secure url using middleware
+#if else for image condition 
+
+	{{(!empty($edit_site_user->profile_photo_path)) ? asset($edit_site_user->profile_photo_path):url('upload/no_image.jpg')}}
 
 				============ Name ===========
 				       HttpsProtocol
