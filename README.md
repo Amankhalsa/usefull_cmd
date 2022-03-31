@@ -143,6 +143,14 @@ for installation go to by below link
 
 # java script for add - after 5 like product key 
 
+			<form method="post" action="process.php">
+			<p>Key: <input name="key" size="40"
+			id="tbNum" onkeyup="addHyphen(this)"
+			placeholder="Type some values here"
+			></p>
+			<p><input type="submit"></p>
+			</form>
+
 			<script>
 			function addHyphen (element) {
 			let ele = document.getElementById(element.id);
