@@ -141,7 +141,17 @@ for installation go to by below link
 
 * <a href="https://copyassignment.com/python/"> PYTHON copyassignment.comt</a>
 
+# java script for add - after 5 like product key 
 
+			<script>
+			function addHyphen (element) {
+			let ele = document.getElementById(element.id);
+			ele = ele.value.split('-').join('');    // Remove dash (-) if mistakenly entered.
+
+			let finalVal = ele.match(/.{1,5}/g).join('-');
+			document.getElementById(element.id).value = finalVal;
+			}
+			</script>
 # Wifi pasword finder 
   *  It’s pretty but u can do this in CMD.
   *  There are steps:
