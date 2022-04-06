@@ -1,5 +1,8 @@
 <a href="https://stackoverflow.com/questions/15124438/jquery-autoplay-video"> Auto Play Article </a>
+ # laravel visitor tracker 
  
+ 	composer require awssat/laravel-visits
+	
   	php artisan migrate:rollback --step=2
  # carbon date in human style
  	
