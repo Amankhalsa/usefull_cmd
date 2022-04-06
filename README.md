@@ -9,6 +9,8 @@
 	3rd =>npm install && npm run dev
 <a href="https://www.tutsmake.com/laravel-7-6-google-login-tutorial-with-socialite-demo-example/">Google login </a>
 <a href="https://www.tutsmake.com/laravel-8-socialite-google-login-example-tutorial/">Google login </a>
+# set string limit in laravel
+	  {{Str::limit(	$values->post_detail,300,$end='....')}}
 # php my admin table if not editable or id is 0 
 * ALTER TABLE `crud` ADD INDEX(`id`);
 * ALTER TABLE `crud` ADD PRIMARY KEY( `id`);
