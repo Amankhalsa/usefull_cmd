@@ -4,6 +4,8 @@
  	composer require awssat/laravel-visits
 	
   	php artisan migrate:rollback --step=2
+# Composer visitor 
+	composer require awssat/laravel-visits   
  # carbon date in human style
  	
 	{{Carbon\Carbon::parse($value->created_at)->diffForHumans()}}
