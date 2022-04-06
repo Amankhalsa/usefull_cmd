@@ -12,6 +12,8 @@
 # set string limit in laravel
 	  {{Str::limit(	$values->post_detail,300,$end='....')}}
 # php my admin table if not editable or id is 0 
+# redirect in laravel by script 
+	<script> setTimeout(function () { window.location.replace('{{ url('home') }}'); }, 5000); </script>
 * ALTER TABLE `crud` ADD INDEX(`id`);
 * ALTER TABLE `crud` ADD PRIMARY KEY( `id`);
 # onchange image
