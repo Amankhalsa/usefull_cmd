@@ -4,7 +4,7 @@
  	composer require awssat/laravel-visits
 	
   	php artisan migrate:rollback --step=2
- 
+ # git Branches <a href="https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches">Make branch</a>
  # carbon date in human style
  	
 	{{Carbon\Carbon::parse($value->created_at)->diffForHumans()}}
