@@ -5,6 +5,11 @@
 	
   	php artisan migrate:rollback --step=2
  # git Branches <a href="https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches">Make branch</a>
+ # if file exists for image unlink 
+ 		if (file_exists($img_del)) 
+						{ 
+						unlink($img_del); 
+						}
  # carbon date in human style
  	
 	{{Carbon\Carbon::parse($value->created_at)->diffForHumans()}}
