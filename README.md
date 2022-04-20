@@ -46,7 +46,7 @@
 * npm run watch
 
 * resources/js/app.js
-* add this 
+* add this  below code :
 * var Turbolinks = require("turbolinks");
 * Turbolinks.start();
 # Get Secure url using middleware
