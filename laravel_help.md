@@ -1,8 +1,8 @@
-For modal in frontend page 
-@php 
-  $address = App\Models\Contact::first();
-  @endphp
-  ====================
+          For modal in frontend page 
+          @php 
+          $address = App\Models\Contact::first();
+          @endphp
+          ====================
         
         
         DB method 
