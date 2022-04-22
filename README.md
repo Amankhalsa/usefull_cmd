@@ -7,6 +7,12 @@
  	composer require awssat/laravel-visits
 	
   	php artisan migrate:rollback --step=2
+# short cut models 
+
+		@php
+		$slider = App\Models\Slider::get();
+
+		@endphp
  # git Branches <a href="https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches">Make branch</a>
  # if file exists for image unlink 
  		if (file_exists($img_del)) 
