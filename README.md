@@ -14,7 +14,8 @@
 						unlink($img_del); 
 						}
  # carbon date in human style
- 	
+ #  HTML entity 
+             {!!html_entity_decode($slider_img->description)!!}	
 	{{Carbon\Carbon::parse($value->created_at)->diffForHumans()}}
 # Laravel Breez package installation steps
 --------------------------------------
