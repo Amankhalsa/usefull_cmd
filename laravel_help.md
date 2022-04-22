@@ -1,5 +1,15 @@
-          
-          HTML entity 
+         PDF function 
+             if($request->file('brochure')) 
+            {
+                $file = $request->file('brochure');
+                $filename = time() . '.' . $request->file('brochure')->extension();
+                $filePath = public_path() . '/upload/brochure/';
+                $brochur_url= $file->move($filePath, $filename);
+            }
+         
+         
+         
+         HTML entity 
                  {!!html_entity_decode($slider_img->description)!!}
           -----------------------------------------------------------
           For modal in frontend page 
