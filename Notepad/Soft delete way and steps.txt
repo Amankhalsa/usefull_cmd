@@ -4,6 +4,7 @@ Steps For soft delete
 # RESTORE 
 		
 		Post::onlyTrashed()->where('id', $post_id)->restore();
+		$data =Brand::withTrashed()->find($id)->restore();
 		
 Note: can use delete(old) method for trashed delete 
     $data=Category::find($id)->delete();
