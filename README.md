@@ -1,3 +1,5 @@
+
+# @if(Request::is('/') || Request::url('/eyeglasses.html') || Request::url('/sunglasses.html') || Request::url('/brands.html')    )
 	* php artisan config:cache
 	* php artisan cache:clear
 	* php artisan view:clear
