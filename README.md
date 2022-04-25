@@ -3,6 +3,7 @@
 	* php artisan config:cache
 	* php artisan cache:clear
 	* php artisan view:clear
+	* 
 	   protected $guarded = [];
 <a href="https://stackoverflow.com/questions/15124438/jquery-autoplay-video"> Auto Play Article </a>
  # laravel visitor tracker 
