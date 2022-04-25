@@ -1,5 +1,5 @@
 
-# @if(Request::is('/') || Request::url('/eyeglasses.html') || Request::url('/sunglasses.html') || Request::url('/brands.html')    )
+* @if(Request::is('/') || Request::url('/eyeglasses.html') || Request::url('/sunglasses.html') || Request::url('/brands.html')    )
 	* php artisan config:cache
 	* php artisan cache:clear
 	* php artisan view:clear
@@ -17,6 +17,14 @@
 
 		@endphp
  # git Branches <a href="https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches">Make branch</a>
+ # aactive inactive 
+         			  @if($value->status == 1)
+
+                                            <span class="badge badge-pill badge-success">Approved</span>
+                                        @else
+                                            <span class="badge badge-pill badge-danger">Unapproved</span>
+                    
+                                        @endif
  # if file exists for image unlink 
  		if (file_exists($img_del)) 
 						{ 
