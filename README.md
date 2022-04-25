@@ -5,7 +5,9 @@
 	* php artisan view:clear
 	* 
 	   protected $guarded = [];
-<a href="https://stackoverflow.com/questions/15124438/jquery-autoplay-video"> Auto Play Article </a>
+	   
+		<a href="https://stackoverflow.com/questions/15124438/jquery-autoplay-video"> Auto Play Article </a>
+		
  # laravel visitor tracker 
  
  	composer require awssat/laravel-visits
