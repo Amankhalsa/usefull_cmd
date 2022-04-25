@@ -31,9 +31,12 @@
 						unlink($img_del); 
 						}
  # carbon date in human style
+ # long string 
+	 {!!html_entity_decode($slider_img->description)!!}	
+
  #  HTML entity 
-             {!!html_entity_decode($slider_img->description)!!}	
-	{{Carbon\Carbon::parse($value->created_at)->diffForHumans()}}
+            
+	    	{{Carbon\Carbon::parse($value->created_at)->diffForHumans()}}
 # Laravel Breez package installation steps
 --------------------------------------
 	1st =>composer require laravel/breeze --dev
