@@ -1,4 +1,36 @@
-         PDF function 
+# Active inactive status 
+                           // active bid
+                           Route::get('/active/{id}',[BidController::class, 'active_front_bid'])->name('active.front.bidpost');
+                           // inactive bid
+                           Route::get('/inactive/{id}',[BidController::class, 'inactive_front_bid'])->name('inactive.front.bidpost');
+
+                           // ============================ Active bid poseted by Admin ==========================
+                           public function active_front_bid($id){
+                           $activeedata = AddPost::find($id);
+                           $activeedata->status = 1;  
+                           $activeedata->save();
+                           $notification = array(
+                           'message' => 'Post  status  is Active',
+                           'alert-type' => 'success'
+                           );
+                           return redirect()->route('front.bid.view')->with($notification);
+
+                           }
+                           // ============================ Inactive bid poseted by user ==========================
+                           public function inactive_front_bid($id){
+                           $activeedata = AddPost::find($id);
+                           $activeedata->status = 0;  
+                           $activeedata->save();
+                           $notification = array(
+                           'message' => 'Post  status  is inactive',
+                           'alert-type' => 'error'
+                           );
+                           return redirect()->route('front.bid.view')->with($notification);
+
+                           }
+<!-- =================================== -->
+        
+        PDF function 
              if($request->file('brochure')) 
             {
                 $file = $request->file('brochure');
