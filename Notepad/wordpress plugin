@@ -1,0 +1,58 @@
+<?php
+
+/**
+
+ * Plugin Name: partner
+ * Plugin URI: www.smartsbee.co/testing/2021/lumitech
+ * Description: Display content using a shortcode to insert in a page or post
+ * Version: 0.1
+ * Text Domain: partner
+ * Author: Tim Bare
+ * Author URI: www.smartsbee.co/testing/2021/lumitech
+
+ */
+
+add_shortcode( 'partner', function () {
+
+	?>
+
+
+<div class="ventureSec">
+	<div class="container">
+		<div class="swiper mySwiper">
+			<div class="swiper-wrapper">
+				<?php
+					$args = array(
+							'category_name'     => 'partner',
+		'post_status' => array('publish', 'future'),
+							'posts_per_page' => -1
+					);
+					$loop = new WP_Query( $args );
+					while ( $loop->have_posts() ) : $loop->the_post();
+				?>
+				<div class="swiper-slide">
+					<div class="slideTab">
+						<div class="slideImg">
+							<?php the_post_thumbnail(); ?>
+						</div>
+						<div class="slideContent">
+							<?php the_content(); ?>
+						</div>
+					</div>
+				</div>
+
+				<?php endwhile; wp_reset_query(); ?>
+			</div>
+			<div class="swiper-button-next">
+				<img src="" alt="...">
+			</div>
+      <div class="swiper-button-prev">
+				<img src="" alt="...">
+      </div>
+		</div>
+	</div>
+</div>
+
+<?php
+	return $out;
+}); ?>
