@@ -9,6 +9,9 @@
 	   protected $guarded = [];
 	   
 		<a href="https://stackoverflow.com/questions/15124438/jquery-autoplay-video"> Auto Play Article </a>
+# If profile set 
+ 	{{(!empty($get_admin_users->profile_photo_path)) 
+                ? asset($get_admin_users->profile_photo_path):url('upload/no_image.jpg')}}
 # data in template  Age calulate
 	 {{ \Carbon\Carbon::parse($values->dob)->diff(\Carbon\Carbon::now())->format('%y years') }}
 # DB make seeder
