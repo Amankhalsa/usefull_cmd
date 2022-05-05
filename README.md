@@ -1,5 +1,6 @@
 
 * @if(Request::is('/') || Request::url('/eyeglasses.html') || Request::url('/sunglasses.html') || Request::url('/brands.html')    )
+
 	* php artisan config:cache
 	* php artisan cache:clear
 	* php artisan view:clear
@@ -7,7 +8,12 @@
 	   protected $guarded = [];
 	   
 		<a href="https://stackoverflow.com/questions/15124438/jquery-autoplay-video"> Auto Play Article </a>
-		
+# DB make seeder
+	after making model class 
+		php artisan make:seeder CountrySeeder
+	and run this below 
+		php artisan db:seed --class=CountrySeeder
+	
  # laravel visitor tracker 
  
  	composer require awssat/laravel-visits
