@@ -1,13 +1,16 @@
 
 * @if(Request::is('/') || Request::url('/eyeglasses.html') || Request::url('/sunglasses.html') || Request::url('/brands.html')    )
 
+
 	* php artisan config:cache
 	* php artisan cache:clear
 	* php artisan view:clear
-	* 
+	
 	   protected $guarded = [];
 	   
 		<a href="https://stackoverflow.com/questions/15124438/jquery-autoplay-video"> Auto Play Article </a>
+# data in template  Age calulate
+	 {{ \Carbon\Carbon::parse($values->dob)->diff(\Carbon\Carbon::now())->format('%y years') }}
 # DB make seeder
 	after making model class 
 		php artisan make:seeder CountrySeeder
