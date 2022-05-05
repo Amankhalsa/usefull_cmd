@@ -13,6 +13,11 @@
 		php artisan make:seeder CountrySeeder
 	and run this below 
 		php artisan db:seed --class=CountrySeeder
+	Use full functions 
+			State::truncate();
+			foreach ($states as $key => $value) {
+			State::create($value);
+			}
 	
  # laravel visitor tracker 
  
