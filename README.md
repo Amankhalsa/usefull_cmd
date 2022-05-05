@@ -24,7 +24,15 @@
  	composer require awssat/laravel-visits
 	
   	php artisan migrate:rollback --step=2
+# age calulate 
+		use Carbon\Carbon; // Include Class in COntroller
+
+		$request->date_of_birth = "2000-10-25";
+		$age = Carbon::parse($request->date_of_birth)->diff(Carbon::now())->y;
+
+		dd($age. " Years");
 # short cut models 
+
 
 		@php
 		$slider = App\Models\Slider::get();
