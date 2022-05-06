@@ -7,7 +7,10 @@
 	* php artisan view:clear
 	
 	   protected $guarded = [];
-	   
+# error message :
+@error('category_id')
+<span class="text-danger"> {{$message}}</span>
+@enderror
 		<a href="https://stackoverflow.com/questions/15124438/jquery-autoplay-video"> Auto Play Article </a>
 # If profile set 
  	{{(!empty($get_admin_users->profile_photo_path)) 
