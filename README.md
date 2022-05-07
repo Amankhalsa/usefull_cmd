@@ -7,9 +7,9 @@
 	* php artisan view:clear
 	
 	   protected $guarded = [];
-#meta tags 
+# meta tags <a href="https://stackoverflow.com/questions/34676729/add-meta-tags-to-laravel-page"> Ref</a>
 
-		<html>
+ 		<html>
 	    <head>
 		<title>App Name - @yield('title')</title>
 		<meta name="description" content="@yield('description')">
