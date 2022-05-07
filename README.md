@@ -7,6 +7,29 @@
 	* php artisan view:clear
 	
 	   protected $guarded = [];
+#meta tags 
+
+		<html>
+	    <head>
+		<title>App Name - @yield('title')</title>
+		<meta name="description" content="@yield('description')">
+		<meta name="keywords" content="@yield('keywords')">
+		<!-- etc -->
+	    </head>
+	    <body>
+		...
+	    </body>
+	</html>
+	And then your template should extend the other template.
+
+	@extends('layouts.master')
+	@section('title')
+	{{trans('strings.About')}}
+	@stop
+	@section('description', 'Share text and photos with your friends and have fun')
+	@section('keywords', 'sharing, sharing text, text, sharing photo, photo,')
+	@section('robots', 'index, follow')
+	@section('revisit-after', 'content="3 days')
 # error message :
 		//@error('category_id')
 		<span class="text-danger"> {{$message}}</span>
