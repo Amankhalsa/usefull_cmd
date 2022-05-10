@@ -30,6 +30,38 @@
 	@section('keywords', 'sharing, sharing text, text, sharing photo, photo,')
 	@section('robots', 'index, follow')
 	@section('revisit-after', 'content="3 days')
+	
+# Validation 
+	 $request->validate([
+            'name'   =>'required',
+            'email' =>'required | unique:users',
+            'dob' =>'required',
+            'gender' =>'required',
+            'country' =>'required',
+            'state' =>'required',
+            'city' =>'required',
+            'phone' =>'required |  numeric |unique:users',
+            'postcode' =>'required',
+            'about_yourself' =>'required',
+            'address' =>'required',
+            'height' =>'required',
+            'Diet' =>'required',
+            'marital_status' =>'required',
+            'profile_created' =>'required',
+            'religion' =>'required',
+            'community' =>'required',
+            'profile_photo_path' =>'required|image|mimes:jpg,png,jpeg,svg,webp|max:4096',
+            'multi_img' =>'max:5',
+
+            
+
+            // 'Working_as' =>'required',
+            // 'mother_tongue' =>'required',
+            // 'education' =>'required',
+            ]
+        ,[
+            'multi_img.max' => 'Maximum 5 photos Acceptable',  
+        ]);
 # error message :
 		//@error('category_id')
 		<span class="text-danger"> {{$message}}</span>
