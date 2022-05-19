@@ -7,6 +7,16 @@
 	* php artisan view:clear
 	
 	   protected $guarded = [];
+	   
+# if session has an error 
+	 @if(session('sucess'))
+ <div class="alert alert-success alert-dismissible fade show" role="alert">
+ <strong>{{session('sucess')}}</strong> 
+ <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+ <span aria-hidden="true">&times;</span>
+ </button>
+ </div>
+ @endif
 # meta tags <a href="https://stackoverflow.com/questions/34676729/add-meta-tags-to-laravel-page"> Ref</a>
 
  		<html>
