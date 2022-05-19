@@ -21,3 +21,26 @@ public function store(Request $request)
       return redirect('/image.index'));       
   }
 }
+
+
+
+======================================
+
+//================ Multi image store ===================
+                if ($request->file('multi_img')) {
+                $images = $request->file('multi_img');
+                foreach ($images as  $value) {
+                    $make_name =hexdec(uniqid()).'.'.$value->getClientOriginalExtension();
+                    Image::make($value)->resize(200,200)->save(public_path('upload/profile/multi/').$make_name);
+                    // ->resize(917,1000)
+                    $uploadpath = 'upload/profile/multi/'.$make_name;
+                    $storemulti_img = new MultiplePic();
+                    $storemulti_img->user_id = $add_data ;
+                    $storemulti_img->photo_name = $uploadpath ;
+                    $storemulti_img->created_at = Carbon::now() ;
+                    // dd($storemulti_img);
+                    $storemulti_img->save();
+                }
+            }
+
+//================ Multi image store ===================
