@@ -1,3 +1,4 @@
+# laravel project 1st composer create-project --prefer-dist laravel/laravel my-blog
 # if else 
 
 	 @if($user_data->height ==  $values->name) selected="selected" @endif
