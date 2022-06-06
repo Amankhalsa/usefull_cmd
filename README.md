@@ -172,6 +172,30 @@
                                             <span class="badge badge-pill badge-danger">Unapproved</span>
                     
                                         @endif
+# function for active 
+			public function active_front_bid($id){
+			$activeedata = AddPost::find($id);
+			$activeedata->status = 1;  
+			$activeedata->save();
+			$notification = array(
+			'message' => 'Post  status  is Active',
+			'alert-type' => 'success'
+			);
+			return redirect()->route('front.bid.view')->with($notification);
+
+			}
+			// ============================ Inactive bid poseted by user ==========================
+			public function inactive_front_bid($id){
+			$activeedata = AddPost::find($id);
+			$activeedata->status = 0;  
+			$activeedata->save();
+			$notification = array(
+			'message' => 'Post  status  is inactive',
+			'alert-type' => 'error'
+			);
+			return redirect()->route('front.bid.view')->with($notification);
+
+			}
  # if file exists for image unlink 
 				$old_slider_img = Slider::find($id);
 				$del_slider =$old_slider_img->image;
