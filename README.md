@@ -14,6 +14,17 @@
 	   protected $guarded = [];
 # slug 
 	 $storecategory->category_slug_en = strtolower(str_replace(' ', '-',$request->category_name));
+# image store function 
+        if($request->file('brand_image')) 
+        {
+            $file = $request->file('brand_image');
+            $filename = time() . '.' . $request->file('brand_image')->extension();
+            Image::make($file)->save(public_path('/frontend/img/brand/').$filename);
+            //   ->resize(1000,720)  //can use this  for resize 
+     
+            $last_img='/frontend/img/brand/'. $filename;
+        }
+            $data['brand_image'] =  $last_img;
 # if session has an error 
 	 @if(session('sucess'))
  <div class="alert alert-success alert-dismissible fade show" role="alert">
