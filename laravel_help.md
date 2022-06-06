@@ -1,5 +1,13 @@
 # Active inactive status 
-                           // active bid
+                          #image mine   public function rules() {
+                                                            return [
+                                                                'pseudonym' => 'required|min:6',
+                                                                'email' => 'required|email',
+                                                                'avatar' => 'required|mimes:jpeg,png',
+                                                            ];
+                                                        }
+
+                          // active bid
                            Route::get('/active/{id}',[BidController::class, 'active_front_bid'])->name('active.front.bidpost');
                            // inactive bid
                            Route::get('/inactive/{id}',[BidController::class, 'inactive_front_bid'])->name('inactive.front.bidpost');
