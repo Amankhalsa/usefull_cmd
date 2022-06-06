@@ -39,7 +39,12 @@
 
                            }
 <!-- =================================== -->
-        
+          $image =$request->file('image');
+          $name_gen= hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
+          Image::make($image)->save('uploaded_files/brand/'.$name_gen);
+          //   ->resize(1000,720)  //can use this  for resize 
+          $last_img='uploaded_files/brand/'.$name_gen;
+
         PDF function 
              if($request->file('brochure')) 
             {
