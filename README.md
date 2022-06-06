@@ -12,7 +12,8 @@
 	* php artisan view:clear
 	
 	   protected $guarded = [];
-	   
+# slug 
+	 $storecategory->category_slug_en = strtolower(str_replace(' ', '-',$request->category_name));
 # if session has an error 
 	 @if(session('sucess'))
  <div class="alert alert-success alert-dismissible fade show" role="alert">
