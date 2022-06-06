@@ -158,10 +158,13 @@
                     
                                         @endif
  # if file exists for image unlink 
- 		if (file_exists($img_del)) 
-						{ 
-						unlink($img_del); 
-						}
+				$old_slider_img = Slider::find($id);
+				$del_slider =$old_slider_img->image;
+
+							if (file_exists($img_del)) 
+							{ 
+							unlink($img_del); 
+							}
  # carbon date in human style
  # long string 
 	 {!!html_entity_decode($slider_img->description)!!}	
