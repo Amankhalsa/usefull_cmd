@@ -160,7 +160,12 @@
  # if file exists for image unlink 
 				$old_slider_img = Slider::find($id);
 				$del_slider =$old_slider_img->image;
-
+--------------------------------------------------------------------------------------------------
+      if(file_exists($del_slider)){
+                    unlink($del_slider);
+                }
+--------------------------------------------------------------------------------------------------
+		
 							if (file_exists($img_del)) 
 							{ 
 							unlink($img_del); 
