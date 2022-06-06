@@ -25,6 +25,23 @@
             $last_img='/frontend/img/brand/'. $filename;
         }
             $data['brand_image'] =  $last_img;
+----------------------------------------------------
+# 2nd 3rd  
+	        if($request->file('image')){
+          $slider_img =  $request->file('image');
+          $name_gen = hexdec(uniqid()).'.'.$slider_img->getClientOriginalExtension();
+          Image::make($slider_img)->fit(558,631)->save(public_path('upload/about/'.$name_gen));
+          $save_url = 'upload/about/'.$name_gen;
+
+        }
+
+            if($request->file('brochure')) 
+            {
+                $file = $request->file('brochure');
+                $filename = time() . '.' . $request->file('brochure')->extension();
+                $filePath = public_path() . '/upload/brochure/';
+                $brochur_url= $file->move($filePath, $filename);
+            }
 # if session has an error 
 	 @if(session('sucess'))
  <div class="alert alert-success alert-dismissible fade show" role="alert">
