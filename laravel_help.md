@@ -1,9 +1,11 @@
 # Active inactive status 
                           #image mine   public function rules() {
                                                             return [
-                                                                'pseudonym' => 'required|min:6',
-                                                                'email' => 'required|email',
-                                                                'avatar' => 'required|mimes:jpeg,png',
+                                                        'title' =>'required',
+                                                        'para1' =>'required',
+                                                        'para2' =>'required',
+                                                        'brochure' =>'required|mimes:pdf|max:10000',
+                                                        'image' =>'required|image|mimes:jpg,png,jpeg,svg,webp|max:4096',
                                                             ];
                                                         }
 
