@@ -150,6 +150,21 @@
 		@endphp
  # git Branches <a href="https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches">Make branch</a>
  # aactive inactive 
+           @if($value->status ==1 )
+                                    <button class="btn btn-light" style="margin-left: 5px;" type="submit" title="Active/Approved">
+                                        <a href="{{route('inactive.front.bidpost',$value->id)}}">
+                                        <i class=" fa fa-eye" style='font-size:20px;color:rgb(3, 99, 24)'> </i>
+                                        </a>
+                                    </button>
+                                    @endif
+                                    @if($value->status == 0 )
+                                    <button class="btn btn-light" style="margin-left: 5px;" type="submit"  title="Inactive/Unapproved">
+                                        <a href="{{route('active.front.bidpost',$value->id)}}">
+                                           <i class=" fa fa-eye-slash" style='font-size:20px;color:red'> </i>
+                                        </a>
+                                        </button>
+                                        @endif
+---------------------------------------------------------------------------------------------------------------------------------
          			  @if($value->status == 1)
 
                                             <span class="badge badge-pill badge-success">Approved</span>
