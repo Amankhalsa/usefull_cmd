@@ -14,6 +14,15 @@
 	   protected $guarded = [];
 # slug 
 	 $storecategory->category_slug_en = strtolower(str_replace(' ', '-',$request->category_name));
+# INSERT SINGLE VALUE 
+    
+    INSERT INTO `brands` (`id`, `title`, `slug`, `brand_image`, `url`, `status`, `created_at`, `updated_at`) 
+    VALUES (NULL, 'Versace', '', NULL, NULL, 'active', NULL, NULL),
+# rename table 
+
+    ALTER TABLE contacts
+      RENAME TO people;
+      
 # image store function 
         if($request->file('brand_image')) 
         {
