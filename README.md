@@ -214,12 +214,21 @@
       if(file_exists($del_slider)){
                     unlink($del_slider);
                 }
---------------------------------------------------------------------------------------------------
+-------------------------------------------- some time ------------------------------------------------------
 		
 							if (file_exists($img_del)) 
 							{ 
 							unlink($img_del); 
 							}
+--------------------- some time -----------------------
+     $old_img = Brand::find($id);
+        $del_image = $old_img->brand_image;
+        $rem = public_path($del_image);
+
+            if(file_exists( $rem )){
+                unlink($rem);
+            }
+        $brand=Bra
  # carbon date in human style
  # long string 
 	 {!!html_entity_decode($slider_img->description)!!}	
