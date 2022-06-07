@@ -12,6 +12,8 @@
 	* php artisan view:clear
 	
 	   protected $guarded = [];
+# loop for serial number 
+ <th scope="row">{{ $cate->firstitem()+$loop->index}}</th>
 # slug 
 	 $storecategory->category_slug_en = strtolower(str_replace(' ', '-',$request->category_name));
 # INSERT SINGLE VALUE 
