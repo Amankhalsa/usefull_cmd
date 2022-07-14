@@ -2,7 +2,7 @@
 	* m so lucky u hve in my lyf😘😘😘😘😘😘
 		1st composer create-project --prefer-dist laravel/laravel my-blog
 # if else 
-
+@if(Request::is('gallery'))
 	 @if($user_data->height ==  $values->name) selected="selected" @endif
 * @if(Request::is('/') || Request::url('/eyeglasses.html') || Request::url('/sunglasses.html') || Request::url('/brands.html')    )
 
