@@ -1,6 +1,16 @@
 # laravel project 
 	* m so lucky u hve in my lyf😘😘😘😘😘😘
 		1st composer create-project --prefer-dist laravel/laravel my-blog
+* 1st update php version
+ * "php": "^8.0",
+ 
+* 2nd laravel/framework
+ * "laravel/framework": "^9.0",
+* 3rd step
+*  "nunomaduro/collision": "^6.0",
+4th change 
+  *  "facade/ignition": "^1.11", to  with "spatie/laravel-ignition": "^1.0"
+5th run composer update
 # if else 
 * php artisan migrate:reset =>for reset datatable
 * @if(Request::is('gallery'))
