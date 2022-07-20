@@ -1,4 +1,5 @@
 # laravel project 
+* composer create-project --prefer-dist laravel/laravel LaraMulti
 	* m so lucky u hve in my lyf😘😘😘😘😘😘
 		1st composer create-project --prefer-dist laravel/laravel my-blog
 * 1st update php version
