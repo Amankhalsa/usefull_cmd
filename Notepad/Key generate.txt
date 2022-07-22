@@ -1,0 +1,10 @@
+Solution 1: Run php artisan key:generate
+
+php artisan key:generate
+
+php artisan key:generate
+php artisan config:cache
+
+php artisan key:generate
+
+php artisan config:cache

@@ -1,0 +1,17 @@
+php artisan config:cache
+php artisan cache:clear
+php artisan view:clear
+
+php artisan db:seed --class=RoleSeeder
+
+'Newton C'
+'newtonadmin@yopmail.com'
+'12345678'
+
+// Customer
+'Harry Saggu'
+'harrysaggu@yopmail.com'
+'12345678'
+
+
+
