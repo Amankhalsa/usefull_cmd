@@ -1,4 +1,9 @@
 # laravel project 
+# laravel Bootstrap UI 
+	* composer require laravel/ui 
+	* php artisan ui bootstrap --auth 
+	* npm install
+	* npm run dev
 * composer create-project --prefer-dist laravel/laravel LaraMulti
 	* m so lucky u hve in my lyf😘😘😘😘😘😘
 		1st composer create-project --prefer-dist laravel/laravel my-blog
