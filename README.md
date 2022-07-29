@@ -1,4 +1,9 @@
 # laravel project 
+# vite plugin
+* npm run dev
+ 
+* npm install --save-dev vite laravel-vite-plugin
+* <a href="https://exerror.com/unable-to-locate-file-in-vite-manifest-resources-css-app-css/" >Link</a>
 # laravel Bootstrap UI 
 	* composer require laravel/ui 
 	* php artisan ui bootstrap --auth 
