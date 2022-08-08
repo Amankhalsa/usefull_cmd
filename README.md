@@ -1,5 +1,6 @@
 # laravel project 
 # js 
+* https://devdojo.com/bobbyiliev/how-to-create-contact-form-with-laravel-livewire
 # if else for route 
 
 * class=" @if(Route::is('dashboard') ) active @else ''  @endif" 
