@@ -1,6 +1,8 @@
 # laravel project 
 # js 
+# if else for route 
 
+* class=" @if(Route::is('dashboard') ) active @else ''  @endif" 
 * <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
 # vite plugin
 # Redmi K50i 5G
