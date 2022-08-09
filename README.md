@@ -1,5 +1,8 @@
 # laravel project 
+# unlink 
+   unlink(storage_path("app/public/resume/".$cv->resume));
 # js 
+
 * https://devdojo.com/bobbyiliev/how-to-create-contact-form-with-laravel-livewire
 # if else for route 
 
