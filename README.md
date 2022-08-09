@@ -41,6 +41,16 @@
 	* php artisan view:clear
 	
 	   protected $guarded = [];
+# email configuration 
+		*  Env config 
+		*  MAIL_DRIVER=smtp
+		*  MAIL_HOST=shubhvivah.us
+		*  MAIL_PORT=465
+		*  MAIL_USERNAME=info@shubhvivah.us
+		*  MAIL_PASSWORD=MX08CJ1)J%36
+		*  MAIL_ENCRYPTION=SSl
+		*  MAIL_FROM_ADDRESS=info@shubhvivah.us
+		*  MAIL_FROM_NAME="${APP_NAME}"
 # loop for serial number 
  <th scope="row">{{ $cate->firstitem()+$loop->index}}</th>
 # slug 
