@@ -21,6 +21,7 @@
 ==================================== Mail Function with file attachment ===============================
 
 // ======================= mail function  ================
+
               $data["name"] = $this->name;
               $data["email"] = $this->email;
               $data["location"] =$this->location;
