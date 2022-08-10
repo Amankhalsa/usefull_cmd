@@ -1,3 +1,9 @@
+# DB Relation 
+* 1 Belong to 
+	public function categoryname(){
+	return $this->belongsTo(Category::class,'category_id' ,'id');
+	}
+
 # laravel project 
 # unlink 
    unlink(storage_path("app/public/resume/".$cv->resume));
