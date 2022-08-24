@@ -1,0 +1,14 @@
+ Redirect function for livewire
+--------------------------------------
+redirect(request()->header('Referer'));
+--------------------------------------
+Encript 
+--------------------------------------
+$id =  Crypt::decrypt($id);
+for link
+Crypt::encrypt($getActive->id)
+controllerarea use it 
+use Illuminate\Support\Facades\Crypt;
+use Illuminate\Contracts\Encryption\DecryptException;
+------------------------------------------
+https://dev.to/dariusdauskurdis/laravel-livewire-security-4jgp
