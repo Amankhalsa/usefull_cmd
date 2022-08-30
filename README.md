@@ -5,6 +5,18 @@
 	}
 
 # laravel project 
+# store file at storage path 
+
+	if($request->file('resumeFile')){
+
+		$file = $request->file('resumeFile');
+
+		$filename = 'Resume' . time() . '.' . $file->getClientOriginalExtension();
+
+		$path = $file->storeAs('resume', $filename);
+		// dd($path);
+		}
+
 # unlink 
    unlink(storage_path("app/public/resume/".$cv->resume));
 # js 
