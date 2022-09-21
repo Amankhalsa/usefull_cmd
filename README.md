@@ -1,3 +1,4 @@
+ * Valucation rules <a href="https://www.codegrepper.com/code-examples/php/laravel+validation+rules+list">For laravel </a> 
 * Regex witout space 
 
 * regex:/^[a-zA-Z0-9_]*$/u
