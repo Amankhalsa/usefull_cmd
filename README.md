@@ -1,3 +1,9 @@
+* Regex witout space 
+
+* regex:/^[a-zA-Z0-9_]*$/u
+
+
+ 
 # DB Relation 
 * 1 Belong to 
 	public function categoryname(){
