@@ -3,7 +3,13 @@
 
 * regex:/^[a-zA-Z0-9_]*$/u
 
-
+* laravel validation 
+* **    protected $rules = [
+        'name' => 'required | max:25',
+        'username' => 'required |alpha_dash | regex:/^[a-zA-Z0-9_]*$/u | max:20 |unique:users,username',
+        'email' => 'required|email|unique:users',
+        'designation' => 'required',
+    ];**
  
 # DB Relation 
 * 1 Belong to 
