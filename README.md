@@ -10,7 +10,14 @@
         'email' => 'required|email|unique:users',
         'designation' => 'required',
     ];**
- 
+ # livewire function validation 
+
+			$this->validate([
+			'outcome' => 'required',
+			'lesson' => 'required',
+			'finalFeel' => 'required',
+			'result' => 'required',
+			]);
 # DB Relation 
 * 1 Belong to 
 	public function categoryname(){
