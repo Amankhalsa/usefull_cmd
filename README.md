@@ -63,7 +63,7 @@
 4th change 
   *  "facade/ignition": "^1.11", to  with "spatie/laravel-ignition": "^1.0"
 5th run composer update
-# if else 
+# if else for selected 
 * php artisan migrate:reset =>for reset datatable
 * @if(Request::is('gallery'))
 	 @if($user_data->height ==  $values->name) selected="selected" @endif
