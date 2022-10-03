@@ -4,7 +4,8 @@
 	* php artisan make:job TagedInCommentJob 
 
 	* php artisan queue:listen
-	# Jon function 
+	
+	# Job function 
 		* 1st   protected $user, $password;
 		* 2nd define constructor 
 		* 3rd define handle function 
