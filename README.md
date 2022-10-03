@@ -29,6 +29,8 @@
 		OR
 		php artisan ui bootstrap --auth
 		npm install && npm run dev
+# wwhatsapp 
+		https://api.whatsapp.com/send?text={{urlencode(url()->current()) }}
 # Db seeder cmds
 		php artisan make:seeder CreateUserSeeder
 		php artisan db:seed --class=CreateUserSeeder
