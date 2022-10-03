@@ -42,6 +42,8 @@
 		git pull origin master
 # image mine 
 		'image' => 'nullable|image|mimes:jpeg,jpg,png,gif',
+# password hash 
+		$2y$10$nLzPHFNh2XS9sOMqVX3j2.SHEpVY6gbus1rENTSvn4K8fC/nFjvGC
 # livewire 
 		php artisan make:livewire dashboard.EditClients
 
