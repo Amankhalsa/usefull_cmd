@@ -32,6 +32,10 @@
 # Db seeder cmds
 		php artisan db:seed --class=CreateUserSeeder
 		php artisan migrate:fresh --seed
+# Git Cmd
+		git pull origin main
+
+		git pull origin master
 # Array seeder
 		
 		$users = [
