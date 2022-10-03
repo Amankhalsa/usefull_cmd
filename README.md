@@ -18,9 +18,11 @@
 				'comment' => $this->data->comment,
 				'name' =>getUserName($this->data->user_id) ,
 				'email' =>getUserEmail($this->data->user_id) ,
-		
-
 				]);
+		# forloop for mail function 
+			foreach($emails as $getemail){
+			Mail::to($getemail->email)->send($email);
+			}
 
 # Array seeder
 		
