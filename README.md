@@ -4,6 +4,23 @@
 	* php artisan make:job TagedInCommentJob 
 
 	* php artisan queue:listen
+	# Jon function 
+		* 1st   protected $user, $password;
+		* 2nd define constructor 
+		* 3rd define handle function 
+		$email = new Welcome($this->data );
+		Mail::to($this->data->email )->send($email);
+	# mail function build as same or build mail below example
+				return $this->subject('Commented  by ' . getUserName($this->data->user_id))
+				->from('noreply@example.com')
+				->view('email.commentNotify')->with([
+				'comment' => $this->data->comment,
+				'name' =>getUserName($this->data->user_id) ,
+				'email' =>getUserEmail($this->data->user_id) ,
+		
+
+				]);
+
 # Array seeder
 		
 		$users = [
