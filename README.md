@@ -36,6 +36,8 @@
 		git pull origin main
 
 		git pull origin master
+# image mine 
+	'image' => 'nullable|image|mimes:jpeg,jpg,png,gif',
 # Array seeder
 		
 		$users = [
