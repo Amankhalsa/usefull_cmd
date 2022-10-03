@@ -35,11 +35,15 @@
 		https://api.whatsapp.com/send?text={{urlencode(url()->current()) }}
 # laravel helper function 
 	* Make a folder in App folder with name of Helper or file nanme helper
-	* set path in conposer.json using below 
-		,
+	* set path in conposer.json using below  at 
+		"autoload-dev": {
+		"psr-4": {
+		"Tests\\": "tests/"
+		},
 		"files": [
 		"app/Helpers/helpers.php"
 		]
+		},
 	
 # query 
 		where(function ($query) {
