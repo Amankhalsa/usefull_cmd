@@ -31,6 +31,10 @@
 		npm install && npm run dev
 # wwhatsapp 
 		https://api.whatsapp.com/send?text={{urlencode(url()->current()) }}
+# query 
+		where(function ($query) {
+		$query->where('user_id', authUserId())->orWhere('user_id', authCompanyId()) ;              $query->whereIn('user_id', getProfiles());
+		})->get();
 # Db seeder cmds
 		php artisan make:seeder CreateUserSeeder
 		php artisan db:seed --class=CreateUserSeeder
