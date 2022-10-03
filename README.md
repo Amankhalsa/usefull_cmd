@@ -1,3 +1,9 @@
+ # email confing by job 
+	* php artisan make:mail CommentNotification  
+
+	* php artisan make:job TagedInCommentJob 
+
+	* php artisan queue:listen
  * Valucation rules <a href="https://www.codegrepper.com/code-examples/php/laravel+validation+rules+list">For laravel </a> 
 * Regex witout space 
 
