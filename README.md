@@ -6,6 +6,8 @@
 	* php artisan queue:listen
 	
 	# Job function 
+		* In Controller area 
+		      dispatch(new UserCommentJob($notifyToUser,$decisionData));
 		* 1st   protected $user, $password;
 		* 2nd define constructor 
 		* 3rd define handle function 
