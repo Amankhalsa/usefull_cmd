@@ -42,6 +42,13 @@
 	php artisan make:livewire dashboard.EditClients
 
 	return redirect(request()->header('Referer'));
+# storage link error 
+
+	cd public
+	rm storage
+	cd ..
+	php artisan storage:link
+	php artisan storage:link --force
 # Array seeder
 		
 		$users = [
