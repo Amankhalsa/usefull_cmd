@@ -38,6 +38,10 @@
 		git pull origin master
 # image mine 
 	'image' => 'nullable|image|mimes:jpeg,jpg,png,gif',
+# livewire 
+	php artisan make:livewire dashboard.EditClients
+
+	return redirect(request()->header('Referer'));
 # Array seeder
 		
 		$users = [
