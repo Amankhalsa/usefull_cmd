@@ -29,6 +29,9 @@
 		OR
 		php artisan ui bootstrap --auth
 		npm install && npm run dev
+# Db seeder cmds
+		php artisan db:seed --class=CreateUserSeeder
+		php artisan migrate:fresh --seed
 # Array seeder
 		
 		$users = [
