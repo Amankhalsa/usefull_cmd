@@ -44,6 +44,7 @@
 		"app/Helpers/helpers.php"
 		]
 		},
+	* After that Update composer
 	
 # query 
 		where(function ($query) {
