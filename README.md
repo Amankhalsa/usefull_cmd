@@ -30,25 +30,37 @@
 		php artisan ui bootstrap --auth
 		npm install && npm run dev
 # Db seeder cmds
+		php artisan make:seeder CreateUserSeeder
 		php artisan db:seed --class=CreateUserSeeder
 		php artisan migrate:fresh --seed
+		
+		for seed
+		php artisan db:seed --class=AdminUserSeeder
 # Git Cmd
 		git pull origin main
 
 		git pull origin master
 # image mine 
-	'image' => 'nullable|image|mimes:jpeg,jpg,png,gif',
+		'image' => 'nullable|image|mimes:jpeg,jpg,png,gif',
 # livewire 
-	php artisan make:livewire dashboard.EditClients
+		php artisan make:livewire dashboard.EditClients
 
-	return redirect(request()->header('Referer'));
+		return redirect(request()->header('Referer'));
 # storage link error 
 
-	cd public
-	rm storage
-	cd ..
-	php artisan storage:link
-	php artisan storage:link --force
+		cd public
+		rm storage
+		cd ..
+		php artisan storage:link
+		php artisan storage:link --force
+# password function 
+		$passcode = 'user@'.rand(000000,999999);
+		// encryptString
+		$encrypted = Crypt::encryptString($passcode );
+		// // decryptString
+		$decrypted = Crypt::decryptString($encrypted);
+		// dd($decrypted);
+		$storeuser->passcode  = $decrypted ;
 # Array seeder
 		
 		$users = [
