@@ -23,7 +23,12 @@
 			foreach($emails as $getemail){
 			Mail::to($getemail->email)->send($email);
 			}
-
+# laravel UI with bootstrap 
+		composer require laravel/ui
+		php artisan ui bootstrap
+		OR
+		php artisan ui bootstrap --auth
+		npm install && npm run dev
 # Array seeder
 		
 		$users = [
