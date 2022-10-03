@@ -33,6 +33,14 @@
 		npm install && npm run dev
 # wwhatsapp 
 		https://api.whatsapp.com/send?text={{urlencode(url()->current()) }}
+# laravel helper function 
+	* Make a folder in App folder with name of Helper or file nanme helper
+	* set path in conposer.json using below 
+		,
+		"files": [
+		"app/Helpers/helpers.php"
+		]
+	
 # query 
 		where(function ($query) {
 		$query->where('user_id', authUserId())->orWhere('user_id', authCompanyId()) ;              $query->whereIn('user_id', getProfiles());
