@@ -1,4 +1,6 @@
- # email confing by job 
+# Cutom reset password 
+	* <a href="https://codingdriver.com/custom-forgot-reset-password-functionality-in-laravel.html">Reset password </a>
+# email confing by job 
 	* php artisan make:mail CommentNotification  
 
 	* php artisan make:job TagedInCommentJob 
