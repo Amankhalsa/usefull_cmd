@@ -4,8 +4,10 @@
 	nunomaduro/collision to ^6.1
 	In addition, please replace facade/ignition with "spatie/laravel-ignition": "^1.0" and pusher/pusher-php-server (if applicable) with "pusher/pusher-php-	server": "^5.0" in your application's composer.json file.
 # Encrpt
-	Crypt::encrypt($getActive->id)
 	use Illuminate\Support\Facades\Crypt;
+	
+	Crypt::encrypt($getActive->id)
+	
  	$id =  Crypt::decrypt($id);
 # Cutom reset password 
 	
