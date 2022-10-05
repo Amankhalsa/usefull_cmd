@@ -1,3 +1,9 @@
+# upgrade laravel 8 to 9 
+
+	laravel/framework to ^9.0
+	nunomaduro/collision to ^6.1
+	In addition, please replace facade/ignition with "spatie/laravel-ignition": "^1.0" and pusher/pusher-php-server (if applicable) with "pusher/pusher-php-	server": "^5.0" in your application's composer.json file.
+
 # Cutom reset password 
 	
 <a href="https://codingdriver.com/custom-forgot-reset-password-functionality-in-laravel.html">Reset password </a>
