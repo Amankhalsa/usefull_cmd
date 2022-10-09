@@ -1,6 +1,18 @@
 #  if Problem 1 how to solve this 
    * Root composer.json requires php ^7.3 but your php version (8.1.6) does not satisfy that requirement.
    * <a href='https://stackoverflow.com/questions/65454412/error-root-composer-json-requires-php-7-3-but-your-php-version-8-0-0-does-no'>Ref Link</a>
+   * It's because in your project in composer.json file you have:
+
+		"require": {
+		"php": ">=7.3",
+		.....
+		},
+		Try to update this requirement to:
+
+		"require": {
+		"php": "^7.3|^8.0",
+		.....
+		},
 # upgrade laravel 8 to 9 
 
 	laravel/framework to ^9.0
