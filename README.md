@@ -1,5 +1,16 @@
 # Banned user 
 * <a href="https://dev.to/techtoolindia/how-to-disable-users-from-login-in-laravel-bm9">Banned user </a>
+
+        if(Auth::check() && (Auth::user()->status == 0)){
+            // Auth::logout();
+            auth()->guard('web')->logout();
+            $request->session()->invalidate();
+
+            $request->session()->regenerateToken();
+
+            return redirect()->route('login')->with('error', 'Your Account is suspended, please contact Admin.');
+
+    }
 #  if Problem 1 how to solve this 
    * Root composer.json requires php ^7.3 but your php version (8.1.6) does not satisfy that requirement.
    * <a href='https://stackoverflow.com/questions/65454412/error-root-composer-json-requires-php-7-3-but-your-php-version-8-0-0-does-no'>Ref Link</a>
