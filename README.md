@@ -1,3 +1,8 @@
+# SQL where in 
+	        
+		    @php
+                     $getpacks =  DB::table('user_offers')->where('user_id',authUserId())->whereIn('offer_service' ,[2, 3])->exists()
+                     @endphp
 # IF URL is then active class
 class="@if(Request::is('user-inquery')  ) active @else '' @endif"
 # Banned user 
