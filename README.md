@@ -1,3 +1,5 @@
+# IF URL is then active class
+class="@if(Request::is('user-inquery')  ) active @else '' @endif"
 # Banned user 
 * <a href="https://dev.to/techtoolindia/how-to-disable-users-from-login-in-laravel-bm9">Banned user </a>
 
