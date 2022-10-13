@@ -1,4 +1,4 @@
-# Forgot password controller 
+# Forgot password controller  And routes 
 
 		Route::get('forget-password', [ForgotPasswordController::class, 'showForgetPasswordForm'])->name('forget.password.get');
 		Route::post('forget-password', [ForgotPasswordController::class, 'submitForgetPasswordForm'])->name('forget.password.post'); 
@@ -6,6 +6,7 @@
 		Route::post('reset-password', [ForgotPasswordController::class, 'submitResetPasswordForm'])->name('reset.password.post');
 
 * Controller : 
+* 
 		<?php
 
 		namespace App\Http\Controllers;
