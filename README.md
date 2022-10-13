@@ -5,8 +5,10 @@
 		Route::get('reset-password/{token}', [ForgotPasswordController::class, 'showResetPasswordForm'])->name('reset.password.get');
 		Route::post('reset-password', [ForgotPasswordController::class, 'submitResetPasswordForm'])->name('reset.password.post');
 
+* Blade template reset link
+	{{ route('reset.password.get', $token) }}
 * Controller : 
-* 
+
 		<?php
 
 		namespace App\Http\Controllers;
