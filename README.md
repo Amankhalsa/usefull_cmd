@@ -5,6 +5,7 @@
 		Route::get('reset-password/{token}', [ForgotPasswordController::class, 'showResetPasswordForm'])->name('reset.password.get');
 		Route::post('reset-password', [ForgotPasswordController::class, 'submitResetPasswordForm'])->name('reset.password.post');
 
+* Controller : 
 		<?php
 
 		namespace App\Http\Controllers;
