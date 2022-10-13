@@ -10,7 +10,7 @@
 		public function users(){
 		return $this->hasMany(User::class);
 		}
-* Check By this :
+* Check relation By this :
 
 	php artisan tinker 
 	
