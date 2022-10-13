@@ -1,5 +1,5 @@
 # Admin Author role doc:
-* Make a relation betweem user and role table 
+* Make a relation between  user and role table 
 * User Model class:
 
 		public function role(){
