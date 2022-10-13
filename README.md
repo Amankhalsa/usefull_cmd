@@ -1,3 +1,23 @@
+# Admin Author role doc:
+* Make a relation betweem user and role table 
+* User Model class:
+
+		public function role(){
+		return $this->belongsTo(Role::class);
+		}
+* Role Model class:
+
+		public function users(){
+		return $this->hasMany(User::class);
+		}
+* Check By this :
+
+	php artisan tinker 
+	
+		* App\Models\user::find(1);
+		* App\Models\user::Role(1);
+		* App\Models\user::find(1)->role;
+		* App\Models\Role::find(1)->users;
 # laravel shot cmds 
 	# Generate a model and a FlightFactory class...
 	php artisan make:model Flight --factory
