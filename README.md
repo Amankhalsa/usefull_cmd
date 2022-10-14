@@ -7,6 +7,19 @@
 
 * Blade template reset link
 	{{ route('reset.password.get', $token) }}
+# livewire search by  oninput
+* 1st you need this in html 
+	 oninput='Livewire.emit("searchData", this.value)' 
+* 2nd you need  listeners like below in method area 
+
+	protected $listeners = [ 'searchData'];
+	
+	  public function searchData($value){
+             $this->searchlocation = $value;  
+ 
+            }
+* 3rd Make a function 
+      
 * Controller : 
 
 		<?php
