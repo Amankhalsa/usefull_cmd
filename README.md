@@ -102,17 +102,17 @@
 		}
 * 3rd Make a function  
 
-		public function render() 
-		{
 		if(isset($this->searchlocation)){
 		$this->getbucketList = UserBucketPlaces::where('user_id',authUserId())
 		->whereHas('userPost', function (EloquentBuilder $query) {
-		$query->where('location', 'like', '%'.$this->searchlocation.'%');
+		$query->where('location', 'like', '%'.$this->searchlocation.'%')
+		->orwhere('hostel_name', 'like', '%'.$this->searchlocation.'%')
+		->orwhere('hostel_type', 'like', '%'.$this->searchlocation.'%')
+		->orwhere('price', 'like', '%'.$this->searchlocation.'%');
 		})->latest('id', 'DESC')->get();
 		$this->searchlocation == null;
 		}else {
 		$this->getbucketList = UserBucketPlaces::where('user_id',authUserId())->with(['userPost','userPostAsset'])->get();
-		}
 		} // close render
 # else fan use 
 	*  1st 
