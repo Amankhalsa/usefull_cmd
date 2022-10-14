@@ -133,6 +133,7 @@
 	php artisan make:model Member --pivot
 # with quesry builder search from two table 
 * use Illuminate\Contracts\Database\Eloquent\Builder;
+
 		case(isset($this->searchTag)):
 		$this->queueCards = Decision::where(function ($query) {
 		$query->where('user_id', authUserId())->orWhere('user_id', authCompanyId())->orWhere(function ($query) 
