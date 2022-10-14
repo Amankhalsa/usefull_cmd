@@ -88,7 +88,42 @@
 		      }
 		}
 
+# in Middle ware area make below if else 
+ * use class :
+	
+	use Illuminate\Support\Facades\Auth;
+	use Illuminate\Support\Facades\Cache;
+       
+	if (Auth::check()) {
+            $expireTime = Carbon::now()->addSeconds(30);
+            Cache::put('user-is-online' . Auth::user()->id, true, 	    $expireTime);
+            User::where('id',Auth::user()->id)->update(['last_seen' => 	    Carbon::now()]);
+         }
+ * Make function in user mode class 
 
+	  // User Active Show
+         public function UserOnline()
+	 {
+            return Cache::has('user-is-online' . $this->id);
+        		}
+ * Make database field in user last_seen with protected 
+ * use Carbon\Carbon;
+   use Illuminate\Support\Facades\Cache;	
+	
+    protected $fillable = [
+        'name',
+        'email',
+        'phone',
+        'password',
+        'last_seen',
+    ];
+ * at last make this if else in blade
+    @if($value->UserOnline())
+	<span class="badge badge-pill badge-success">Active Now</span>
+ 	@else
+   <span class="badge badge-pill badge-danger">{{ Carbon\Carbon::parse		($value->last_seen)->diffForHumans() }}</span>
+    @endif
+ 
 # livewire search by  oninput
 * 1st you need this in html 
 	 
