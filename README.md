@@ -7,18 +7,7 @@
 
 * Blade template reset link
 	{{ route('reset.password.get', $token) }}
-# livewire search by  oninput
-* 1st you need this in html 
-	 oninput='Livewire.emit("searchData", this.value)' 
-* 2nd you need  listeners like below in method area 
 
-	protected $listeners = [ 'searchData'];
-	
-	  public function searchData($value){
-             $this->searchlocation = $value;  
- 
-            }
-* 3rd Make a function 
       
 * Controller : 
 
@@ -96,6 +85,33 @@
 		      }
 		}
 
+
+# livewire search by  oninput
+* 1st you need this in html 
+	 oninput='Livewire.emit("searchData", this.value)' 
+* 2nd you need  listeners like below in method area 
+
+	protected $listeners = [ 'searchData'];
+	
+	  public function searchData($value){
+             $this->searchlocation = $value;  
+ 
+            }
+* 3rd Make a function  
+*
+  public function render() 
+    {
+
+        if(isset($this->searchlocation)){
+            $this->getbucketList = UserBucketPlaces::where('user_id',authUserId())
+            ->whereHas('userPost', function (EloquentBuilder $query) {
+            $query->where('location', 'like', '%'.$this->searchlocation.'%');
+        })->latest('id', 'DESC')->get();
+            $this->searchlocation == null;
+        }else {
+            $this->getbucketList = UserBucketPlaces::where('user_id',authUserId())->with(['userPost','userPostAsset'])->get();
+        }
+	} // close render
 # Admin Author role doc:
 * Make a relation between  user and role table 
 * User Model class:
