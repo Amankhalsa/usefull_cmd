@@ -98,10 +98,9 @@
  
             }
 * 3rd Make a function  
-*
+
   public function render() 
     {
-
         if(isset($this->searchlocation)){
             $this->getbucketList = UserBucketPlaces::where('user_id',authUserId())
             ->whereHas('userPost', function (EloquentBuilder $query) {
@@ -112,6 +111,15 @@
             $this->getbucketList = UserBucketPlaces::where('user_id',authUserId())->with(['userPost','userPostAsset'])->get();
         }
 	} // close render
+# else fan use 
+	*  1st 
+		wire:keydown="searchlocation()"
+	* 2nd 
+		public function searchlocation()
+		{
+		$this->searchlocation =   $this->location;
+
+		}
 # Admin Author role doc:
 * Make a relation between  user and role table 
 * User Model class:
