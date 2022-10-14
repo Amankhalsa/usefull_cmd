@@ -1,3 +1,6 @@
+# Carbon date format 	
+	
+	{{ Carbon\Carbon::parse($trip->from)->format('D, d F Y')}}
 # Forgot password controller  And routes 
 
 		Route::get('forget-password', [ForgotPasswordController::class, 'showForgetPasswordForm'])->name('forget.password.get');
