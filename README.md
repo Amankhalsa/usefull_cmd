@@ -131,6 +131,20 @@
 
 	# Generate a pivot model...
 	php artisan make:model Member --pivot
+# with quesry builder search from two table 
+* use Illuminate\Contracts\Database\Eloquent\Builder;
+		case(isset($this->searchTag)):
+		$this->queueCards = Decision::where(function ($query) {
+		$query->where('user_id', authUserId())->orWhere('user_id', authCompanyId())->orWhere(function ($query) 
+		{
+		$query->whereIn('user_id', getProfiles()); 
+		});
+		})->whereHas('getDecisionTags', function (Builder $query) {
+		$query->where('tag', 'like', '%'.$this->searchTag.'%');
+		})->latest('id', 'DESC')->where('active', '2')->get();
+		$this->searchTag == null;
+		$this->clearFilter = true;  
+		break;
 # SQL where in 
 	        
 		    @php
