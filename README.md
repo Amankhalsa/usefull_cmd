@@ -88,7 +88,7 @@
 		      }
 		}
 
-# in Middle ware area make below if else 
+# Last seen active user Middleware area make below if else 
  * use class :
 	
 	use Illuminate\Support\Facades\Auth;
