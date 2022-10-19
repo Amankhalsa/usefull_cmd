@@ -1,3 +1,4 @@
+ਅਠਵੇਂ ਪਾਤਿਸ਼ਾਹ ਦਾ ਗੁਰਗੱਦੀ ਗੁਰਪੁਰਬ ਅਤੇ ਸਤਵੇਂ ਪਾਤਿਸ਼ਾਹ ਦਾ ਜੋਤੀ ਜੋਤਿ ਦਿਵਸ
 # Carbon date format 	
 	
 	{{ Carbon\Carbon::parse($trip->from)->format('D, d F Y')}}
