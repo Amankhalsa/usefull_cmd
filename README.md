@@ -723,7 +723,7 @@ class="@if(Request::is('user-inquery')  ) active @else '' @endif"
             }
         $brand=Bra
  # carbon date in human style
- # long string 
+ # long string  Html special char
 	 {!!html_entity_decode($slider_img->description)!!}	
 
  #  HTML entity 
