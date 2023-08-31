@@ -1,4 +1,4 @@
-# Onupload multiple image 
+# laravel forloop error validation
                                     @foreach ($experiences as $index => $experience)
                                     <div class="col-lg-4">
                                         <div class="">
@@ -34,6 +34,8 @@
 		'experiences.*.institution_name' => 'required',
 		'experiences.*.period_from' => 'required|date',
 		'experiences.*.period_to' => 'required|date',
+
+  # Onupload multiple image 
 		<script>
 		$(document).ready(function(){
 		$('#multiImg').on('change', function(){ //on file input change
