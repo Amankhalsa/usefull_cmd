@@ -1,5 +1,39 @@
 # Onupload multiple image 
+                                    @foreach ($experiences as $index => $experience)
+                                    <div class="col-lg-4">
+                                        <div class="">
+                                            <label for="institution_{{ $index }}">Institution Name </label>
+                                            <input type="text" class="form-control" wire:model="experiences.{{ $index }}.institution_name" placeholder="Institution Name" />
+                                        </div>
+                                        @error('experiences.' . $index . '.institution_name')
+                                        <span class="text-danger">{{ $message }}</span><br>
+                                        @enderror
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="">
+                                            <label for="period_from_{{ $index }}">Period From</label>
+                                            <input type="date" class="form-control" wire:model="experiences.{{ $index }}.period_from" />
+                                        </div>
+                                        @error('experiences.' . $index . '.period_from')
+                                        <span class="text-danger">{{ $message }}</span><br>
+                                        @enderror
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="">
+                                            <label for="period_to_{{ $index }}">Period To</label>
+                                            <input type="date" class="form-control" wire:model="experiences.{{ $index }}.period_to" />
+                                        </div>
+                                        @error('experiences.' . $index . '.period_to')
+                                        <span class="text-danger">{{ $message }}</span><br>
+                                        @enderror
+                                    </div>
+                                @endforeach
 
+		validation 
+  
+		'experiences.*.institution_name' => 'required',
+		'experiences.*.period_from' => 'required|date',
+		'experiences.*.period_to' => 'required|date',
 		<script>
 		$(document).ready(function(){
 		$('#multiImg').on('change', function(){ //on file input change
