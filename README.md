@@ -34,6 +34,25 @@
 		'experiences.*.institution_name' => 'required',
 		'experiences.*.period_from' => 'required|date',
 		'experiences.*.period_to' => 'required|date',
+  ---------------------------
+
+          foreach ($this->experiences as $experienceData) {
+            if (!empty($experienceData['institution_name'])
+            && !empty($experienceData['experience_period_from'])
+            && !empty($experienceData['experience_period_to'])
+        ) {
+            Experience::create([
+                'application_forms_id' =>  $appication_id->id, // Adjust this value accordingly
+                'institution_name' => $experienceData['institution_name'],
+                'experience_period_from' => Carbon::parse( $experienceData['experience_period_from'])->format('Y-m-d'),
+                'experience_period_to' => Carbon::parse( $experienceData['experience_period_to'])->format('Y-m-d'),
+                // Add other fields as needed
+            ]);
+        }
+   
+    
+
+    }
 
   # Onupload multiple image 
 		<script>
